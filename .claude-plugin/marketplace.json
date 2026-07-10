@@ -1,0 +1,21 @@
+{
+  "name": "vzp-engenharia-marketplace",
+  "version": "1.0.0",
+  "description": "Plugins do escritório VZP / Base Empreendimentos.",
+  "owner": {
+    "name": "VZP Engenharia",
+    "email": "vitorzanchet@gmail.com"
+  },
+  "metadata": {
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "vzp-engenharia",
+      "description": "Auxiliar administrativo e engenharia civil da VZP: padrao de contratos, medicoes no Asana, arquivamento por obra e contexto do escritorio.",
+      "source": "vzp-engenharia",
+      "version": "0.1.0",
+      "category": "engenharia"
+    }
+  ]
+}
