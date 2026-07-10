@@ -1,0 +1,9 @@
+{
+  "name": "vzp-engenharia",
+  "version": "0.1.0",
+  "description": "Auxiliar administrativo e engenharia civil da VZP / Base Empreendimentos: padrao de contratos, medicoes no Asana, arquivamento por obra e contexto do escritorio.",
+  "author": {
+    "name": "VZP Engenharia"
+  },
+  "keywords": ["engenharia-civil", "planejamento", "contratos", "suprimentos", "asana", "obras"]
+}
