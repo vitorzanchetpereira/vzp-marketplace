@@ -14,7 +14,7 @@
       "name": "vzp-engenharia",
       "description": "Auxiliar administrativo e engenharia civil da VZP: padrao de contratos, medicoes no Asana, arquivamento por obra e contexto do escritorio.",
       "source": "vzp-engenharia",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "category": "engenharia"
     },
     {
