@@ -2,10 +2,7 @@
   "mcpServers": {
     "vobi": {
       "type": "http",
-      "url": "https://vzp-mcp-vobi.onrender.com/mcp",
-      "headers": {
-        "Authorization": "Bearer ${VZP_MCP_TOKEN}"
-      }
+      "url": "https://vzp-mcp-vobi.onrender.com/mcp"
     }
   }
 }
