@@ -1,0 +1,21 @@
+# Mantém os conectores MCP da VZP acordados no Render (plano free dorme após ~15min).
+# Roda a cada 10 minutos e chama o /health de cada serviço.
+# Este repo é público -> GitHub Actions é gratuito e ilimitado aqui.
+name: keep-alive
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch: {}
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping conectores
+        run: |
+          for url in \
+            "https://vzp-mcp-vobi.onrender.com/health"; do
+            code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 80 "$url" || echo "ERR")
+            echo "$url -> $code"
+          done
