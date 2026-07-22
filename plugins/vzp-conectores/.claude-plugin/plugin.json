@@ -1,0 +1,9 @@
+{
+  "name": "vzp-conectores",
+  "version": "0.1.0",
+  "description": "Conectores MCP remotos da VZP (Vobi hoje; Sienge e WhatsApp a caminho). Da acesso as ferramentas das plataformas dentro do Claude, sem cada pessoa instalar codigo. Requer o token compartilhado VZP_MCP_TOKEN no ambiente.",
+  "author": {
+    "name": "VZP Engenharia"
+  },
+  "keywords": ["mcp", "conectores", "vobi", "obras", "integracao", "vzp"]
+}

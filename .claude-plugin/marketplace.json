@@ -16,6 +16,13 @@
       "source": "vzp-engenharia",
       "version": "0.1.0",
       "category": "engenharia"
+    },
+    {
+      "name": "vzp-conectores",
+      "description": "Conectores MCP remotos da VZP: Vobi (gestao de obras) e, em breve, Sienge e WhatsApp. Requer o token VZP_MCP_TOKEN no ambiente.",
+      "source": "vzp-conectores",
+      "version": "0.1.0",
+      "category": "conectores"
     }
   ]
 }
