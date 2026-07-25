@@ -50,10 +50,10 @@ sua própria conta GitHub. Não compartilhe tokens pessoais ou uma credencial
 ## Pacotes por empresa
 
 - `vzp-engenharia`: conteúdo legado de contratos, ainda em classificação.
-- `base-empreendimentos`: disponível com quatro skills comprovadamente da Base.
-- `vla-engenharia-arquitetura`: estrutura preparada; instalação será liberada após a primeira skill.
-- `vla-imobiliaria`: estrutura preparada; instalação será liberada após a primeira skill.
-- `vla-patrimonial`: estrutura preparada; instalação será liberada após a primeira skill.
+- `base-empreendimentos`: 5 POPs, 29 ITs técnicas e skills operacionais já existentes.
+- `vla-engenharia-arquitetura`: 4 POPs vigentes.
+- `vla-imobiliaria`: 4 POPs vigentes.
+- `vla-patrimonial`: 1 POP vigente.
 
 Instale apenas os pacotes das empresas em que a pessoa atua. Quando duas
 empresas tiverem procedimentos diferentes para o mesmo trabalho, mantenha

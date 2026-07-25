@@ -1,0 +1,4 @@
+interface:
+  display_name: "Planejar Obras - Base"
+  short_description: "Planejamento de obras conforme POP da Base"
+  default_prompt: "Use $planejar-obras-base para organizar este planejamento conforme o POP da Base."

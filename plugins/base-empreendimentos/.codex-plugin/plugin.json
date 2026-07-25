@@ -1,7 +1,7 @@
 {
   "name": "base-empreendimentos",
-  "version": "0.1.0",
-  "description": "POPs, ITs e fluxos operacionais exclusivos da Base Empreendimentos.",
+  "version": "0.2.0",
+  "description": "Skills dos 5 POPs, 29 ITs e fluxos operacionais exclusivos da Base Empreendimentos.",
   "author": {
     "name": "Grupo VZP"
   },
@@ -9,7 +9,7 @@
   "interface": {
     "displayName": "Base Empreendimentos",
     "shortDescription": "Padrões operacionais exclusivos da Base",
-    "longDescription": "Skills internas construídas a partir dos POPs e ITs vigentes da Base Empreendimentos. Não aplicar procedimentos de outras empresas.",
+    "longDescription": "Skills internas construídas a partir de 5 POPs e 29 ITs vigentes da Base Empreendimentos. Não aplicar procedimentos de outras empresas.",
     "developerName": "Grupo VZP",
     "category": "Productivity",
     "capabilities": ["Knowledge", "Workflow"],

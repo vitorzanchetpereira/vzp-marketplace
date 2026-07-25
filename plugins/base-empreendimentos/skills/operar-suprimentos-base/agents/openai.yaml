@@ -1,0 +1,4 @@
+interface:
+  display_name: "Operar Suprimentos - Base"
+  short_description: "Fluxo completo de suprimentos da Base"
+  default_prompt: "Use $operar-suprimentos-base para executar esta demanda conforme o POP de Suprimentos da Base."

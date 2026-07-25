@@ -1,0 +1,4 @@
+interface:
+  display_name: "Executar Projetos - VLA Engenharia"
+  short_description: "Fluxo de projetos da VLA Engenharia"
+  default_prompt: "Use $executar-projetos-vla-engenharia para conduzir este trabalho conforme o POP da VLA Engenharia."

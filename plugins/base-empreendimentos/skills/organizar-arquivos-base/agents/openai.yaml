@@ -1,0 +1,4 @@
+interface:
+  display_name: "Organizar Arquivos - Base"
+  short_description: "Organização documental conforme POP da Base"
+  default_prompt: "Use $organizar-arquivos-base para arquivar estes documentos conforme o POP da Base."

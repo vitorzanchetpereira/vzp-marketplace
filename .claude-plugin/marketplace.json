@@ -1,6 +1,6 @@
 {
   "name": "vzp-engenharia-marketplace",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Skills internas separadas por empresa do Grupo VZP.",
   "owner": {
     "name": "VZP Engenharia",
@@ -19,10 +19,31 @@
     },
     {
       "name": "base-empreendimentos",
-      "description": "POPs, ITs e fluxos operacionais exclusivos da Base Empreendimentos.",
+      "description": "Skills dos 5 POPs, 29 ITs e fluxos operacionais exclusivos da Base Empreendimentos.",
       "source": "base-empreendimentos",
+      "version": "0.2.0",
+      "category": "engenharia"
+    },
+    {
+      "name": "vla-engenharia-arquitetura",
+      "description": "Skills dos 4 POPs vigentes da VLA Engenharia e Arquitetura.",
+      "source": "vla-engenharia-arquitetura",
       "version": "0.1.0",
       "category": "engenharia"
+    },
+    {
+      "name": "vla-imobiliaria",
+      "description": "Skills dos 4 POPs vigentes da VLA Imobiliária.",
+      "source": "vla-imobiliaria",
+      "version": "0.1.0",
+      "category": "operacoes"
+    },
+    {
+      "name": "vla-patrimonial",
+      "description": "Skill do POP vigente da VLA Patrimonial.",
+      "source": "vla-patrimonial",
+      "version": "0.1.0",
+      "category": "operacoes"
     }
   ]
 }

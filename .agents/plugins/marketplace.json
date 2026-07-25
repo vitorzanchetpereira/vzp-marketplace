@@ -35,7 +35,7 @@
         "path": "./plugins/vla-engenharia-arquitetura"
       },
       "policy": {
-        "installation": "NOT_AVAILABLE",
+        "installation": "AVAILABLE",
         "authentication": "ON_INSTALL"
       },
       "category": "Productivity"
@@ -47,7 +47,7 @@
         "path": "./plugins/vla-imobiliaria"
       },
       "policy": {
-        "installation": "NOT_AVAILABLE",
+        "installation": "AVAILABLE",
         "authentication": "ON_INSTALL"
       },
       "category": "Productivity"
@@ -59,7 +59,7 @@
         "path": "./plugins/vla-patrimonial"
       },
       "policy": {
-        "installation": "NOT_AVAILABLE",
+        "installation": "AVAILABLE",
         "authentication": "ON_INSTALL"
       },
       "category": "Productivity"

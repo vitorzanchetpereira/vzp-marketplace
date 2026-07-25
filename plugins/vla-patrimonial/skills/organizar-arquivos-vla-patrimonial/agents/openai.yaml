@@ -1,0 +1,4 @@
+interface:
+  display_name: "Organizar Arquivos - VLA Patrimonial"
+  short_description: "Arquivos conforme POP da VLA Patrimonial"
+  default_prompt: "Use $organizar-arquivos-vla-patrimonial para arquivar estes documentos no padrão da VLA Patrimonial."

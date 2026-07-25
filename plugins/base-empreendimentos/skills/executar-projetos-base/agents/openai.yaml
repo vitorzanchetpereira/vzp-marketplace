@@ -1,0 +1,4 @@
+interface:
+  display_name: "Executar Projetos - Base"
+  short_description: "Fluxo de projetos da Base Empreendimentos"
+  default_prompt: "Use $executar-projetos-base para conduzir este trabalho conforme o POP de Projetos da Base."

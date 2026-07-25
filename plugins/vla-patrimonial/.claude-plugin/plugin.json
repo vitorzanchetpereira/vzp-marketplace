@@ -1,7 +1,7 @@
 {
   "name": "vla-patrimonial",
   "version": "0.1.0",
-  "description": "POPs e fluxos operacionais exclusivos da VLA Patrimonial.",
+  "description": "Skill do POP vigente da VLA Patrimonial.",
   "author": {
     "name": "Grupo VZP"
   },
