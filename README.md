@@ -47,6 +47,20 @@ Em qualquer IA, a pessoa precisa primeiro ter acesso ao repositório privado com
 sua própria conta GitHub. Não compartilhe tokens pessoais ou uma credencial
 única entre a equipe.
 
+## Pacotes por empresa
+
+- `vzp-engenharia`: conteúdo legado de contratos, ainda em classificação.
+- `base-empreendimentos`: disponível com quatro skills comprovadamente da Base.
+- `vla-engenharia-arquitetura`: estrutura preparada; instalação será liberada após a primeira skill.
+- `vla-imobiliaria`: estrutura preparada; instalação será liberada após a primeira skill.
+- `vla-patrimonial`: estrutura preparada; instalação será liberada após a primeira skill.
+
+Instale apenas os pacotes das empresas em que a pessoa atua. Quando duas
+empresas tiverem procedimentos diferentes para o mesmo trabalho, mantenha
+skills distintas e nunca aplique silenciosamente a regra de uma empresa à
+outra. Se a empresa não estiver explícita no pedido, a IA deve confirmar antes
+de executar.
+
 ## Atualizar um padrão
 
 1. Edite o `SKILL.md` correspondente em `plugins/vzp-engenharia/skills/`.

@@ -1,0 +1,9 @@
+{
+  "name": "base-empreendimentos",
+  "version": "0.1.0",
+  "description": "POPs, ITs e fluxos operacionais exclusivos da Base Empreendimentos.",
+  "author": {
+    "name": "Grupo VZP"
+  },
+  "keywords": ["base-empreendimentos", "pops", "its", "engenharia", "obras"]
+}

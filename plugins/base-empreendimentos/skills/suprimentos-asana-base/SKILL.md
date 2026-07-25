@@ -1,5 +1,5 @@
 ---
-name: suprimentos-asana
+name: suprimentos-asana-base
 description: >-
   Regras do projeto Asana de Suprimentos (Base Empreendimentos / URBANIT / MIRAGE):
   automação que reposiciona tarefas novas, como corrigir seção e descrição, e quem

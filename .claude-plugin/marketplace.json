@@ -1,7 +1,7 @@
 {
   "name": "vzp-engenharia-marketplace",
-  "version": "1.1.0",
-  "description": "Skills do escritório VZP / Base Empreendimentos.",
+  "version": "1.2.0",
+  "description": "Skills internas separadas por empresa do Grupo VZP.",
   "owner": {
     "name": "VZP Engenharia",
     "email": "vitorzanchet@gmail.com"
@@ -12,9 +12,16 @@
   "plugins": [
     {
       "name": "vzp-engenharia",
-      "description": "Auxiliar administrativo e engenharia civil da VZP: padrao de contratos, medicoes no Asana, arquivamento por obra e contexto do escritorio.",
+      "description": "Skill de contratos ainda em classificação entre VZP e Base Empreendimentos.",
       "source": "vzp-engenharia",
-      "version": "0.3.0",
+      "version": "0.3.1",
+      "category": "engenharia"
+    },
+    {
+      "name": "base-empreendimentos",
+      "description": "POPs, ITs e fluxos operacionais exclusivos da Base Empreendimentos.",
+      "source": "base-empreendimentos",
+      "version": "0.1.0",
       "category": "engenharia"
     }
   ]

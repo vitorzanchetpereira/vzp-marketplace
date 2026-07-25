@@ -1,7 +1,7 @@
 {
   "name": "vzp-engenharia-marketplace",
   "interface": {
-    "displayName": "VZP Engenharia"
+    "displayName": "Grupo VZP - Skills Internas"
   },
   "plugins": [
     {
@@ -12,6 +12,54 @@
       },
       "policy": {
         "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "base-empreendimentos",
+      "source": {
+        "source": "local",
+        "path": "./plugins/base-empreendimentos"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "vla-engenharia-arquitetura",
+      "source": {
+        "source": "local",
+        "path": "./plugins/vla-engenharia-arquitetura"
+      },
+      "policy": {
+        "installation": "NOT_AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "vla-imobiliaria",
+      "source": {
+        "source": "local",
+        "path": "./plugins/vla-imobiliaria"
+      },
+      "policy": {
+        "installation": "NOT_AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "vla-patrimonial",
+      "source": {
+        "source": "local",
+        "path": "./plugins/vla-patrimonial"
+      },
+      "policy": {
+        "installation": "NOT_AVAILABLE",
         "authentication": "ON_INSTALL"
       },
       "category": "Productivity"

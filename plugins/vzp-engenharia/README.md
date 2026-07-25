@@ -1,23 +1,18 @@
-# VZP Engenharia — skills do escritório
+# VZP Engenharia — conteúdo em classificação
 
-Empacota o modo de trabalho do escritório VZP / Base Empreendimentos para que
-Claude, Codex e outros agentes usem o mesmo padrão sem configuração duplicada.
+Este pacote mantém temporariamente skills que ainda não foram atribuídas com
+segurança a uma única empresa.
 
 ## O que vem dentro
 
-- **contexto-escritorio-vzp** — perfil de atuação (engenheiro civil pleno +
-  auxiliar administrativo) e diretório de pessoas/áreas.
-- **padrao-contratos** — preâmbulo, qualificação das partes, "CEP antes da cidade"
-  e dados recorrentes.
-- **medicao-asana** — passo a passo para lançar NF + recibo na coluna Fechamento.
-- **suprimentos-asana** — automação do projeto de Suprimentos e responsável (Duana).
-- **arquivamento-obras** — onde salvar NF/recibo/contrato e o padrão de nome.
+- **padrao-contratos** — conteúdo atual menciona VZP e Base Empreendimentos e
+  precisa ser separado após validação dos POPs de cada empresa.
 
 ## Por papel
 
-- **Suprimentos / Compras** → medicao-asana, suprimentos-asana, arquivamento-obras
-- **Contratos / Jurídico** → padrao-contratos, arquivamento-obras
-- **Orçamento / Planejamento** → contexto-escritorio-vzp (base para quantitativos e orçamentos)
+- **Contratos / Jurídico** → padrao-contratos
+
+Não aplicar este conteúdo sem confirmar primeiro qual empresa rege o trabalho.
 
 ## Dependências
 

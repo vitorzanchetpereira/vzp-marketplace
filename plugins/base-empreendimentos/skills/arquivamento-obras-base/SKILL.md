@@ -1,5 +1,5 @@
 ---
-name: arquivamento-obras
+name: arquivamento-obras-base
 description: >-
   Convenção de arquivamento de documentos por obra na Base Empreendimentos (NF-e,
   recibos, contratos) e padrão de nome de arquivo. Use ao salvar, arquivar ou

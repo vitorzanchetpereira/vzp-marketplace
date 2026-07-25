@@ -1,5 +1,5 @@
 ---
-name: medicao-asana
+name: medicao-asana-base
 description: >-
   Passo a passo aprovado para lançar uma medição (NF + recibo) na coluna Fechamento
   do projeto Asana de Suprimentos. Use ao lançar/registrar medição, pagamento de

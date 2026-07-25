@@ -1,0 +1,9 @@
+{
+  "name": "vla-engenharia-arquitetura",
+  "version": "0.1.0",
+  "description": "POPs e fluxos operacionais exclusivos da VLA Engenharia e Arquitetura.",
+  "author": {
+    "name": "Grupo VZP"
+  },
+  "keywords": ["vla", "engenharia", "arquitetura", "pops", "projetos"]
+}

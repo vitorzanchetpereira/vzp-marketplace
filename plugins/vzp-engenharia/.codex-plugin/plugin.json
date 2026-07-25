@@ -1,7 +1,7 @@
 {
   "name": "vzp-engenharia",
-  "version": "0.3.0",
-  "description": "Padrões e fluxos de engenharia e administração da VZP / Base Empreendimentos.",
+  "version": "0.3.1",
+  "description": "Skill de contratos ainda em classificação entre VZP e Base Empreendimentos.",
   "author": {
     "name": "VZP Engenharia",
     "email": "vitorzanchet@gmail.com",
@@ -20,8 +20,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "VZP Engenharia",
-    "shortDescription": "Padrões e fluxos operacionais da VZP",
-    "longDescription": "Skills compartilhadas para contratos, medições, suprimentos, arquivamento e rotinas de engenharia da VZP.",
+    "shortDescription": "Conteúdo legado em classificação",
+    "longDescription": "Skill de contratos que ainda precisa ser separada entre os padrões da VZP e da Base Empreendimentos.",
     "developerName": "VZP Engenharia",
     "category": "Productivity",
     "capabilities": [
@@ -30,9 +30,7 @@
     ],
     "websiteURL": "https://github.com/vitorzanchetpereira/vzp-marketplace",
     "defaultPrompt": [
-      "Aplique o padrão VZP a este contrato.",
-      "Organize esta medição no fluxo da obra.",
-      "Arquive estes documentos no padrão da VZP."
+      "Identifique a empresa antes de aplicar o padrão contratual."
     ]
   }
 }
