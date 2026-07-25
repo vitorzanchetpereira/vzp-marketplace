@@ -1,0 +1,38 @@
+{
+  "name": "vzp-engenharia",
+  "version": "0.3.0",
+  "description": "Padrões e fluxos de engenharia e administração da VZP / Base Empreendimentos.",
+  "author": {
+    "name": "VZP Engenharia",
+    "email": "vitorzanchet@gmail.com",
+    "url": "https://github.com/vitorzanchetpereira"
+  },
+  "homepage": "https://github.com/vitorzanchetpereira/vzp-marketplace",
+  "repository": "https://github.com/vitorzanchetpereira/vzp-marketplace",
+  "keywords": [
+    "engenharia-civil",
+    "planejamento",
+    "contratos",
+    "suprimentos",
+    "asana",
+    "obras"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "VZP Engenharia",
+    "shortDescription": "Padrões e fluxos operacionais da VZP",
+    "longDescription": "Skills compartilhadas para contratos, medições, suprimentos, arquivamento e rotinas de engenharia da VZP.",
+    "developerName": "VZP Engenharia",
+    "category": "Productivity",
+    "capabilities": [
+      "Knowledge",
+      "Workflow"
+    ],
+    "websiteURL": "https://github.com/vitorzanchetpereira/vzp-marketplace",
+    "defaultPrompt": [
+      "Aplique o padrão VZP a este contrato.",
+      "Organize esta medição no fluxo da obra.",
+      "Arquive estes documentos no padrão da VZP."
+    ]
+  }
+}

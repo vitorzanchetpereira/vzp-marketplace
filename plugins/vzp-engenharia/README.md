@@ -1,7 +1,7 @@
-# VZP Engenharia — plugin do escritório
+# VZP Engenharia — skills do escritório
 
-Empacota o modo de trabalho do escritório VZP / Base Empreendimentos para que toda
-a equipe tenha o mesmo padrão sem precisar configurar do zero.
+Empacota o modo de trabalho do escritório VZP / Base Empreendimentos para que
+Claude, Codex e outros agentes usem o mesmo padrão sem configuração duplicada.
 
 ## O que vem dentro
 
@@ -19,12 +19,15 @@ a equipe tenha o mesmo padrão sem precisar configurar do zero.
 - **Contratos / Jurídico** → padrao-contratos, arquivamento-obras
 - **Orçamento / Planejamento** → contexto-escritorio-vzp (base para quantitativos e orçamentos)
 
-## Instalação
+## Dependências
 
-Cada pessoa abre o arquivo `vzp-engenharia.plugin`, confirma a instalação e conecta
-as ferramentas listadas em `CONNECTORS.md` com a própria conta.
+As skills podem usar ferramentas externas, mas não incorporam código nem
+credenciais. Cada pessoa conecta as ferramentas listadas em `CONNECTORS.md` com a
+própria conta. Os conectores MCP desenvolvidos pela VZP ficam no repositório
+`vzp-conectores`.
 
 ## Manutenção
 
-Para atualizar um padrão, edite o `SKILL.md` da skill correspondente e suba a versão
-em `.claude-plugin/plugin.json`.
+Para atualizar um padrão, edite o `SKILL.md` correspondente, valide a skill e
+atualize a versão nos manifestos `.claude-plugin/plugin.json` e
+`.codex-plugin/plugin.json`.
