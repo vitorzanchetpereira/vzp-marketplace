@@ -11,10 +11,10 @@ O código dos conectores MCP fica no repositório privado
 Aqui entram apenas instruções e recursos de skills. Não entram clientes de API,
 webhooks, bancos, tokens, infraestrutura ou motores de aplicações.
 
-O marketplace é atualmente público. Skills com nomes, e-mails, IDs internos ou
-procedimentos confidenciais devem ser revisadas antes da distribuição externa;
-se necessário, o catálogo deve ser separado em uma edição interna privada e uma
-edição pública do produto.
+O marketplace é privado e destinado somente à equipe autorizada da VZP. Como as
+skills podem conter nomes, e-mails, IDs internos e procedimentos confidenciais,
+cada integrante deve receber acesso individual ao repositório e não deve
+redistribuir o conteúdo fora das empresas.
 
 ## Compatibilidade
 
@@ -42,6 +42,10 @@ Pelo Claude Code:
 Adicione este repositório como marketplace local ou de equipe e instale o plugin
 `vzp-engenharia`. O catálogo do Codex está em
 `.agents/plugins/marketplace.json`.
+
+Em qualquer IA, a pessoa precisa primeiro ter acesso ao repositório privado com
+sua própria conta GitHub. Não compartilhe tokens pessoais ou uma credencial
+única entre a equipe.
 
 ## Atualizar um padrão
 
