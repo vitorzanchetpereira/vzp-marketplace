@@ -1,0 +1,4 @@
+interface:
+  display_name: "Serviços de Obra - VZP"
+  short_description: "ITs técnicas próprias da VZP Engenharia"
+  default_prompt: "Use $executar-servicos-obra-vzp para executar este serviço conforme a IT vigente da VZP Engenharia."

@@ -34,7 +34,7 @@ Pelo Claude Code:
 
 ```text
 /plugin marketplace add vitorzanchetpereira/vzp-marketplace
-/plugin install base-empreendimentos
+/plugin install vzp-engenharia
 ```
 
 ## Instalar no Codex
@@ -44,7 +44,7 @@ e instale somente o pacote da empresa em que a pessoa atua:
 
 ```text
 codex plugin marketplace add <caminho-local-do-vzp-marketplace>
-codex plugin add base-empreendimentos@vzp-engenharia-marketplace
+codex plugin add vzp-engenharia@vzp-engenharia-marketplace
 ```
 
 O catálogo do Codex está em `.agents/plugins/marketplace.json`. Abra uma nova
@@ -56,6 +56,7 @@ sua própria conta GitHub. Não compartilhe tokens pessoais ou uma credencial
 
 ## Pacotes por empresa
 
+- `vzp-engenharia`: 4 POPs e 30 ITs técnicas vigentes.
 - `base-empreendimentos`: 5 POPs, 29 ITs técnicas, contratos e skills operacionais.
 - `vla-engenharia-arquitetura`: 4 POPs vigentes.
 - `vla-imobiliaria`: 4 POPs vigentes.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Vistoria - VZP Engenharia"
+  short_description: "Vistorias conforme o POP da VZP"
+  default_prompt: "Use $realizar-vistoria-vzp para realizar esta vistoria conforme o padrão da VZP Engenharia."

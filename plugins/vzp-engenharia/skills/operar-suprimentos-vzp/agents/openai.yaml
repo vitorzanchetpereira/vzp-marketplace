@@ -1,0 +1,4 @@
+interface:
+  display_name: "Suprimentos - VZP Engenharia"
+  short_description: "Suprimentos conforme o POP da VZP"
+  default_prompt: "Use $operar-suprimentos-vzp para executar este fluxo de suprimentos da VZP Engenharia."
