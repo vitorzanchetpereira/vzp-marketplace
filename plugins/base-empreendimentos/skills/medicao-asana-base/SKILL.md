@@ -16,13 +16,13 @@ projeto URBANIT - Suprimentos. Replicar em medições futuras.
    pagamento já quitado, valores não batem com o total dito), **perguntar antes de
    lançar**.
 2. **Salvar arquivos** nas pastas locais da obra no padrão
-   `AAMMDD-UG-CATEGORIA-Descricao.pdf` — ver skill **arquivamento-obras**
+   `AAMMDD-UG-CATEGORIA-Descricao.pdf` — ver skill **arquivamento-obras-base**
    (NF → `Fisc/01-Nfe-Recebidas`; recibo → `Fin/Recibos`).
 3. **Criar a task** (`create_tasks`). Nome no padrão do quadro: `UG - <descrição>`.
-   Definir `due_on` = data do pagamento. Responsável = Duana (ver **suprimentos-asana**).
+   Definir `due_on` = data do pagamento. Responsável = Duana (ver **suprimentos-asana-base**).
 4. **Corrigir seção/descrição.** A automação joga a task em Solicitações de Compras e
    troca a descrição. Corrigir com `update_tasks` (`add_projects` com project_id +
-   section_id de **Fechamento**; reenviar `html_notes`). Ver **suprimentos-asana**.
+   section_id de **Fechamento**; reenviar `html_notes`). Ver **suprimentos-asana-base**.
 5. **Anexar os 2 PDFs** pelo navegador (Chrome): abrir a task, `find` o file input
    oculto, `file_upload` com os caminhos locais. Confirmar com `get_attachments`.
 6. **Descrição do card** deve deixar claro: total, parcelas, o que já está pago e o

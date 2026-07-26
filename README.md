@@ -1,7 +1,7 @@
-# VZP Engenharia — Marketplace de Skills
+# Grupo VZP — Marketplace de Skills
 
-Skills compartilhadas do escritório VZP / Base Empreendimentos. Este repositório
-contém somente conhecimento operacional, padrões e fluxos reutilizáveis por IAs.
+Skills internas separadas por empresa. Este repositório contém somente
+conhecimento operacional, padrões e fluxos reutilizáveis por IAs.
 
 O código dos conectores MCP fica no repositório privado
 [`vzp-conectores`](https://github.com/vitorzanchetpereira/vzp-conectores).
@@ -34,14 +34,21 @@ Pelo Claude Code:
 
 ```text
 /plugin marketplace add vitorzanchetpereira/vzp-marketplace
-/plugin install vzp-engenharia
+/plugin install base-empreendimentos
 ```
 
 ## Instalar no Codex
 
-Adicione este repositório como marketplace local ou de equipe e instale o plugin
-`vzp-engenharia`. O catálogo do Codex está em
-`.agents/plugins/marketplace.json`.
+Depois de clonar este repositório privado, adicione-o como marketplace de equipe
+e instale somente o pacote da empresa em que a pessoa atua:
+
+```text
+codex plugin marketplace add <caminho-local-do-vzp-marketplace>
+codex plugin add base-empreendimentos@vzp-engenharia-marketplace
+```
+
+O catálogo do Codex está em `.agents/plugins/marketplace.json`. Abra uma nova
+tarefa depois da instalação para o Codex carregar as skills.
 
 Em qualquer IA, a pessoa precisa primeiro ter acesso ao repositório privado com
 sua própria conta GitHub. Não compartilhe tokens pessoais ou uma credencial
@@ -49,8 +56,7 @@ sua própria conta GitHub. Não compartilhe tokens pessoais ou uma credencial
 
 ## Pacotes por empresa
 
-- `vzp-engenharia`: conteúdo legado de contratos, ainda em classificação.
-- `base-empreendimentos`: 5 POPs, 29 ITs técnicas e skills operacionais já existentes.
+- `base-empreendimentos`: 5 POPs, 29 ITs técnicas, contratos e skills operacionais.
 - `vla-engenharia-arquitetura`: 4 POPs vigentes.
 - `vla-imobiliaria`: 4 POPs vigentes.
 - `vla-patrimonial`: 1 POP vigente.
@@ -63,7 +69,9 @@ de executar.
 
 ## Atualizar um padrão
 
-1. Edite o `SKILL.md` correspondente em `plugins/vzp-engenharia/skills/`.
-2. Valide a skill.
-3. Atualize a versão nos manifestos do Claude e do Codex e nos dois catálogos.
-4. Faça commit e push para disponibilizar a atualização.
+1. Identifique a empresa responsável pelo padrão.
+2. Edite o `SKILL.md` correspondente dentro do pacote dessa empresa.
+3. Mantenha uma única fonte de conteúdo; os manifestos apenas adaptam a instalação para cada IA.
+4. Valide a skill e todas as referências.
+5. Atualize a versão nos manifestos e catálogos aplicáveis.
+6. Faça commit e push para disponibilizar a atualização.

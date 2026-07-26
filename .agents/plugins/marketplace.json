@@ -5,18 +5,6 @@
   },
   "plugins": [
     {
-      "name": "vzp-engenharia",
-      "source": {
-        "source": "local",
-        "path": "./plugins/vzp-engenharia"
-      },
-      "policy": {
-        "installation": "AVAILABLE",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Productivity"
-    },
-    {
       "name": "base-empreendimentos",
       "source": {
         "source": "local",

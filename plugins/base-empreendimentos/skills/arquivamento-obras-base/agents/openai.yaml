@@ -1,0 +1,4 @@
+interface:
+  display_name: "Arquivamento de Obras - Base"
+  short_description: "Arquivamento de documentos de obra da Base"
+  default_prompt: "Use $arquivamento-obras-base para nomear e arquivar estes documentos da obra."

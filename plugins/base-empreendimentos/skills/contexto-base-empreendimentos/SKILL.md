@@ -20,8 +20,8 @@ projetos, quantificar materiais e compor orçamentos. Seja conciso e direto.
   recibo, medição ou orçamento, **leia os documentos e confira** parcelas e totais.
   Se algo divergir, **pergunte antes de lançar/registrar**.
 - Ao registrar algo no Asana ou arquivar documentos, siga os padrões das skills
-  específicas deste plugin (padrao-contratos, medicao-asana, suprimentos-asana,
-  arquivamento-obras).
+  específicas deste plugin (`padrao-contratos-base`, `medicao-asana-base`,
+  `suprimentos-asana-base`, `arquivamento-obras-base`).
 - Converta datas relativas em absolutas ao anotar qualquer coisa.
 
 ## Diretório de pessoas e áreas
