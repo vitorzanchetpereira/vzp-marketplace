@@ -1,0 +1,9 @@
+{
+  "name": "vla-imobiliaria",
+  "version": "0.1.0",
+  "description": "Skills dos 4 POPs vigentes da VLA Imobiliária.",
+  "author": {
+    "name": "Grupo VZP"
+  },
+  "keywords": ["vla", "imobiliaria", "pops", "locacao", "imoveis"]
+}

@@ -1,0 +1,9 @@
+{
+  "name": "base-empreendimentos",
+  "version": "0.3.0",
+  "description": "Skills dos 5 POPs, 29 ITs, contratos e fluxos operacionais exclusivos da Base Empreendimentos.",
+  "author": {
+    "name": "Grupo VZP"
+  },
+  "keywords": ["base-empreendimentos", "pops", "its", "engenharia", "obras", "contratos"]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Executar Serviços de Obra - Base"
+  short_description: "Roteamento das ITs técnicas de obra da Base"
+  default_prompt: "Use $executar-servicos-obra-base para aplicar a IT correta a este serviço de obra."

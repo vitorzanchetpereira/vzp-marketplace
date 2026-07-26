@@ -1,0 +1,4 @@
+interface:
+  display_name: "Operar Jurídico - Base"
+  short_description: "Fluxo jurídico conforme POP da Base"
+  default_prompt: "Use $operar-juridico-base para executar esta demanda conforme o POP Jurídico da Base."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Operar Suprimentos - VLA Engenharia"
+  short_description: "Suprimentos conforme POP da VLA Engenharia"
+  default_prompt: "Use $operar-suprimentos-vla-engenharia para executar esta compra conforme o POP da VLA Engenharia."

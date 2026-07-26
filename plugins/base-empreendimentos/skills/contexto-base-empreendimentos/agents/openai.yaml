@@ -1,0 +1,4 @@
+interface:
+  display_name: "Contexto - Base Empreendimentos"
+  short_description: "Contexto operacional da Base Empreendimentos"
+  default_prompt: "Use $contexto-base-empreendimentos para aplicar o contexto correto da Base a este trabalho."

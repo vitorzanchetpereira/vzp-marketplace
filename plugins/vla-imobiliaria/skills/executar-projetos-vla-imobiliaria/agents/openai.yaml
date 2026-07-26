@@ -1,0 +1,4 @@
+interface:
+  display_name: "Executar Projetos - VLA Imobiliária"
+  short_description: "Fluxo de projetos da VLA Imobiliária"
+  default_prompt: "Use $executar-projetos-vla-imobiliaria para conduzir este trabalho conforme o POP da VLA Imobiliária."

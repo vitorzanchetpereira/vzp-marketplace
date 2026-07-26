@@ -1,0 +1,18 @@
+{
+  "name": "vla-imobiliaria",
+  "version": "0.1.0",
+  "description": "POPs e fluxos operacionais exclusivos da VLA Imobiliária.",
+  "author": {
+    "name": "Grupo VZP"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "VLA Imobiliária",
+    "shortDescription": "Padrões exclusivos da VLA Imobiliária",
+    "longDescription": "Skills internas construídas a partir dos 4 POPs vigentes da VLA Imobiliária. Não aplicar procedimentos de outras empresas.",
+    "developerName": "Grupo VZP",
+    "category": "Productivity",
+    "capabilities": ["Knowledge", "Workflow"],
+    "defaultPrompt": "Execute este trabalho conforme os POPs vigentes da VLA Imobiliária."
+  }
+}

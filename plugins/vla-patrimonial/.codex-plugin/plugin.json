@@ -1,0 +1,18 @@
+{
+  "name": "vla-patrimonial",
+  "version": "0.1.0",
+  "description": "POPs e fluxos operacionais exclusivos da VLA Patrimonial.",
+  "author": {
+    "name": "Grupo VZP"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "VLA Patrimonial",
+    "shortDescription": "Padrões exclusivos da VLA Patrimonial",
+    "longDescription": "Skill interna construída a partir do POP vigente da VLA Patrimonial. Não aplicar procedimentos de outras empresas.",
+    "developerName": "Grupo VZP",
+    "category": "Productivity",
+    "capabilities": ["Knowledge", "Workflow"],
+    "defaultPrompt": "Execute este trabalho conforme os POPs vigentes da VLA Patrimonial."
+  }
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Padrão de Contratos - Base"
+  short_description: "Contratos conforme o padrão da Base"
+  default_prompt: "Use $padrao-contratos-base para revisar este contrato conforme o padrão da Base."

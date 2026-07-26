@@ -1,0 +1,4 @@
+interface:
+  display_name: "Organizar Arquivos - VLA Engenharia"
+  short_description: "Arquivos conforme POP da VLA Engenharia"
+  default_prompt: "Use $organizar-arquivos-vla-engenharia para arquivar estes documentos no padrão da VLA Engenharia."

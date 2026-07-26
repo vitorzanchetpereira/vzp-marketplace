@@ -1,7 +1,7 @@
 {
   "name": "vzp-engenharia-marketplace",
-  "version": "1.0.0",
-  "description": "Plugins do escritório VZP / Base Empreendimentos.",
+  "version": "1.4.0",
+  "description": "Skills internas separadas por empresa do Grupo VZP.",
   "owner": {
     "name": "VZP Engenharia",
     "email": "vitorzanchet@gmail.com"
@@ -11,18 +11,32 @@
   },
   "plugins": [
     {
-      "name": "vzp-engenharia",
-      "description": "Auxiliar administrativo e engenharia civil da VZP: padrao de contratos, medicoes no Asana, arquivamento por obra e contexto do escritorio.",
-      "source": "vzp-engenharia",
-      "version": "0.2.0",
+      "name": "base-empreendimentos",
+      "description": "Skills dos 5 POPs, 29 ITs, contratos e fluxos operacionais exclusivos da Base Empreendimentos.",
+      "source": "./plugins/base-empreendimentos",
+      "version": "0.3.0",
       "category": "engenharia"
     },
     {
-      "name": "vzp-conectores",
-      "description": "Conectores MCP remotos da VZP: Vobi (gestao de obras) e, em breve, Sienge e WhatsApp. Requer o token VZP_MCP_TOKEN no ambiente.",
-      "source": "vzp-conectores",
+      "name": "vla-engenharia-arquitetura",
+      "description": "Skills dos 4 POPs vigentes da VLA Engenharia e Arquitetura.",
+      "source": "./plugins/vla-engenharia-arquitetura",
       "version": "0.1.0",
-      "category": "conectores"
+      "category": "engenharia"
+    },
+    {
+      "name": "vla-imobiliaria",
+      "description": "Skills dos 4 POPs vigentes da VLA Imobiliária.",
+      "source": "./plugins/vla-imobiliaria",
+      "version": "0.1.0",
+      "category": "operacoes"
+    },
+    {
+      "name": "vla-patrimonial",
+      "description": "Skill do POP vigente da VLA Patrimonial.",
+      "source": "./plugins/vla-patrimonial",
+      "version": "0.1.0",
+      "category": "operacoes"
     }
   ]
 }

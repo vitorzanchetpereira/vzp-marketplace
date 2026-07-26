@@ -1,8 +1,0 @@
-{
-  "mcpServers": {
-    "vobi": {
-      "type": "http",
-      "url": "https://vzp-mcp-vobi.onrender.com/mcp"
-    }
-  }
-}

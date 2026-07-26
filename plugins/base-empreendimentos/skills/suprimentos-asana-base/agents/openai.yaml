@@ -1,0 +1,4 @@
+interface:
+  display_name: "Suprimentos no Asana - Base"
+  short_description: "Regras de suprimentos no Asana da Base"
+  default_prompt: "Use $suprimentos-asana-base para criar ou atualizar esta tarefa de suprimentos."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Realizar Vistoria - VLA Engenharia"
+  short_description: "Vistorias conforme manual da VLA Engenharia"
+  default_prompt: "Use $realizar-vistoria-vla-engenharia para realizar esta vistoria conforme o manual da VLA Engenharia."

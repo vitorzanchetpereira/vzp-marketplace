@@ -1,0 +1,4 @@
+interface:
+  display_name: "Operar Locação Longa - VLA"
+  short_description: "Locação longa conforme POP da VLA Imobiliária"
+  default_prompt: "Use $operar-locacao-longa-vla-imobiliaria para executar esta locação longa conforme o POP da VLA Imobiliária."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Medição no Asana - Base"
+  short_description: "Medições no Asana da Base"
+  default_prompt: "Use $medicao-asana-base para registrar esta medição no fluxo correto do Asana."
