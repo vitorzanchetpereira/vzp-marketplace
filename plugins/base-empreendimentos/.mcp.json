@@ -1,0 +1,6 @@
+{
+  "mcpServers": {
+    "sienge": { "type": "http", "url": "https://vzp-mcp-sienge.onrender.com/mcp" },
+    "prevision": { "type": "http", "url": "https://vzp-mcp-prevision.onrender.com/mcp" }
+  }
+}
