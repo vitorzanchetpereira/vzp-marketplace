@@ -1,6 +1,6 @@
 {
   "name": "vzp-engenharia-marketplace",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Skills internas separadas por empresa do Grupo VZP.",
   "owner": {
     "name": "VZP Engenharia",
@@ -10,6 +10,13 @@
     "pluginRoot": "./plugins"
   },
   "plugins": [
+    {
+      "name": "vzp-engenharia",
+      "description": "Skills dos 4 POPs e 30 ITs técnicas exclusivas da VZP Engenharia.",
+      "source": "./plugins/vzp-engenharia",
+      "version": "0.1.0",
+      "category": "engenharia"
+    },
     {
       "name": "base-empreendimentos",
       "description": "Skills dos 5 POPs, 29 ITs, contratos e fluxos operacionais exclusivos da Base Empreendimentos.",
