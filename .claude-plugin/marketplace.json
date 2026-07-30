@@ -14,35 +14,35 @@
       "name": "vzp-engenharia",
       "description": "Skills dos 4 POPs e 30 ITs técnicas exclusivas da VZP Engenharia.",
       "source": "./plugins/vzp-engenharia",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "category": "engenharia"
     },
     {
       "name": "base-empreendimentos",
       "description": "Skills dos 5 POPs, 29 ITs, contratos e fluxos operacionais exclusivos da Base Empreendimentos.",
       "source": "./plugins/base-empreendimentos",
-      "version": "0.3.0",
+      "version": "0.3.1",
       "category": "engenharia"
     },
     {
       "name": "vla-engenharia-arquitetura",
       "description": "Skills dos 4 POPs vigentes da VLA Engenharia e Arquitetura.",
       "source": "./plugins/vla-engenharia-arquitetura",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "category": "engenharia"
     },
     {
       "name": "vla-imobiliaria",
       "description": "Skills dos 4 POPs vigentes da VLA Imobiliária.",
       "source": "./plugins/vla-imobiliaria",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "category": "operacoes"
     },
     {
       "name": "vla-patrimonial",
       "description": "Skill do POP vigente da VLA Patrimonial.",
       "source": "./plugins/vla-patrimonial",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "category": "operacoes"
     }
   ]
