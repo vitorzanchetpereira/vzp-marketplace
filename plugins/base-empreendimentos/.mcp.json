@@ -3,6 +3,7 @@
     "sienge": { "type": "http", "url": "https://vzp-mcp-sienge.onrender.com/mcp" },
     "prevision": { "type": "http", "url": "https://vzp-mcp-prevision.onrender.com/mcp" },
     "construpoint": { "type": "http", "url": "https://vzp-mcp-construpoint.onrender.com/mcp" },
-    "asana": { "type": "http", "url": "https://vzp-mcp-asana.onrender.com/mcp" }
+    "asana": { "type": "http", "url": "https://vzp-mcp-asana.onrender.com/mcp" },
+    "google_contatos": { "type": "http", "url": "https://vzp-mcp-contatos.onrender.com/mcp" }
   }
 }
