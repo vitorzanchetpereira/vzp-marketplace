@@ -1,21 +1,25 @@
 {
   "name": "vzp-engenharia",
-  "version": "0.1.0",
-  "description": "Skills dos 4 POPs e 30 ITs técnicas exclusivas da VZP Engenharia.",
+  "version": "0.1.1+codex.20260730164633",
+  "description": "Skills dos 4 POPs e 30 ITs t\u00e9cnicas exclusivas da VZP Engenharia.",
   "author": {
     "name": "Grupo VZP"
   },
   "skills": "./skills/",
+  "apps": "./.app.json",
   "interface": {
     "displayName": "VZP Engenharia",
     "shortDescription": "Procedimentos exclusivos da VZP Engenharia",
-    "longDescription": "Skills internas construídas a partir dos 4 POPs e 30 ITs vigentes da VZP Engenharia. Não aplicar procedimentos da Base ou das empresas VLA.",
+    "longDescription": "Skills internas constru\u00eddas a partir dos 4 POPs e 30 ITs vigentes da VZP Engenharia. N\u00e3o aplicar procedimentos da Base ou das empresas VLA.",
     "developerName": "Grupo VZP",
     "category": "Productivity",
-    "capabilities": ["Knowledge", "Workflow"],
+    "capabilities": [
+      "Knowledge",
+      "Workflow"
+    ],
     "defaultPrompt": [
       "Execute este trabalho conforme os POPs vigentes da VZP Engenharia.",
-      "Confira este serviço conforme a IT vigente da VZP Engenharia."
+      "Confira este servi\u00e7o conforme a IT vigente da VZP Engenharia."
     ]
   }
 }
