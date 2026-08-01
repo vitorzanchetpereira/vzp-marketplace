@@ -20,10 +20,12 @@ categorização e projeção antes que virem bola de neve.
    formaram (clicar e chegar no razão).
 
 ## 3. Fontes de dados (por mês)
-- **Extratos** de cada conta e cada cartão (preferir **OFX/CSV**; PDF não é lido
-  por máquina — pedir OFX/CSV).
+- **Extratos** de cada conta e cada cartão (preferir **OFX/CSV** para lançar; PDF
+  não é lido linha a linha por máquina — pedir OFX/CSV para a importação).
   - `NU_..._DDMMM_DDMMM` = extrato da **conta corrente** (salário, Pix, boletos).
   - `Nubank_AAAA-MM-DD` = **fatura do cartão** (fechamento naquela data).
+  - Alguns bancos exportam o extrato em **`.zip`** direto do app — **extrair antes
+    de importar** (o motor/planilha não lê zip).
 - **Saldos reais (gabarito):** um arquivo `_saldos.txt` com o saldo de cada conta
   e a fatura em aberto de cada cartão, numa data:
   ```
@@ -32,18 +34,38 @@ categorização e projeção antes que virem bola de neve.
   Cartao Nubank: 8417.70
   Cartao Mercado Pago: 1989.90
   ```
+- **Sem gabarito?** Mesmo não lendo linha a linha, o **PDF traz o resumo do
+  período** ("Saldo inicial", "Saldo final do período") — dá para abrir com
+  qualquer leitor de PDF (ex.: `pdfplumber`) e usar esses dois números como
+  checksum daquela conta, no lugar do `_saldos.txt`.
 
 ## 4. Importação / lançamento
 1. **Não duplicar, não perder:** dedup por **contagem** (multiset). Re-importar o
    mesmo arquivo não duplica; mas 2 compras iguais no mesmo dia (café, transporte)
    contam 2 — repetição legítima é preservada.
 2. **Arquivo idêntico** enviado 2x é ignorado.
-3. **Prefixos de pagamento** (`PAG*`, `MP*`, `Mercado Pago*`, `PIX`, `TEF`…) são
+3. **Um formato por vez:** o dedup por contagem compara contra o que **já está
+   gravado** — ele não enxerga duplicata **dentro do mesmo lote**. Importar o
+   CSV e o OFX do **mesmo período juntos numa só leva** faz cada lançamento
+   contar 2x (nenhum dos dois "já estava gravado" ainda, então nenhum é
+   descartado como repetição). Escolher **um formato só** por extrato (CSV ou
+   OFX, tanto faz) e conferir a prévia antes de gravar.
+4. **Prefixos de pagamento** (`PAG*`, `MP*`, `Mercado Pago*`, `PIX`, `TEF`…) são
    removidos antes de identificar o estabelecimento (senão tudo cola no prefixo).
-4. **Cartão sem duplicar:** a **compra** entra na data da compra (despesa). O
+5. **Cartão sem duplicar:** a **compra** entra na data da compra (despesa). O
    **pagamento da fatura** é transferência interna (**valor 0**) — não conta de
    novo. Parcela mensal ≠ compra cheia: cuidar para não lançar as duas.
-5. **Confirmação:** só grava após conferir a prévia (quantos novos, categorias).
+6. **Transferência entre contas da mesma pessoa/empresa** (ex.: conta da
+   empresa → conta pessoal do sócio, "é tudo eu mesmo"): diferente do
+   pagamento de fatura, aqui **NÃO zerar** — o extrato de cada banco fecha com
+   esse valor de verdade saindo/entrando, zerar quebra o saldo daquela conta.
+   Manter o **valor real nas duas pontas**, marcar como **transferência
+   interna** (só para identificar), e deixar a **categoria de receita/despesa
+   só na ponta de ORIGEM** (onde o dinheiro de fato nasceu — ex.: cliente
+   pagando a empresa). A ponta de destino fica **sem categoria**: some do
+   previsto×realizado da categoria real, mas continua visível (linha "sem
+   categoria") em vez de virar receita ou despesa fantasma em dobro.
+7. **Confirmação:** só grava após conferir a prévia (quantos novos, categorias).
 
 ## 5. Categorização
 1. Aprende do **histórico** (estabelecimento → categoria) + **palavras-chave**.
@@ -100,4 +122,11 @@ categorização e projeção antes que virem bola de neve.
    pendente de definição.
 
 ---
-*Versão 1 · 2026-07-28 · revisar quando a metodologia evoluir.*
+*Versão 2 (R01) · 2026-08-01 · revisar quando a metodologia evoluir.*
+
+### Histórico de revisões
+- **R01 (2026-08-01):** +zip precisa extrair; +checksum por PDF (saldo
+  inicial/final) quando falta `_saldos.txt`; +dedup não cobre duplicata dentro
+  do mesmo lote (importar um formato por vez); +transferência entre contas da
+  mesma pessoa/empresa (valor real nas duas pontas, categoria só na origem).
+- **R00 (2026-07-28):** versão inicial.
