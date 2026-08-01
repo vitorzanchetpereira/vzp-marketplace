@@ -14,7 +14,7 @@ description: >-
 
 ## Fonte obrigatória
 
-Ler integralmente [references/procedimento.md](references/procedimento.md) antes de executar. É o POP de Controle e Conciliação Financeira (mesmo conteúdo do documento oficial `POP-*-Controle-Financeiro-R01.docx`).
+Ler integralmente [references/procedimento.md](references/procedimento.md) antes de executar. É o POP de Controle e Conciliação Financeira (mesmo conteúdo do documento oficial `POP-*-Controle-Financeiro-R02.docx`).
 
 ## Preparação
 

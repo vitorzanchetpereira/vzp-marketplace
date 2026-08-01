@@ -26,6 +26,10 @@ categorização e projeção antes que virem bola de neve.
   - `Nubank_AAAA-MM-DD` = **fatura do cartão** (fechamento naquela data).
   - Alguns bancos exportam o extrato em **`.zip`** direto do app — **extrair antes
     de importar** (o motor/planilha não lê zip).
+  - **Olhar TODOS os arquivos da pasta do mês por data de modificação**, não só
+    os que vieram dentro de um `.zip` — uma fatura de cartão solta (ex.: fatura
+    aberta, ainda não fechou) pode ter sido salva na mesma leva e passar
+    despercebida se o olho for só atrás dos zips.
 - **Saldos reais (gabarito):** um arquivo `_saldos.txt` com o saldo de cada conta
   e a fatura em aberto de cada cartão, numa data:
   ```
@@ -56,16 +60,29 @@ categorização e projeção antes que virem bola de neve.
    **pagamento da fatura** é transferência interna (**valor 0**) — não conta de
    novo. Parcela mensal ≠ compra cheia: cuidar para não lançar as duas.
 6. **Transferência entre contas da mesma pessoa/empresa** (ex.: conta da
-   empresa → conta pessoal do sócio, "é tudo eu mesmo"): diferente do
-   pagamento de fatura, aqui **NÃO zerar** — o extrato de cada banco fecha com
-   esse valor de verdade saindo/entrando, zerar quebra o saldo daquela conta.
-   Manter o **valor real nas duas pontas**, marcar como **transferência
-   interna** (só para identificar), e deixar a **categoria de receita/despesa
-   só na ponta de ORIGEM** (onde o dinheiro de fato nasceu — ex.: cliente
-   pagando a empresa). A ponta de destino fica **sem categoria**: some do
-   previsto×realizado da categoria real, mas continua visível (linha "sem
-   categoria") em vez de virar receita ou despesa fantasma em dobro.
-7. **Confirmação:** só grava após conferir a prévia (quantos novos, categorias).
+   empresa → conta pessoal do sócio, "é tudo eu mesmo"): tratar **igual a
+   pagamento de fatura/RDB** — **zerar o valor nas duas pontas** e marcar como
+   transferência interna, sem categoria. Decisão do Vitor (2026-08-01): relatório
+   limpo vale mais do que o saldo instantâneo de uma conta batendo sozinho —
+   manter valor real (mesmo só na ponta de destino) sempre poluiu o previsto×
+   realizado com receita/despesa fantasma. O saldo TOTAL da pessoa (todas as
+   contas somadas) não muda de qualquer jeito — só o saldo *daquela conta
+   isolada* deixa de bater com o extrato dela sozinha enquanto a outra ponta não
+   é conferida junto (mesma limitação que RDB já tinha).
+7. **Nunca editar um lançamento por filtro ambíguo** (ex.: `data + conta +
+   eh_transferencia_interna=True`): pode casar mais de um lançamento (ex.: um
+   RDB do mesmo dia) e corrigir o errado sem avisar. **Sempre localizar e editar
+   pelo `id` único** do lançamento antes de gravar.
+8. **Confirmação:** só grava após conferir a prévia (quantos novos, categorias).
+9. **Parcela duplicada por data diferente (ARMADILHA RECORRENTE):** a fatura do
+   cartão data a parcela pela ABERTURA da fatura; um lançamento antigo (planilha
+   ou fatura anterior) pode ter datado a MESMA parcela pelo aniversário da
+   compra. Datas diferentes → o dedup exato não pega, e a prévia mostra como
+   "novo" algo que já está lançado. Antes de gravar qualquer linha com
+   "Parcela N/M" marcada como nova, buscar no razão pela MESMA descrição +
+   MESMO valor **ignorando a data** — se já existir, é duplicata, não lançar
+   de novo (repete a cada fatura nova até alguém ensinar o motor a reconhecer
+   isso).
 
 ## 5. Categorização
 1. Aprende do **histórico** (estabelecimento → categoria) + **palavras-chave**.
@@ -85,7 +102,14 @@ categorização e projeção antes que virem bola de neve.
 3. Comparar com o **saldo real do banco na mesma data** (do `_saldos.txt`).
 4. Regra do saldo a comparar: **dinheiro nas contas − faturas de cartão em aberto**
    (a compra já foi lançada como despesa; a fatura ainda não saiu do banco).
-5. **Diferente? Investiga** (Seção 8) antes de forçar o número.
+5. **Fórmula completa (com dinheiro guardado/investido):** o sistema NÃO
+   rastreia RDB/investimento como conta própria (é zerado na importação — item
+   4.5). Por isso o cheque certo é:
+   **dinheiro guardado (RDB etc.) + dinheiro disponível (contas correntes) −
+   fatura do cartão em aberto = saldo do sistema.** "Fatura em aberto" = soma
+   das compras do cartão **desde o último fechamento até hoje** (não a conta
+   inteira do cartão, que acumula todo o histórico).
+6. **Diferente? Investiga** (Seção 8) antes de forçar o número.
 
 ## 7. Âncora da auditoria
 - A **última conciliação com lançamento** (valor ≠ 0) é o ponto **confiável**:
@@ -122,11 +146,21 @@ categorização e projeção antes que virem bola de neve.
    pendente de definição.
 
 ---
-*Versão 2 (R01) · 2026-08-01 · revisar quando a metodologia evoluir.*
+*Versão 3 (R02) · 2026-08-01 · revisar quando a metodologia evoluir.*
 
 ### Histórico de revisões
+- **R02 (2026-08-01):** correção da R01 — transferência entre contas da mesma
+  pessoa/empresa passa a **zerar** (como fatura/RDB), não manter valor real
+  (decisão explícita do Vitor: relatório limpo > saldo instantâneo por conta);
+  +nunca editar lançamento por filtro ambíguo, sempre por `id`; +armadilha
+  recorrente da parcela duplicada por data diferente (fatura vs. planilha) e
+  como detectar (mesma descrição+valor, ignorando data); +olhar todos os
+  arquivos da pasta por data de modificação, não só os de dentro de `.zip`;
+  +fórmula completa de conciliação (guardado + disponível − fatura em aberto =
+  saldo do sistema).
 - **R01 (2026-08-01):** +zip precisa extrair; +checksum por PDF (saldo
   inicial/final) quando falta `_saldos.txt`; +dedup não cobre duplicata dentro
   do mesmo lote (importar um formato por vez); +transferência entre contas da
-  mesma pessoa/empresa (valor real nas duas pontas, categoria só na origem).
+  mesma pessoa/empresa (valor real nas duas pontas, categoria só na origem) —
+  **substituído na R02**.
 - **R00 (2026-07-28):** versão inicial.
