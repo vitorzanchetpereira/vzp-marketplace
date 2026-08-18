@@ -1,8 +1,8 @@
 {
   "mcpServers": {
-    "vobi": { "type": "http", "url": "https://vzp-mcp-vobi.onrender.com/mcp" },
+    "vobi": { "type": "http", "url": "https://vzp-mcp-vobi-ra6s7yj5ca-uc.a.run.app/mcp" },
     "asana": { "type": "http", "url": "https://vzp-mcp-asana.onrender.com/mcp" },
     "google_contatos": { "type": "http", "url": "https://vzp-mcp-contatos.onrender.com/mcp" },
-    "gestao_imoveis": { "type": "http", "url": "https://vzp-mcp-imoveis.onrender.com/mcp" }
+    "gestao_imoveis": { "type": "http", "url": "https://vzp-mcp-imoveis-ra6s7yj5ca-uc.a.run.app/mcp" }
   }
 }
