@@ -1,6 +1,6 @@
 {
   "mcpServers": {
-    "sienge": { "type": "http", "url": "https://vzp-mcp-sienge.onrender.com/mcp" },
+    "sienge": { "type": "http", "url": "https://vzp-mcp-sienge-898146672742.us-central1.run.app/mcp" },
     "prevision": { "type": "http", "url": "https://vzp-mcp-prevision.onrender.com/mcp" },
     "construpoint": { "type": "http", "url": "https://vzp-mcp-construpoint.onrender.com/mcp" },
     "asana": { "type": "http", "url": "https://vzp-mcp-asana.onrender.com/mcp" },
