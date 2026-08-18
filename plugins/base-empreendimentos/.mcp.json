@@ -1,8 +1,8 @@
 {
   "mcpServers": {
     "sienge": { "type": "http", "url": "https://vzp-mcp-sienge-898146672742.us-central1.run.app/mcp" },
-    "prevision": { "type": "http", "url": "https://vzp-mcp-prevision.onrender.com/mcp" },
-    "construpoint": { "type": "http", "url": "https://vzp-mcp-construpoint.onrender.com/mcp" },
+    "prevision": { "type": "http", "url": "https://vzp-mcp-prevision-ra6s7yj5ca-uc.a.run.app/mcp" },
+    "construpoint": { "type": "http", "url": "https://vzp-mcp-construpoint-ra6s7yj5ca-uc.a.run.app/mcp" },
     "asana": { "type": "http", "url": "https://vzp-mcp-asana.onrender.com/mcp" },
     "google_contatos": { "type": "http", "url": "https://vzp-mcp-contatos.onrender.com/mcp" }
   }
