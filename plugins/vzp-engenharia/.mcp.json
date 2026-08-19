@@ -1,7 +1,7 @@
 {
   "mcpServers": {
     "vobi": { "type": "http", "url": "https://vzp-mcp-vobi-ra6s7yj5ca-uc.a.run.app/mcp" },
-    "asana": { "type": "http", "url": "https://vzp-mcp-asana.onrender.com/mcp" },
-    "google_contatos": { "type": "http", "url": "https://vzp-mcp-contatos.onrender.com/mcp" }
+    "asana": { "type": "http", "url": "https://vzp-mcp-asana-ra6s7yj5ca-uc.a.run.app/mcp" },
+    "google_contatos": { "type": "http", "url": "https://vzp-mcp-contatos-ra6s7yj5ca-uc.a.run.app/mcp" }
   }
 }
