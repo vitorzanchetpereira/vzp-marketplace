@@ -4,6 +4,7 @@
     "asana": { "type": "http", "url": "https://vzp-mcp-asana-ra6s7yj5ca-uc.a.run.app/mcp" },
     "google_contatos": { "type": "http", "url": "https://vzp-mcp-contatos-ra6s7yj5ca-uc.a.run.app/mcp" },
     "autocad": { "type": "http", "url": "https://vzp-mcp-autocad-ra6s7yj5ca-uc.a.run.app/mcp" },
-    "construir_reformar": { "type": "http", "url": "https://vzp-mcp-construir-reformar-ra6s7yj5ca-uc.a.run.app/mcp" }
+    "construir_reformar": { "type": "http", "url": "https://vzp-mcp-construir-reformar-ra6s7yj5ca-uc.a.run.app/mcp" },
+    "whatsapp": { "type": "http", "url": "https://vzp-mcp-whatsapp-ra6s7yj5ca-uc.a.run.app/mcp" }
   }
 }
