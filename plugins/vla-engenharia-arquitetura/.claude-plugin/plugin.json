@@ -1,9 +1,15 @@
 {
   "name": "vla-engenharia-arquitetura",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Skills dos 4 POPs vigentes da VLA Engenharia e Arquitetura.",
   "author": {
     "name": "Grupo VZP"
   },
-  "keywords": ["vla", "engenharia", "arquitetura", "pops", "projetos"]
+  "keywords": [
+    "vla",
+    "engenharia",
+    "arquitetura",
+    "pops",
+    "projetos"
+  ]
 }
