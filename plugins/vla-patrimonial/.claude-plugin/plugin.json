@@ -1,9 +1,15 @@
 {
   "name": "vla-patrimonial",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Skill do POP vigente da VLA Patrimonial.",
   "author": {
     "name": "Grupo VZP"
   },
-  "keywords": ["vla", "patrimonial", "pops", "arquivos", "patrimonio"]
+  "keywords": [
+    "vla",
+    "patrimonial",
+    "pops",
+    "arquivos",
+    "patrimonio"
+  ]
 }
