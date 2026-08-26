@@ -74,15 +74,27 @@ categorização e projeção antes que virem bola de neve.
    RDB do mesmo dia) e corrigir o errado sem avisar. **Sempre localizar e editar
    pelo `id` único** do lançamento antes de gravar.
 8. **Confirmação:** só grava após conferir a prévia (quantos novos, categorias).
-9. **Parcela duplicada por data diferente (ARMADILHA RECORRENTE):** a fatura do
-   cartão data a parcela pela ABERTURA da fatura; um lançamento antigo (planilha
-   ou fatura anterior) pode ter datado a MESMA parcela pelo aniversário da
-   compra. Datas diferentes → o dedup exato não pega, e a prévia mostra como
-   "novo" algo que já está lançado. Antes de gravar qualquer linha com
-   "Parcela N/M" marcada como nova, buscar no razão pela MESMA descrição +
-   MESMO valor **ignorando a data** — se já existir, é duplicata, não lançar
-   de novo (repete a cada fatura nova até alguém ensinar o motor a reconhecer
-   isso).
+9. **Parcela duplicada por data diferente (ARMADILHA RECORRENTE — reincidiu em
+   ago/2026):** a fatura do cartão data a parcela pela ABERTURA da fatura; um
+   lançamento antigo (planilha ou fatura anterior) pode ter datado a MESMA
+   parcela pelo aniversário da compra. Datas diferentes → o dedup exato não
+   pega, e a prévia mostra como "novo" algo que já está lançado.
+   **A janela de conferência é o MÊS, não o dia** (decisão do Vitor,
+   2026-08-26): a regra antiga só olhava mesmo valor **no mesmo dia** e por isso
+   deixou passar de novo em ago/2026 — os pares caíram em 02/08 contra
+   20–30/08. Antes de gravar, para cada linha nova, procurar no razão um
+   lançamento **do mesmo mês** com:
+   - **mesmo remetente/estabelecimento** — descrição normalizada, já sem os
+     prefixos de pagamento (`PAG*`, `MP*`, `PIX`…, item 4.4); e
+   - **mesmo valor, com tolerância de ±R$ 0,05** — fatura e planilha arredondam
+     a parcela de formas diferentes e o centavo separa o par (visto em ago/2026:
+     1.327,35 × 1.327,34 e 318,41 × 318,40; valor exato não pegaria).
+   Bateu → **atenção a duplicidade**: não gravar sem conferir. Vale para
+   **qualquer** lançamento, não só os marcados "Parcela N/M" (esses são só os
+   mais prováveis). É **aviso, não exclusão automática**: repetição legítima
+   no mesmo mês existe (dois abastecimentos iguais, duas compras iguais) — a
+   linha entra destacada na prévia e quem confirma decide. Repete a cada fatura
+   nova até o motor de importação aprender a janela mensal.
 
 ## 5. Categorização
 1. Aprende do **histórico** (estabelecimento → categoria) + **palavras-chave**.
@@ -146,9 +158,14 @@ categorização e projeção antes que virem bola de neve.
    pendente de definição.
 
 ---
-*Versão 3 (R02) · 2026-08-01 · revisar quando a metodologia evoluir.*
+*Versão 4 (R03) · 2026-08-26 · revisar quando a metodologia evoluir.*
 
 ### Histórico de revisões
+- **R03 (2026-08-26):** a conferência de duplicidade passa de **mesmo dia** para
+  **mesmo mês** — mesmo remetente + mesmo valor (±R$ 0,05) dentro do mês pede
+  atenção a duplicidade, para qualquer lançamento (não só "Parcela N/M").
+  Motivo: as parcelas do cartão duplicaram de novo em ago/2026, com o par
+  separado por até 28 dias e, em dois casos, por 1 centavo.
 - **R02 (2026-08-01):** correção da R01 — transferência entre contas da mesma
   pessoa/empresa passa a **zerar** (como fatura/RDB), não manter valor real
   (decisão explícita do Vitor: relatório limpo > saldo instantâneo por conta);
