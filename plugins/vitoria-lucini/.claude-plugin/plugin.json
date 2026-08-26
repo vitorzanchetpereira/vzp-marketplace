@@ -1,0 +1,15 @@
+{
+  "name": "vitoria-lucini",
+  "version": "0.1.0",
+  "description": "Skill do POP de Controle e Conciliação Financeira das finanças pessoais de Vitória Lucini.",
+  "author": {
+    "name": "Grupo VZP"
+  },
+  "keywords": [
+    "vitoria",
+    "lucini",
+    "financas-pessoais",
+    "pop",
+    "conciliacao"
+  ]
+}

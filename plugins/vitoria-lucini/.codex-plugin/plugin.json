@@ -1,0 +1,21 @@
+{
+  "name": "vitoria-lucini",
+  "version": "0.1.0",
+  "description": "Skill do POP de Controle e Conciliação Financeira das finanças pessoais de Vitória Lucini.",
+  "author": {
+    "name": "Grupo VZP"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Vitória Lucini",
+    "shortDescription": "Controle financeiro pessoal de Vitória",
+    "longDescription": "Skill interna construída a partir do POP de Controle e Conciliação Financeira vigente (R03), aplicada às finanças pessoais de Vitória Lucini. Não misturar com as finanças de outra pessoa ou empresa do grupo.",
+    "developerName": "Grupo VZP",
+    "category": "Productivity",
+    "capabilities": [
+      "Knowledge",
+      "Workflow"
+    ],
+    "defaultPrompt": "Cuide das finanças pessoais de Vitória conforme o POP vigente."
+  }
+}

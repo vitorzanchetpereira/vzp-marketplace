@@ -63,6 +63,42 @@
         "authentication": "ON_INSTALL"
       },
       "category": "Productivity"
+    },
+    {
+      "name": "vitor-zp",
+      "source": {
+        "source": "local",
+        "path": "./plugins/vitor-zp"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "vitoria-lucini",
+      "source": {
+        "source": "local",
+        "path": "./plugins/vitoria-lucini"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "luciana-zanchet",
+      "source": {
+        "source": "local",
+        "path": "./plugins/luciana-zanchet"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
     }
   ]
 }
