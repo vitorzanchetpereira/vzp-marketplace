@@ -62,6 +62,13 @@ sua própria conta GitHub. Não compartilhe tokens pessoais ou uma credencial
 - `vla-imobiliaria`: 4 POPs vigentes.
 - `vla-patrimonial`: 1 POP vigente.
 
+Carteiras pessoais (mesmo POP de Controle e Conciliação Financeira, base de
+dados separada por pessoa):
+
+- `vitor-zp`: finanças pessoais de Vitor Zanchet Pereira.
+- `vitoria-lucini`: finanças pessoais de Vitória Lucini.
+- `luciana-zanchet`: finanças pessoais de Luciana Zanchet.
+
 Instale apenas os pacotes das empresas em que a pessoa atua. Quando duas
 empresas tiverem procedimentos diferentes para o mesmo trabalho, mantenha
 skills distintas e nunca aplique silenciosamente a regra de uma empresa à

@@ -1,0 +1,21 @@
+{
+  "name": "vitor-zp",
+  "version": "0.1.0",
+  "description": "Skill do POP de Controle e Conciliação Financeira das finanças pessoais de Vitor Zanchet Pereira.",
+  "author": {
+    "name": "Grupo VZP"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Vitor Zanchet Pereira",
+    "shortDescription": "Controle financeiro pessoal de Vitor Z.P",
+    "longDescription": "Skill interna construída a partir do POP de Controle e Conciliação Financeira vigente (R03), aplicada às finanças pessoais de Vitor Zanchet Pereira. Não misturar com as finanças de outra pessoa ou empresa do grupo.",
+    "developerName": "Grupo VZP",
+    "category": "Productivity",
+    "capabilities": [
+      "Knowledge",
+      "Workflow"
+    ],
+    "defaultPrompt": "Cuide das finanças pessoais de Vitor Z.P conforme o POP vigente."
+  }
+}

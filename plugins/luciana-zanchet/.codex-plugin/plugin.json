@@ -1,0 +1,21 @@
+{
+  "name": "luciana-zanchet",
+  "version": "0.1.0",
+  "description": "Skill do POP de Controle e Conciliação Financeira das finanças pessoais de Luciana Zanchet.",
+  "author": {
+    "name": "Grupo VZP"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Luciana Zanchet",
+    "shortDescription": "Controle financeiro pessoal de Luciana",
+    "longDescription": "Skill interna construída a partir do POP de Controle e Conciliação Financeira vigente (R03), aplicada às finanças pessoais de Luciana Zanchet. Não misturar com as finanças de outra pessoa ou empresa do grupo.",
+    "developerName": "Grupo VZP",
+    "category": "Productivity",
+    "capabilities": [
+      "Knowledge",
+      "Workflow"
+    ],
+    "defaultPrompt": "Cuide das finanças pessoais de Luciana conforme o POP vigente."
+  }
+}

@@ -1,6 +1,6 @@
 {
   "name": "vzp-engenharia-marketplace",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "description": "Skills internas separadas por empresa do Grupo VZP.",
   "owner": {
     "name": "VZP Engenharia",
@@ -44,6 +44,27 @@
       "source": "./plugins/vla-patrimonial",
       "version": "0.1.2",
       "category": "operacoes"
+    },
+    {
+      "name": "vitor-zp",
+      "description": "Skill do POP de Controle e Conciliação Financeira das finanças pessoais de Vitor Zanchet Pereira.",
+      "source": "./plugins/vitor-zp",
+      "version": "0.1.0",
+      "category": "financas"
+    },
+    {
+      "name": "vitoria-lucini",
+      "description": "Skill do POP de Controle e Conciliação Financeira das finanças pessoais de Vitória Lucini.",
+      "source": "./plugins/vitoria-lucini",
+      "version": "0.1.0",
+      "category": "financas"
+    },
+    {
+      "name": "luciana-zanchet",
+      "description": "Skill do POP de Controle e Conciliação Financeira das finanças pessoais de Luciana Zanchet.",
+      "source": "./plugins/luciana-zanchet",
+      "version": "0.1.0",
+      "category": "financas"
     }
   ]
 }
