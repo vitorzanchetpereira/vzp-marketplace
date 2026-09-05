@@ -21,7 +21,7 @@ description: >-
 
 Ler integralmente [references/procedimento.md](references/procedimento.md) antes
 de classificar ou alterar arquivos. A referência foi extraída de
-`POP-04.00-VZP-Organizacao-Arquivos-R00.docx`.
+`POP-04.00-VZP-Organizacao-Arquivos-R01.docx`.
 
 ## Preparação
 
