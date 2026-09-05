@@ -1,7 +1,7 @@
 {
   "name": "vitor-zp",
-  "version": "0.1.0",
-  "description": "Skill do POP de Controle e Conciliação Financeira das finanças pessoais de Vitor Zanchet Pereira.",
+  "version": "0.2.0",
+  "description": "Skills pessoais de Vitor Zanchet Pereira: POP de Controle e Conciliacao Financeira, e as ferramentas locais de e-mail das quatro caixas.",
   "author": {
     "name": "Grupo VZP"
   },
@@ -10,6 +10,10 @@
     "financas-pessoais",
     "pop",
     "conciliacao",
-    "payingless"
+    "payingless",
+    "email",
+    "outlook",
+    "imap",
+    "ferramentas-locais"
   ]
 }
