@@ -1,5 +1,6 @@
 {
   "mcpServers": {
-    "saude": { "type": "http", "url": "https://vzp-mcp-saude-ra6s7yj5ca-uc.a.run.app/mcp" }
+    "saude": { "type": "http", "url": "https://vzp-mcp-saude-ra6s7yj5ca-uc.a.run.app/mcp" },
+    "meu_tempo": { "type": "http", "url": "https://vzp-mcp-meu-tempo-ra6s7yj5ca-uc.a.run.app/mcp" }
   }
 }

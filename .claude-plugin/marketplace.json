@@ -47,7 +47,7 @@
     },
     {
       "name": "vitor-zp",
-      "description": "Skills pessoais de Vitor Zanchet Pereira e o conector da Saúde Pessoal — o prontuário da família.",
+      "description": "Skills pessoais de Vitor Zanchet Pereira e os conectores da Saúde Pessoal (prontuário da família) e do Meu Tempo (mapa de automação).",
       "source": "./plugins/vitor-zp",
       "version": "0.3.0",
       "category": "financas"
