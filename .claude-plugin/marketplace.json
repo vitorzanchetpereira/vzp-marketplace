@@ -47,9 +47,9 @@
     },
     {
       "name": "vitor-zp",
-      "description": "Skill do POP de Controle e Conciliação Financeira das finanças pessoais de Vitor Zanchet Pereira.",
+      "description": "Skills pessoais de Vitor Zanchet Pereira e os conectores da Saúde Pessoal, do Meu Tempo e da operação do produto Zara.",
       "source": "./plugins/vitor-zp",
-      "version": "0.1.0",
+      "version": "0.3.0",
       "category": "financas"
     },
     {

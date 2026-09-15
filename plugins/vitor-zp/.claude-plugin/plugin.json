@@ -1,7 +1,7 @@
 {
   "name": "vitor-zp",
-  "version": "0.2.0",
-  "description": "Skills pessoais de Vitor Zanchet Pereira: POP de Controle e Conciliacao Financeira, e as ferramentas locais de e-mail das quatro caixas.",
+  "version": "0.3.0",
+  "description": "Skills pessoais de Vitor Zanchet Pereira: POP de Controle e Conciliacao Financeira, as ferramentas locais de e-mail das quatro caixas, e os conectores da Saude Pessoal (prontuario da familia), do Meu Tempo (mapa de automacao) e da operacao do produto Zara.",
   "author": {
     "name": "Grupo VZP"
   },
@@ -14,6 +14,11 @@
     "email",
     "outlook",
     "imap",
-    "ferramentas-locais"
+    "ferramentas-locais",
+    "saude",
+    "prontuario",
+    "meu-tempo",
+    "automacao",
+    "zara"
   ]
 }
