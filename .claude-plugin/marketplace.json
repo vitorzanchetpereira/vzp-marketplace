@@ -47,9 +47,9 @@
     },
     {
       "name": "vitor-zp",
-      "description": "Skill do POP de Controle e Conciliação Financeira das finanças pessoais de Vitor Zanchet Pereira.",
+      "description": "Skills pessoais de Vitor Zanchet Pereira e o conector da Saúde Pessoal — o prontuário da família.",
       "source": "./plugins/vitor-zp",
-      "version": "0.1.0",
+      "version": "0.3.0",
       "category": "financas"
     },
     {
