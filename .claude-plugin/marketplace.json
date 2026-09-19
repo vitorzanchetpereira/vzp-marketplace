@@ -1,6 +1,6 @@
 {
   "name": "vzp-engenharia-marketplace",
-  "version": "1.12.0",
+  "version": "1.13.0",
   "description": "Skills internas separadas por empresa do Grupo VZP.",
   "owner": {
     "name": "VZP Engenharia",
@@ -68,9 +68,9 @@
     },
     {
       "name": "canil-lucini",
-      "description": "Contexto operacional do Canil Lucini Ltda (criação de Spitz Alemão em Sorriso/MT) e da Animalle Pet Care, e o conector do software próprio do canil.",
+      "description": "Contexto operacional do Canil Lucini Ltda (criação de Spitz Alemão em Sorriso/MT) e da Animalle Pet Care, e dois conectores: o do software próprio do canil e o da Animalle Pet Care sobre a API do SimplesVet.",
       "source": "./plugins/canil-lucini",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "category": "operacoes"
     }
   ]

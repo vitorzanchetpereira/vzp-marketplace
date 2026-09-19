@@ -1,5 +1,6 @@
 {
   "mcpServers": {
-    "canil": { "type": "http", "url": "https://vzp-mcp-canil-ra6s7yj5ca-uc.a.run.app/mcp" }
+    "canil": { "type": "http", "url": "https://vzp-mcp-canil-ra6s7yj5ca-uc.a.run.app/mcp" },
+    "animalle": { "type": "http", "url": "https://vzp-mcp-animalle-ra6s7yj5ca-uc.a.run.app/mcp" }
   }
 }
