@@ -7,6 +7,7 @@
     "whatsapp": { "type": "http", "url": "https://vzp-mcp-whatsapp-ra6s7yj5ca-uc.a.run.app/mcp" },
     "planejamento": { "type": "http", "url": "https://vzp-mcp-planejamento-ra6s7yj5ca-uc.a.run.app/mcp" },
     "google_maps": { "type": "http", "url": "https://vzp-mcp-maps-ra6s7yj5ca-uc.a.run.app/mcp" },
+    "vero": { "type": "http", "url": "https://vzp-mcp-vero-898146672742.us-central1.run.app/mcp" },
     "payingless": { "type": "http", "url": "https://vzp-mcp-payingless-ra6s7yj5ca-uc.a.run.app/mcp" }
   }
 }
