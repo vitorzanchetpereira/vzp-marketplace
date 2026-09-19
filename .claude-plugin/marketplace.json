@@ -1,6 +1,6 @@
 {
   "name": "vzp-engenharia-marketplace",
-  "version": "1.11.0",
+  "version": "1.12.0",
   "description": "Skills internas separadas por empresa do Grupo VZP.",
   "owner": {
     "name": "VZP Engenharia",
@@ -12,9 +12,9 @@
   "plugins": [
     {
       "name": "vzp-engenharia",
-      "description": "Skills dos 4 POPs e 30 ITs técnicas exclusivas da VZP Engenharia, mais a gestão de contatos e o padrão de interface, e os conectores de Vobi, Asana, Google Contatos, Construir & Reformar, WhatsApp, VZP Planejamento, Google Maps e PayingLess.",
+      "description": "Skills dos 4 POPs e 30 ITs técnicas exclusivas da VZP Engenharia, o padrão de desenvolvimento de app da casa, a interface que se explica e a gestão de contatos, e os conectores de Vobi, Asana, Google Contatos, Construir & Reformar, WhatsApp, VZP Planejamento, Google Maps e PayingLess.",
       "source": "./plugins/vzp-engenharia",
-      "version": "0.2.0",
+      "version": "0.3.0",
       "category": "engenharia"
     },
     {
@@ -35,7 +35,7 @@
       "name": "vla-imobiliaria",
       "description": "Skills dos 4 POPs vigentes da VLA Imobiliária, e os conectores de Vobi, Asana, Google Contatos, Gestão de Imóveis, VERO e PayingLess.",
       "source": "./plugins/vla-imobiliaria",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "category": "operacoes"
     },
     {
