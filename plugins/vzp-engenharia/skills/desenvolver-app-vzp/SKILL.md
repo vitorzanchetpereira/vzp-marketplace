@@ -29,7 +29,7 @@ A pilha não é escolha nova a cada projeto — ela já existe em 20+ repositór
 - **Postgres** (Supabase ou Neon)
 - **Publicação** em Cloud Run (`Dockerfile` + `cloudbuild.yaml`) ou Render
 
-React/Next existe só em `vzp-planejamento` e `meus-sites-vzp`. **App novo não
+React/Next existe só em `vzp-planejamento`. **App novo não
 nasce em React sem motivo dito em voz alta** — carregar build, tipos e
 ecossistema para uma tela de cadastro é custo sem retorno, e quebra a regra de
 que qualquer um dos programas se abre e se conserta do mesmo jeito.
