@@ -1,7 +1,7 @@
 {
   "name": "vitoria-lucini",
-  "version": "0.1.0",
-  "description": "Skill do POP de Controle e Conciliação Financeira das finanças pessoais de Vitória Lucini.",
+  "version": "0.1.1",
+  "description": "Skill do POP de Controle e Conciliacao Financeira das financas pessoais de Vitoria Lucini, e o conector do PayingLess.",
   "author": {
     "name": "Grupo VZP"
   },

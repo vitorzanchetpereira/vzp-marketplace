@@ -8,8 +8,15 @@ O código dos conectores MCP fica no repositório privado
 
 ## Limite deste repositório
 
-Aqui entram apenas instruções e recursos de skills. Não entram clientes de API,
-webhooks, bancos, tokens, infraestrutura ou motores de aplicações.
+Aqui entram instruções e recursos de skills, e a **declaração** dos conectores
+MCP de cada pacote (`.mcp.json`: nome e URL do serviço). Não entram clientes de
+API, webhooks, bancos, tokens, infraestrutura ou motores de aplicações.
+
+Um conector só pode ser declarado aqui se autenticar por OAuth, que é o que
+o serviço negocia com cada pessoa na hora de vincular. Conector que dependa de
+token estático no cabeçalho fica fora — a chave viraria conteúdo do repositório.
+É o caso da Central de Comunicação (Zara), que segue como conector
+personalizado no claude.ai.
 
 O marketplace é privado e destinado somente à equipe autorizada da VZP. Como as
 skills podem conter nomes, e-mails, IDs internos e procedimentos confidenciais,
@@ -56,16 +63,21 @@ sua própria conta GitHub. Não compartilhe tokens pessoais ou uma credencial
 
 ## Pacotes por empresa
 
-- `vzp-engenharia`: 4 POPs e 30 ITs técnicas vigentes.
-- `base-empreendimentos`: 5 POPs, 29 ITs técnicas, contratos e skills operacionais.
+- `vzp-engenharia`: 4 POPs e 30 ITs técnicas vigentes, gestão de contatos e o
+  padrão de interface.
+- `base-empreendimentos`: 5 POPs, 29 ITs técnicas, contratos, skills operacionais
+  e o fechamento trimestral do contrato de gestão.
 - `vla-engenharia-arquitetura`: 4 POPs vigentes.
 - `vla-imobiliaria`: 4 POPs vigentes.
 - `vla-patrimonial`: 1 POP vigente.
+- `canil-lucini`: contexto operacional do Canil Lucini e da Animalle Pet Care.
 
 Carteiras pessoais (mesmo POP de Controle e Conciliação Financeira, base de
 dados separada por pessoa):
 
-- `vitor-zp`: finanças pessoais de Vitor Zanchet Pereira.
+- `vitor-zp`: finanças pessoais de Vitor Zanchet Pereira, mais o contexto
+  pessoal e profissional dele, a organização dos arquivos pessoais, a
+  verificação antes de enviar e o registro do log do dia.
 - `vitoria-lucini`: finanças pessoais de Vitória Lucini.
 - `luciana-zanchet`: finanças pessoais de Luciana Zanchet.
 
@@ -83,3 +95,16 @@ de executar.
 4. Valide a skill e todas as referências.
 5. Atualize a versão nos manifestos e catálogos aplicáveis.
 6. Faça commit e push para disponibilizar a atualização.
+
+## Conectores
+
+Cada pacote declara em `.mcp.json` os conectores que a empresa usa. Quando o
+mesmo serviço serve mais de uma empresa (Asana, Google Contatos, PayingLess),
+ele é declarado em cada pacote com **o mesmo nome** — é pelo nome que o cliente
+reconhece que é o mesmo conector e mostra um só na lista.
+
+Um serviço não deve existir ao mesmo tempo aqui e como conector personalizado
+no claude.ai. Dois conectores iguais na lista não é cosmético: cada um tem seu
+próprio consentimento e seu próprio estado, e a IA escolhe um sem dizer qual.
+Numa ferramenta que grava, é a diferença entre gravar com a identidade certa e
+com a errada. Declarado aqui, o personalizado sai.

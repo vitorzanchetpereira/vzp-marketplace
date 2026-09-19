@@ -1,0 +1,21 @@
+{
+  "name": "canil-lucini",
+  "version": "0.1.0",
+  "description": "Contexto operacional do Canil Lucini Ltda e da Animalle Pet Care.",
+  "author": {
+    "name": "Grupo VZP"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Canil Lucini",
+    "shortDescription": "Contexto e conector do Canil Lucini",
+    "longDescription": "Contexto operacional do Canil Lucini Ltda (criação de Spitz Alemão em Sorriso/MT) e da Animalle Pet Care, com os dados reais do negócio, os aprendizados de documento já validados e o conector do software próprio do canil. Não aplicar aqui procedimentos das empresas de engenharia do grupo.",
+    "developerName": "Grupo VZP",
+    "category": "Productivity",
+    "capabilities": [
+      "Knowledge",
+      "Workflow"
+    ],
+    "defaultPrompt": "Trabalhe no Canil Lucini conforme o contexto operacional vigente."
+  }
+}

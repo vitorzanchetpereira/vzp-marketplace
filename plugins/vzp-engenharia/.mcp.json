@@ -4,6 +4,9 @@
     "asana": { "type": "http", "url": "https://vzp-mcp-asana-ra6s7yj5ca-uc.a.run.app/mcp" },
     "google_contatos": { "type": "http", "url": "https://vzp-mcp-contatos-ra6s7yj5ca-uc.a.run.app/mcp" },
     "construir_reformar": { "type": "http", "url": "https://vzp-mcp-construir-reformar-ra6s7yj5ca-uc.a.run.app/mcp" },
-    "whatsapp": { "type": "http", "url": "https://vzp-mcp-whatsapp-ra6s7yj5ca-uc.a.run.app/mcp" }
+    "whatsapp": { "type": "http", "url": "https://vzp-mcp-whatsapp-ra6s7yj5ca-uc.a.run.app/mcp" },
+    "planejamento": { "type": "http", "url": "https://vzp-mcp-planejamento-ra6s7yj5ca-uc.a.run.app/mcp" },
+    "google_maps": { "type": "http", "url": "https://vzp-mcp-maps-ra6s7yj5ca-uc.a.run.app/mcp" },
+    "payingless": { "type": "http", "url": "https://vzp-mcp-payingless-ra6s7yj5ca-uc.a.run.app/mcp" }
   }
 }

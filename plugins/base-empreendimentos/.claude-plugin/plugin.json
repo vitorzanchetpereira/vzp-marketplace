@@ -1,9 +1,16 @@
 {
   "name": "base-empreendimentos",
-  "version": "0.3.4",
-  "description": "Skills dos 5 POPs, 29 ITs, contratos e fluxos operacionais exclusivos da Base Empreendimentos.",
+  "version": "0.4.0",
+  "description": "Skills dos 5 POPs, 29 ITs, contratos, fluxos operacionais e o fechamento trimestral exclusivos da Base Empreendimentos, e os conectores de Sienge, Prevision, Asana, Google Contatos, ConstruBASE, Google Maps e PayingLess.",
   "author": {
     "name": "Grupo VZP"
   },
-  "keywords": ["base-empreendimentos", "pops", "its", "engenharia", "obras", "contratos"]
+  "keywords": [
+    "base-empreendimentos",
+    "pops",
+    "its",
+    "engenharia",
+    "obras",
+    "contratos"
+  ]
 }
