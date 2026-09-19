@@ -1,7 +1,7 @@
 {
   "name": "vzp-engenharia",
-  "version": "0.2.0",
-  "description": "Skills dos 4 POPs e 30 ITs tecnicas exclusivas da VZP Engenharia, mais a gestao de contatos e o padrao de interface, e os conectores de Vobi, Asana, Google Contatos, Construir & Reformar, WhatsApp, VZP Planejamento, Google Maps e PayingLess.",
+  "version": "0.3.0",
+  "description": "Skills dos 4 POPs e 30 ITs tecnicas exclusivas da VZP Engenharia, o padrao de desenvolvimento de app da casa, a interface que se explica e a gestao de contatos, e os conectores de Vobi, Asana, Google Contatos, Construir & Reformar, WhatsApp, VZP Planejamento, Google Maps e PayingLess.",
   "author": {
     "name": "Grupo VZP"
   },
