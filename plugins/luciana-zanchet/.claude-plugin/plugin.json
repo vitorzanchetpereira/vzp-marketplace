@@ -1,7 +1,7 @@
 {
   "name": "luciana-zanchet",
-  "version": "0.1.0",
-  "description": "Skill do POP de Controle e Conciliação Financeira das finanças pessoais de Luciana Zanchet.",
+  "version": "0.1.1",
+  "description": "Skill do POP de Controle e Conciliacao Financeira das financas pessoais de Luciana Zanchet, e o conector do PayingLess.",
   "author": {
     "name": "Grupo VZP"
   },

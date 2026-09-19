@@ -3,6 +3,9 @@
     "sienge": { "type": "http", "url": "https://vzp-mcp-sienge-898146672742.us-central1.run.app/mcp" },
     "prevision": { "type": "http", "url": "https://vzp-mcp-prevision-ra6s7yj5ca-uc.a.run.app/mcp" },
     "asana": { "type": "http", "url": "https://vzp-mcp-asana-ra6s7yj5ca-uc.a.run.app/mcp" },
-    "google_contatos": { "type": "http", "url": "https://vzp-mcp-contatos-ra6s7yj5ca-uc.a.run.app/mcp" }
+    "google_contatos": { "type": "http", "url": "https://vzp-mcp-contatos-ra6s7yj5ca-uc.a.run.app/mcp" },
+    "construbase": { "type": "http", "url": "https://vzp-mcp-construbase-ra6s7yj5ca-uc.a.run.app/mcp" },
+    "google_maps": { "type": "http", "url": "https://vzp-mcp-maps-ra6s7yj5ca-uc.a.run.app/mcp" },
+    "payingless": { "type": "http", "url": "https://vzp-mcp-payingless-ra6s7yj5ca-uc.a.run.app/mcp" }
   }
 }
