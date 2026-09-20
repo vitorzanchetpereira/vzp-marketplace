@@ -112,9 +112,34 @@ Três armadilhas que já derrubaram app nosso em produção, cada uma calada:
 
 Detalhe em `references/dados.md` e `references/publicar.md`.
 
+## Olhar a tela pronta, não só o código
+
+**Toda melhoria termina abrindo a tela no navegador e olhando** — de verdade,
+nas três larguras (celular, tablet, monitor). Não é opcional, e não se
+substitui por ler o código: `grep` e `node --check` provam que o script roda,
+não que a tela ficou boa. "Compila" não é "ficou bom", e "está no ar" não é
+"está apresentável".
+
+O que só o olho pega — e que já foi entregue torto porque ninguém abriu:
+
+- **escrita estourando o card** — texto vazando a borda porque o container não
+  tem padding, ou porque a altura é fixa;
+- **coisas espalhadas** — campo, botão, selo ou cartão desalinhado, fora da
+  grade, ou solto no meio do branco;
+- **sobreposição** — um elemento por cima do outro; alça, etiqueta ou botão
+  saindo do lugar;
+- **sobra de espaço** — coluna órfã, metade da largura em branco.
+
+Renderizar (preview ou navegador), **olhar** e, quando fizer sentido, tirar o
+print é parte de fazer — não passada de acabamento. Ficou ruim, conserta antes
+de dizer que acabou. Não dá para abrir a tela (sem dado, sem login)? Então
+reproduz o pedaço numa página isolada e olha nela — nunca se declara pronto no
+escuro.
+
 ## Antes de dizer que acabou
 
-Varrer, nesta ordem, na largura de celular, de tablet e de monitor:
+Primeiro a tela renderizada na frente (a seção acima). Só então varrer, nesta
+ordem, na largura de celular, de tablet e de monitor:
 
 1. Cada botão da tela leva a algum lugar?
 2. Dá para voltar de toda tela?
