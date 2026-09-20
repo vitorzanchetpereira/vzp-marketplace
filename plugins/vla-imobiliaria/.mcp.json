@@ -16,10 +16,6 @@
       "type": "http",
       "url": "https://vzp-mcp-imoveis-ra6s7yj5ca-uc.a.run.app/mcp"
     },
-    "vero": {
-      "type": "http",
-      "url": "https://vzp-mcp-vero-898146672742.us-central1.run.app/mcp"
-    },
     "payingless": {
       "type": "http",
       "url": "https://vzp-mcp-payingless-ra6s7yj5ca-uc.a.run.app/mcp"
