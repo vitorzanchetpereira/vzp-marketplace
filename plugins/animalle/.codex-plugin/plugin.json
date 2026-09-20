@@ -1,6 +1,6 @@
 {
   "name": "animalle",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Conector da Animalle Pet Care sobre a API do SimplesVet.",
   "author": {
     "name": "Grupo VZP"

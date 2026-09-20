@@ -8,11 +8,11 @@
       "type": "http",
       "url": "https://vzp-mcp-asana-ra6s7yj5ca-uc.a.run.app/mcp"
     },
-    "Google_Contatos": {
+    "Google-Contatos": {
       "type": "http",
       "url": "https://vzp-mcp-contatos-ra6s7yj5ca-uc.a.run.app/mcp"
     },
-    "Construir_Reformar": {
+    "Construir-Reformar": {
       "type": "http",
       "url": "https://vzp-mcp-construir-reformar-ra6s7yj5ca-uc.a.run.app/mcp"
     },
@@ -24,7 +24,7 @@
       "type": "http",
       "url": "https://vzp-mcp-planejamento-ra6s7yj5ca-uc.a.run.app/mcp"
     },
-    "Google_Maps": {
+    "Google-Maps": {
       "type": "http",
       "url": "https://vzp-mcp-maps-ra6s7yj5ca-uc.a.run.app/mcp"
     },

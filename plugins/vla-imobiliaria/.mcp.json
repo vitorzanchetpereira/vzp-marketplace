@@ -8,11 +8,11 @@
       "type": "http",
       "url": "https://vzp-mcp-asana-ra6s7yj5ca-uc.a.run.app/mcp"
     },
-    "Google_Contatos": {
+    "Google-Contatos": {
       "type": "http",
       "url": "https://vzp-mcp-contatos-ra6s7yj5ca-uc.a.run.app/mcp"
     },
-    "Gestao_Imoveis": {
+    "Gestao-Imoveis": {
       "type": "http",
       "url": "https://vzp-mcp-imoveis-ra6s7yj5ca-uc.a.run.app/mcp"
     },

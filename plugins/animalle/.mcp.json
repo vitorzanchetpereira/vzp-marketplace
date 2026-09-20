@@ -1,5 +1,5 @@
 {
   "mcpServers": {
-    "animalle": { "type": "http", "url": "https://vzp-mcp-animalle-ra6s7yj5ca-uc.a.run.app/mcp" }
+    "Animalle": { "type": "http", "url": "https://vzp-mcp-animalle-ra6s7yj5ca-uc.a.run.app/mcp" }
   }
 }

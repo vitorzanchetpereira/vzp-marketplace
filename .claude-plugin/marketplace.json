@@ -14,42 +14,42 @@
       "name": "vzp-engenharia",
       "description": "Skills dos 4 POPs e 30 ITs técnicas exclusivas da VZP Engenharia, o padrão de desenvolvimento de app da casa, a interface que se explica e a gestão de contatos, e os conectores de Vobi, Asana, Google Contatos, Construir & Reformar, WhatsApp, VZP Planejamento, Google Maps, VERO e PayingLess.",
       "source": "./plugins/vzp-engenharia",
-      "version": "0.4.0",
+      "version": "0.5.0",
       "category": "engenharia"
     },
     {
       "name": "base-empreendimentos",
       "description": "Skills dos 5 POPs, 29 ITs, contratos, fluxos operacionais e o fechamento trimestral exclusivos da Base Empreendimentos, e os conectores de Sienge, Prevision, Asana, Google Contatos, ConstruBASE, Google Maps e PayingLess.",
       "source": "./plugins/base-empreendimentos",
-      "version": "0.5.0",
+      "version": "0.6.0",
       "category": "engenharia"
     },
     {
       "name": "vla-engenharia-arquitetura",
       "description": "Skills dos 4 POPs vigentes da VLA Engenharia e Arquitetura, e os conectores de Vobi, Asana, Google Contatos e PayingLess.",
       "source": "./plugins/vla-engenharia-arquitetura",
-      "version": "0.2.0",
+      "version": "0.3.0",
       "category": "engenharia"
     },
     {
       "name": "vla-imobiliaria",
       "description": "Skills dos 4 POPs vigentes da VLA Imobiliária, e os conectores de Vobi, Asana, Google Contatos, Gestão de Imóveis e PayingLess.",
       "source": "./plugins/vla-imobiliaria",
-      "version": "0.3.0",
+      "version": "0.4.0",
       "category": "operacoes"
     },
     {
       "name": "vla-patrimonial",
       "description": "Skill do POP vigente da VLA Patrimonial, e os conectores de Vobi, Asana, Google Contatos e PayingLess.",
       "source": "./plugins/vla-patrimonial",
-      "version": "0.2.0",
+      "version": "0.3.0",
       "category": "operacoes"
     },
     {
       "name": "vitor-zp",
       "description": "Skills pessoais de Vitor Zanchet Pereira — contexto pessoal e profissional, POP de Controle e Conciliação Financeira, organização dos arquivos pessoais, verificação antes de enviar, registro do log do dia e as ferramentas locais de e-mail das quatro caixas — e os conectores da Saúde Pessoal, do Meu Tempo, da operação do produto Zara, do correio das quatro caixas e do PayingLess.",
       "source": "./plugins/vitor-zp",
-      "version": "0.5.0",
+      "version": "0.6.0",
       "category": "financas"
     },
     {
@@ -70,14 +70,14 @@
       "name": "canil-lucini",
       "description": "Contexto operacional do Canil Lucini Ltda (criação de Spitz Alemão em Sorriso/MT) e da Animalle Pet Care, e o conector do software próprio do canil.",
       "source": "./plugins/canil-lucini",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "category": "operacoes"
     },
     {
       "name": "animalle",
       "description": "Conector da Animalle Pet Care (clínica veterinária em Sorriso/MT) sobre a API do SimplesVet: faturamento, ticket, KPIs da semana, conversão, retenção, clientes inativos e origem dos clientes. Outro negócio, não confundir com o Canil Lucini.",
       "source": "./plugins/animalle",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "category": "operacoes"
     }
   ]

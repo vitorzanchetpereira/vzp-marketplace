@@ -103,12 +103,18 @@ mesmo serviço serve mais de uma empresa (Asana, Google Contatos, PayingLess),
 ele é declarado em cada pacote com **o mesmo nome** — é pelo nome que o cliente
 reconhece que é o mesmo conector e mostra um só na lista.
 
-**Como se escreve o nome:** primeira letra de cada palavra em maiúscula e `_`
-entre elas — `Google_Contatos`, `Construir_Reformar`, `Asana`. Essa chave não é
+**Como se escreve o nome:** primeira letra de cada palavra em maiúscula e `-`
+entre elas — `Google-Contatos`, `Construir-Reformar`, `Asana`. Essa chave não é
 rótulo: ela vira o endereço da ferramenta (`plugin:vzp-engenharia:Asana`), e por
-isso **não aceita espaço** nem acento. É também por ela que passa a autorização,
-então renomear um conector existente obriga a autorizar de novo — mudar o nome
-não é ajuste cosmético, é troca de identidade.
+isso **não aceita espaço** nem acento — só letra, número, `-` e `_`. É também por
+ela que passa a autorização, então renomear um conector existente obriga a
+autorizar de novo — mudar o nome não é ajuste cosmético, é troca de identidade.
+
+O hífen é escolha de 19/09/2026, depois de o sublinhado ter sido julgado feio na
+lista de conectores do claude.ai. Espaço era o pedido e **não existe** aqui;
+hífen é o mais perto que a chave chega. Nome de uma palavra só foi descartado
+por explicar menos — `Google-Contatos` diz de onde vem o contato, `Contatos`
+não.
 
 Um serviço não deve existir ao mesmo tempo aqui e como conector personalizado
 no claude.ai. Dois conectores iguais na lista não é cosmético: cada um tem seu

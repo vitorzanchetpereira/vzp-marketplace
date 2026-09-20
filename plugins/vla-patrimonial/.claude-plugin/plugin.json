@@ -1,6 +1,6 @@
 {
   "name": "vla-patrimonial",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Skill do POP vigente da VLA Patrimonial, e os conectores de Vobi, Asana, Google Contatos e PayingLess.",
   "author": {
     "name": "Grupo VZP"

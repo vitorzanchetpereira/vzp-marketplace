@@ -1,6 +1,6 @@
 {
   "name": "vla-imobiliaria",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Skills dos 4 POPs vigentes da VLA Imobiliaria, e os conectores de Vobi, Asana, Google Contatos, Gestao de Imoveis e PayingLess.",
   "author": {
     "name": "Grupo VZP"
