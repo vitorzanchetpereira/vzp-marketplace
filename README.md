@@ -101,7 +101,23 @@ de executar.
 Cada pacote declara em `.mcp.json` os conectores que a empresa usa. Quando o
 mesmo serviço serve mais de uma empresa (Asana, Google Contatos, PayingLess),
 ele é declarado em cada pacote com **o mesmo nome** — é pelo nome que o cliente
-reconhece que é o mesmo conector e mostra um só na lista.
+reconhece que é um conector só: abre uma conexão, pede uma autorização, e
+autorizar por um pacote vale para todos.
+
+**A tela não mostra assim, e isso assusta.** Em *Personalizar → Conectores* o
+`Asana` aparece cinco vezes, uma por pacote que o declara ("Fornecido pelo
+plugin Vla imobiliaria", "...Vzp engenharia", e assim por diante). São cinco
+linhas para um servidor só. Quem contar linha vai achar que duplicou; não
+duplicou.
+
+**Conector de plugin não tem painel de permissão por ferramenta.** Aquela tela
+de Aprovar / Requer aprovação / Bloquear existe só para conector da conta
+(personalizado e de terceiro), porque nesses a Anthropic guarda o token e
+consegue listar as ferramentas do servidor. O de plugin **não existe na conta** —
+a API de conectores da conta não o devolve; ele vive na instalação do plugin, e
+quem controla o que ele faz é a permissão da sessão. É o preço de migrar para o
+marketplace, pago em troca de atualizar num lugar só. Se algum conector precisar
+mesmo desse controle fino, o caminho é mantê-lo personalizado de propósito.
 
 **Como se escreve o nome:** primeira letra de cada palavra em maiúscula e `-`
 entre elas — `Google-Contatos`, `Construir-Reformar`, `Asana`. Essa chave não é
