@@ -103,6 +103,13 @@ mesmo serviço serve mais de uma empresa (Asana, Google Contatos, PayingLess),
 ele é declarado em cada pacote com **o mesmo nome** — é pelo nome que o cliente
 reconhece que é o mesmo conector e mostra um só na lista.
 
+**Como se escreve o nome:** primeira letra de cada palavra em maiúscula e `_`
+entre elas — `Google_Contatos`, `Construir_Reformar`, `Asana`. Essa chave não é
+rótulo: ela vira o endereço da ferramenta (`plugin:vzp-engenharia:Asana`), e por
+isso **não aceita espaço** nem acento. É também por ela que passa a autorização,
+então renomear um conector existente obriga a autorizar de novo — mudar o nome
+não é ajuste cosmético, é troca de identidade.
+
 Um serviço não deve existir ao mesmo tempo aqui e como conector personalizado
 no claude.ai. Dois conectores iguais na lista não é cosmético: cada um tem seu
 próprio consentimento e seu próprio estado, e a IA escolhe um sem dizer qual.

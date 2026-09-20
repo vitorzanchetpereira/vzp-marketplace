@@ -1,8 +1,20 @@
 {
   "mcpServers": {
-    "vobi": { "type": "http", "url": "https://vzp-mcp-vobi-ra6s7yj5ca-uc.a.run.app/mcp" },
-    "asana": { "type": "http", "url": "https://vzp-mcp-asana-ra6s7yj5ca-uc.a.run.app/mcp" },
-    "google_contatos": { "type": "http", "url": "https://vzp-mcp-contatos-ra6s7yj5ca-uc.a.run.app/mcp" },
-    "payingless": { "type": "http", "url": "https://vzp-mcp-payingless-ra6s7yj5ca-uc.a.run.app/mcp" }
+    "Vobi": {
+      "type": "http",
+      "url": "https://vzp-mcp-vobi-ra6s7yj5ca-uc.a.run.app/mcp"
+    },
+    "Asana": {
+      "type": "http",
+      "url": "https://vzp-mcp-asana-ra6s7yj5ca-uc.a.run.app/mcp"
+    },
+    "Google_Contatos": {
+      "type": "http",
+      "url": "https://vzp-mcp-contatos-ra6s7yj5ca-uc.a.run.app/mcp"
+    },
+    "Payingless": {
+      "type": "http",
+      "url": "https://vzp-mcp-payingless-ra6s7yj5ca-uc.a.run.app/mcp"
+    }
   }
 }

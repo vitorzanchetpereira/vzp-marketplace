@@ -1,22 +1,22 @@
 {
   "mcpServers": {
-    "vobi": {
+    "Vobi": {
       "type": "http",
       "url": "https://vzp-mcp-vobi-ra6s7yj5ca-uc.a.run.app/mcp"
     },
-    "asana": {
+    "Asana": {
       "type": "http",
       "url": "https://vzp-mcp-asana-ra6s7yj5ca-uc.a.run.app/mcp"
     },
-    "google_contatos": {
+    "Google_Contatos": {
       "type": "http",
       "url": "https://vzp-mcp-contatos-ra6s7yj5ca-uc.a.run.app/mcp"
     },
-    "gestao_imoveis": {
+    "Gestao_Imoveis": {
       "type": "http",
       "url": "https://vzp-mcp-imoveis-ra6s7yj5ca-uc.a.run.app/mcp"
     },
-    "payingless": {
+    "Payingless": {
       "type": "http",
       "url": "https://vzp-mcp-payingless-ra6s7yj5ca-uc.a.run.app/mcp"
     }

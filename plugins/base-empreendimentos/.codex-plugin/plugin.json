@@ -1,6 +1,6 @@
 {
   "name": "base-empreendimentos",
-  "version": "0.3.2+codex.20260730170544",
+  "version": "0.4.0",
   "description": "Skills dos 5 POPs, 29 ITs, contratos e fluxos operacionais exclusivos da Base Empreendimentos.",
   "author": {
     "name": "Grupo VZP"
@@ -12,7 +12,10 @@
     "longDescription": "Skills internas construídas a partir de 5 POPs, 29 ITs e do padrão contratual da Base Empreendimentos. Não aplicar procedimentos de outras empresas.",
     "developerName": "Grupo VZP",
     "category": "Productivity",
-    "capabilities": ["Knowledge", "Workflow"],
+    "capabilities": [
+      "Knowledge",
+      "Workflow"
+    ],
     "defaultPrompt": [
       "Execute este trabalho conforme os padrões vigentes da Base Empreendimentos.",
       "Revise este contrato conforme o padrão da Base Empreendimentos."
