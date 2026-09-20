@@ -98,10 +98,23 @@ Cabeçalhos, e cada um tem motivo:
 
 ## Os que ainda têm a armadilha
 
-`canil-lucini`, `vzp-desenhos` e `vzp-gestao-de-imoveis` seguem com service
-worker que intercepta arquivo e cache versionado à mão (`lucini-shell-v18`).
-Funciona enquanto alguém lembra de subir o número a cada publicação — e o dia
-que esquecer é o dia da tela destruída. Ao mexer em qualquer um deles, migrar.
+**`canil-lucini` é o caso inteiro.** Service worker que intercepta arquivo com
+cache de casca versionado à mão (`lucini-shell-v18`). Funciona enquanto alguém
+lembra de subir o número a cada publicação — e o dia que esquecer é o dia da
+tela destruída. Ao mexer nele, migrar.
+
+**`vzp-gestao-de-imoveis` é meio caminho.** HTML e manifesto já vêm da rede
+primeiro, e `/api/` e `/ical/` nunca entram em cache — isso está certo. O que
+sobra é o estático: JS e CSS são cache-primeiro sem carimbo de versão no
+endereço, então a primeira carga depois de publicar ainda mistura. Falta só o
+carimbo, não o service worker inteiro.
+
+**`vzp-desenhos` já resolveu, por outro caminho, e vale ler.** Lá o código vem
+da rede primeiro e só o WebAssembly (10 MB, nunca muda) vem do cache. O próprio
+arquivo conta que na v1 tudo era cache-primeiro e uma correção no `app.mjs`
+simplesmente não chegava — uma hora de medição para descobrir que a página
+rodava o script de antes. Duas saídas legítimas para o mesmo problema: carimbar
+a versão no endereço, ou não interceptar o que muda.
 
 Ao receber "está quebrado" ou "ficou feio" logo depois de publicar: **conferir
 cache antes de mexer no layout.** Comparar o arquivo que o servidor entrega com
