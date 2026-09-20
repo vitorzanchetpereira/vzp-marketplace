@@ -34,9 +34,21 @@ Na dúvida, registre — o custo de um registro a mais é zero; o de um a menos 
 
 ### 1. Carregue o conector do Asana
 
-ToolSearch: `select:mcp__041aa7e0-a6b3-4dde-a314-66c50d91da3c__buscar_tarefas,mcp__041aa7e0-a6b3-4dde-a314-66c50d91da3c__criar_tarefa,mcp__041aa7e0-a6b3-4dde-a314-66c50d91da3c__comentar_tarefa`
+**Descubra o prefixo, não presuma.** Ele muda conforme onde a sessão roda, e
+instrução que fixa um prefixo é a própria armadilha — já matou quatro rodadas
+em silêncio (24 e 25/08/2026). Busque por palavra-chave:
 
-Os nomes curtos (`mcp__Asana__*`) NÃO existem. Workspace = `"Base"`.
+ToolSearch: `buscar_tarefas comentar_tarefa criar_tarefa asana`
+
+Hoje, nesta máquina, quem responde é o do plugin —
+`mcp__plugin_vzp-engenharia_Asana__…` ou `mcp__plugin_base-empreendimentos_Asana__…`.
+O antigo de prefixo UUID (`mcp__041aa7e0-…`) **foi apagado em 19/09/2026**, junto
+com os outros conectores personalizados: o marketplace virou fonte única. Os
+nomes curtos (`mcp__asana__*`) só existem nas tarefas agendadas do app de
+desktop, não aqui.
+
+Só declare o conector indisponível depois de tentar por palavra-chave.
+Workspace = `"Base"`.
 
 ### 2. Descubra a data
 
