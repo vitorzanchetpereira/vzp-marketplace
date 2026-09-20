@@ -1,6 +1,6 @@
 {
   "name": "vzp-engenharia-marketplace",
-  "version": "1.14.0",
+  "version": "1.15.0",
   "description": "Skills internas separadas por empresa do Grupo VZP.",
   "owner": {
     "name": "VZP Engenharia",
@@ -21,7 +21,7 @@
       "name": "base-empreendimentos",
       "description": "Skills dos 5 POPs, 29 ITs, contratos, fluxos operacionais e o fechamento trimestral exclusivos da Base Empreendimentos, e os conectores de Sienge, Prevision, Asana, Google Contatos, ConstruBASE, Google Maps e PayingLess.",
       "source": "./plugins/base-empreendimentos",
-      "version": "0.6.0",
+      "version": "0.7.0",
       "category": "engenharia"
     },
     {
@@ -49,7 +49,7 @@
       "name": "vitor-zp",
       "description": "Skills pessoais de Vitor Zanchet Pereira — contexto pessoal e profissional, POP de Controle e Conciliação Financeira, organização dos arquivos pessoais, verificação antes de enviar, registro do log do dia e as ferramentas locais de e-mail das quatro caixas — e os conectores da Saúde Pessoal, do Meu Tempo, da operação do produto Zara, do correio das quatro caixas e do PayingLess.",
       "source": "./plugins/vitor-zp",
-      "version": "0.6.0",
+      "version": "0.7.0",
       "category": "financas"
     },
     {

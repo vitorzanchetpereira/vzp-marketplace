@@ -33,13 +33,17 @@ Os cartões `📊 Log do dia — DD/MM/AAAA` vivem no projeto Asana **"Assistent
 (workspace *BASE Empreendimentos*, conta "Base"). A série começou em **22/07/2026**.
 
 ```
-mcp__asana__buscar_tarefas  texto="Log do dia"  workspace="BASE"  limite=60
+buscar_tarefas  texto="Log do dia"  workspace="BASE"  limite=60
+
+# O prefixo do conector muda conforme onde a sessao roda: descubra com
+# ToolSearch por palavra-chave (`buscar_tarefas obter_tarefa asana`), nunca
+# fixe um. Hoje e o do plugin; o antigo de UUID foi apagado em 19/09/2026.
 ```
 
 Armadilhas conhecidas, todas já custaram tempo:
 
 - **O conector cai de sessão a cada poucas chamadas** (`session expired`). Recarregue com
-  `ToolSearch select:mcp__asana__listar_comentarios,mcp__asana__obter_tarefa` e siga. Não é falha real.
+  `ToolSearch` por palavra-chave (`listar_comentarios obter_tarefa asana`) e siga. Não é falha real.
 - **O conteúdo do log fica ora em comentário, ora nas notas.** Depende de qual conector rodou naquele
   dia. **Sempre chame as duas** — `listar_comentarios` e `obter_tarefa` — por cartão. `total: 0` em
   comentários não significa cartão vazio.
