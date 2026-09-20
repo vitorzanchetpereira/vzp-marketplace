@@ -1,6 +1,6 @@
 {
   "name": "vzp-engenharia-marketplace",
-  "version": "1.15.0",
+  "version": "1.16.0",
   "description": "Skills internas separadas por empresa do Grupo VZP.",
   "owner": {
     "name": "VZP Engenharia",
@@ -78,6 +78,13 @@
       "description": "Conector da Animalle Pet Care (clínica veterinária em Sorriso/MT) sobre a API do SimplesVet: faturamento, ticket, KPIs da semana, conversão, retenção, clientes inativos e origem dos clientes. Outro negócio, não confundir com o Canil Lucini.",
       "source": "./plugins/animalle",
       "version": "0.2.0",
+      "category": "operacoes"
+    },
+    {
+      "name": "animalle-marketing",
+      "description": "Motor do departamento de marketing autônomo da Animalle Pet Care: planeja campanhas por ciclo (quinzenal a anual) com cenários por verba, registra proposta, aprovação, campanha, gasto e resultado, e publica atrás de dupla trava. Grava e gasta (nasce desligado). Separado do conector animalle, que só lê.",
+      "source": "./plugins/animalle-marketing",
+      "version": "0.1.0",
       "category": "operacoes"
     }
   ]

@@ -1,0 +1,19 @@
+{
+  "name": "animalle-marketing",
+  "version": "0.1.0",
+  "description": "Motor do departamento de marketing autonomo da Animalle Pet Care: planeja campanhas por ciclo (quinzenal a anual) com cenarios por verba, registra proposta, aprovacao, campanha, gasto e resultado, e publica atras de dupla trava. GRAVA e GASTA (nasce desligado). Separado do conector animalle, que so le.",
+  "author": {
+    "name": "Grupo VZP"
+  },
+  "keywords": [
+    "animalle",
+    "marketing",
+    "campanha",
+    "google-ads",
+    "meta",
+    "tiktok",
+    "anuncio",
+    "roas",
+    "sorriso"
+  ]
+}
