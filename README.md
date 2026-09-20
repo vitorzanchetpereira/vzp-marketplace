@@ -110,6 +110,14 @@ plugin Vla imobiliaria", "...Vzp engenharia", e assim por diante). São cinco
 linhas para um servidor só. Quem contar linha vai achar que duplicou; não
 duplicou.
 
+Hoje são **19 conectores em 38 linhas** — metade é repetição: `Payingless` 8×,
+`Asana` 5×, `Google-Contatos` 5×, `Vobi` 4×, `Google-Maps` 2×. **Decidido em
+19/09/2026 deixar assim.** A alternativa era tirar os repetidos para um pacote
+comum e cair para 19 linhas, mas aí cada pessoa passaria a instalar dois pacotes
+e quem instalasse só o da empresa ficaria sem conector nenhum, sem entender por
+quê. Pacote autossuficiente vale mais que lista curta: o ruído é visual e se
+ignora, o conector faltando trava o trabalho e parece defeito.
+
 **Conector de plugin não tem painel de permissão por ferramenta.** Aquela tela
 de Aprovar / Requer aprovação / Bloquear existe só para conector da conta
 (personalizado e de terceiro), porque nesses a Anthropic guarda o token e
