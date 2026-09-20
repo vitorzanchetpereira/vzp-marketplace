@@ -1,0 +1,18 @@
+{
+  "name": "animalle",
+  "version": "0.1.0",
+  "description": "Conector da Animalle Pet Care (clinica veterinaria em Sorriso/MT) sobre a API do SimplesVet: faturamento, ticket medio, KPIs da semana (consultas, especialidades, vacinas, cirurgias, exames, internacoes), conversao, retencao, clientes inativos, origem dos clientes, ranking de itens e o relatorio semanal. Outro negocio, nao confundir com o Canil Lucini.",
+  "author": {
+    "name": "Grupo VZP"
+  },
+  "keywords": [
+    "animalle",
+    "pet",
+    "veterinaria",
+    "clinica",
+    "simplesvet",
+    "faturamento",
+    "kpi",
+    "sorriso"
+  ]
+}

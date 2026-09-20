@@ -1,7 +1,7 @@
 {
   "name": "canil-lucini",
-  "version": "0.3.0",
-  "description": "Contexto operacional do Canil Lucini Ltda (criacao de Spitz Alemao em Sorriso/MT) e da Animalle Pet Care. Dois conectores: o do software proprio do canil (plantel, genealogia, saude, reproducao, funil, financeiro, agenda, estoque) e o da Animalle Pet Care sobre a API do SimplesVet (faturamento, KPIs, conversao, retencao, clientes).",
+  "version": "0.1.0",
+  "description": "Contexto operacional do Canil Lucini Ltda (criacao de Spitz Alemao em Sorriso/MT) e da Animalle Pet Care, e o conector do software proprio do canil: plantel, genealogia, saude, reproducao, funil comercial, financeiro, agenda e estoque.",
   "author": {
     "name": "Grupo VZP"
   },
