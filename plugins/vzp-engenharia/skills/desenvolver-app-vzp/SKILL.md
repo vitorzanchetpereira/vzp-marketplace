@@ -99,6 +99,13 @@ alcançável de qualquer tela, com rotas liberadas para toda conta — inclusive
 que perdeu acesso a tudo, que é justamente quem precisa reclamar. Ao copiar,
 manter as cinco decisões do padrão (fonte: `projetos/saude-pessoal/src/melhorias.js`).
 
+**Melhoria entregue fecha o card.** O botão de melhorias não é caixa de entrada
+só de ida: quem pediu precisa ver que foi feito. Ao terminar uma melhoria pedida
+ali, **volte no card e marque a sugestão como feita** — com uma linha do que
+entrou — antes de dizer que acabou. "Feita" quer dizer "a testar", não
+"arquivada". Card que fica em aberto depois de pronto ensina a pessoa a parar de
+pedir, e some o rastro de quem entregou o quê.
+
 ## Dado e publicação
 
 Três armadilhas que já derrubaram app nosso em produção, cada uma calada:
