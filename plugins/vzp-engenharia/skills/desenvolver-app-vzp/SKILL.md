@@ -52,7 +52,7 @@ conclui que a correção não funcionou.
 
 Detalhe e código de referência em `references/pwa.md`.
 
-## As oito leis da tela
+## As nove leis da tela
 
 **1. Toda tela em que se entra tem como sair.** Botão de voltar, sempre. Em PWA
 com `display: standalone` isso é obrigação dobrada: ali não existe o botão do
@@ -85,6 +85,17 @@ acabou de pedir.
 **8. A explicação chega por mouse, dedo e foco.** Interface que só explica no
 `hover` não explica nada no telefone — e telefone costuma ser onde ela mais é
 usada.
+
+**9. Toda aba abre com o painel dela.** Logo abaixo do título, antes de
+qualquer lista ou formulário, vem a fileira de cartões com os números que
+importam naquela aba — o que está atrasado, o que vence, quanto está em dia,
+quanto entrou. Quem abre a aba lê a situação num relance, sem rolar. Cada
+cartão obedece à lei 2: toca e leva ao que compõe o número (filtra a lista
+abaixo, rola até o painel certo ou abre a aba de onde ele vem). Número de
+enfeite não entra: aba sem dado ainda diz isso (lei 4) em vez de mostrar zeros.
+A quantidade de cartões casa com as colunas da grade (lei 5) — seis cabem em
+3 × 2 no tablet e 2 × 3 no celular, cinco deixam um órfão. Referência: a aba
+Saúde e o Plantel do `canil-lucini`.
 
 O detalhe de como escrever a explicação, o registro de verbetes em arquivo
 separado e a conferência tela a tela estão na skill **`interface-que-se-explica`**,
@@ -156,3 +167,4 @@ ordem, na largura de celular, de tablet e de monitor:
 6. Lista vazia ensina?
 7. Sobrou espaço grande em branco em alguma largura?
 8. `grep` por `_blank` e `window.open` dá zero?
+9. Toda aba abre com o painel de indicadores no topo, e cada cartão leva a algum lugar?
