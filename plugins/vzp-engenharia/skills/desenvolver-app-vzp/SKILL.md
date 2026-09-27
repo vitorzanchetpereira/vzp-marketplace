@@ -52,7 +52,7 @@ conclui que a correção não funcionou.
 
 Detalhe e código de referência em `references/pwa.md`.
 
-## As nove leis da tela
+## As dez leis da tela
 
 **1. Toda tela em que se entra tem como sair.** Botão de voltar, sempre. Em PWA
 com `display: standalone` isso é obrigação dobrada: ali não existe o botão do
@@ -104,6 +104,32 @@ conseguir sozinha. Tela só de leitura é defeito, não "versão 1".
   — e aí a tela diz isso por escrito e aponta onde se muda.
 - A rota do servidor nasce junto: `POST`, `PUT`/`PATCH` e `DELETE` para cada
   tabela que a tela mostra, com a mesma validação que o conector usa.
+
+**10. Quem usa arruma os cartões.** Tela com dois cartões ou mais deixa a pessoa
+mudar a ordem deles. A ordem que o programa escolhe é um palpite sobre o que
+importa, e erra para cada um de um jeito: quem treina quer o treino em cima,
+quem cuida de um remédio quer o remédio. Não se pergunta "posso deixar mover?"
+— nasce móvel.
+
+- É um **modo** (lei 7): "Organizar cartões" liga, "Concluir" desliga. Alça de
+  arrastar solta o tempo todo é convite para mover sem querer ao rolar a tela
+  no celular.
+- Arrasta com **mouse e dedo** — pointer events, não o drag-and-drop do HTML,
+  que não existe no toque — e tem **↑ ↓** para quem usa teclado ou não acerta
+  o arrasto numa tela pequena.
+- A ordem fica **no servidor, por conta**, não no `localStorage`: a mesma
+  pessoa abre no celular e no notebook, e arrumar num para achar a ordem velha
+  no outro é arrumar duas vezes.
+- **"Ordem padrão"** devolve o arranjo de fábrica. Cartão que deixou de existir
+  é ignorado; cartão novo entra no fim.
+- Cada cartão vai para a **vaga** que um cartão ocupava — cabeçalho e números do
+  topo não descem junto.
+
+Não é preciso reescrever tela por tela: um módulo só, que acha os blocos de
+cartões depois de cada desenho e tira a chave do título. Referência:
+`projetos/saude-pessoal/public/leiaute.js`, com a tabela em
+`db/031_leiaute.sql` e as rotas `/api/leiaute` liberadas para toda conta,
+inclusive a de só leitura — arrumar a própria tela não é mexer no dado.
 
 O detalhe de como escrever a explicação, o registro de verbetes em arquivo
 separado e a conferência tela a tela estão na skill **`interface-que-se-explica`**,
@@ -176,3 +202,4 @@ ordem, na largura de celular, de tablet e de monitor:
 7. Sobrou espaço grande em branco em alguma largura?
 8. `grep` por `_blank` e `window.open` dá zero?
 9. Cada lista deixa criar, abrir e alterar, e excluir o registro sem passar pela IA?
+10. Tela com dois cartões ou mais deixa reordenar — arrastando e por ↑ ↓ — e a ordem volta igual no outro aparelho?
