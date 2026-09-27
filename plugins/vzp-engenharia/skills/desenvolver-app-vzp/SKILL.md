@@ -52,7 +52,7 @@ conclui que a correção não funcionou.
 
 Detalhe e código de referência em `references/pwa.md`.
 
-## As oito leis da tela
+## As nove leis da tela
 
 **1. Toda tela em que se entra tem como sair.** Botão de voltar, sempre. Em PWA
 com `display: standalone` isso é obrigação dobrada: ali não existe o botão do
@@ -85,6 +85,25 @@ acabou de pedir.
 **8. A explicação chega por mouse, dedo e foco.** Interface que só explica no
 `hover` não explica nada no telefone — e telefone costuma ser onde ela mais é
 usada.
+
+**9. O que a tela lista, a tela cria, edita e apaga.** Lista de lançamentos,
+animais, eventos, contatos, itens — cada registro que aparece tem, na própria
+tela, o caminho para **criar um novo, abrir e alterar, e excluir**. Fazer pela
+IA (conector) é ótimo, mas é o atalho, não a única porta: quando o conector
+cai, a sessão acaba ou a pessoa só quer corrigir um valor, ela precisa
+conseguir sozinha. Tela só de leitura é defeito, não "versão 1".
+
+- Clicar no registro **abre o registro**, com os campos editáveis — nunca uma
+  janela genérica que repete o texto da linha e diz "este quadro é
+  interativo". Isso é beco sem saída disfarçado (lei 2).
+- Editar segue a lei 7: entra-se num modo e sai-se dele, com Salvar e Cancelar.
+- Excluir pede confirmação dizendo **o que** vai sumir, e o que foi lançado
+  pela integração (ex.: espelho de outro sistema) diz de onde veio e se volta
+  na próxima sincronização.
+- Leitura só é aceitável quando o dado é **de outro sistema e só pode mudar lá**
+  — e aí a tela diz isso por escrito e aponta onde se muda.
+- A rota do servidor nasce junto: `POST`, `PUT`/`PATCH` e `DELETE` para cada
+  tabela que a tela mostra, com a mesma validação que o conector usa.
 
 O detalhe de como escrever a explicação, o registro de verbetes em arquivo
 separado e a conferência tela a tela estão na skill **`interface-que-se-explica`**,
@@ -156,3 +175,4 @@ ordem, na largura de celular, de tablet e de monitor:
 6. Lista vazia ensina?
 7. Sobrou espaço grande em branco em alguma largura?
 8. `grep` por `_blank` e `window.open` dá zero?
+9. Cada lista deixa criar, abrir e alterar, e excluir o registro sem passar pela IA?
