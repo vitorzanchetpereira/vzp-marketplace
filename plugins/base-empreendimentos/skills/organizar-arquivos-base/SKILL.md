@@ -16,7 +16,7 @@ description: >-
 ## Fonte obrigatória
 
 Ler integralmente [references/procedimento.md](references/procedimento.md) antes de executar.
-A referência foi extraída de `POP-04.00-Base-Organizacao-Arquivos-R06.docx`.
+A referência foi extraída de `POP-04.00-Base-Organizacao-Arquivos-R09.docx`.
 
 ## Preparação
 
