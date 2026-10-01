@@ -21,7 +21,7 @@
       "name": "base-empreendimentos",
       "description": "Skills dos 5 POPs, 29 ITs, contratos, fluxos operacionais, o fechamento trimestral e o fluxo de desembolso exclusivos da Base Empreendimentos, e os conectores de Sienge, Prevision, Asana, Google Contatos, ConstruBASE, Google Maps e PayingLess.",
       "source": "./plugins/base-empreendimentos",
-      "version": "0.8.2",
+      "version": "0.8.3",
       "category": "engenharia"
     },
     {
