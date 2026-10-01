@@ -94,12 +94,12 @@ O `--forcar` gera mesmo travado. Só com decisão do Vitor, e com o motivo escri
 ## O que sai
 
 Em `C:\claude\trabalho\fluxo-desembolso\saida\`:
-- `AAMMDD-<MIR|UG>-PLAN-FluxoDesembolso-<Unidade>-RXX.xlsx`, uma por unidade. A revisão sobe
+- `AAMMDD-<MIR|UG>-PLAN-FluxoDesembolso<Unidade>-RXX.xlsx` (ex.: `260930-UG-PLAN-FluxoDesembolsoObraE01-R00.xlsx`), uma por unidade. A revisão sobe
   uma a cada dia de rodada (R00, R01...). Rodar de novo no mesmo dia mantém o número e
   substitui a emissão do dia. Abas Leia-me,
   Fluxo mensal (com gráfico), Premissas (amarelo é editável: CUB futuro % a.a. e prazo por
   pacote), A incorrer, A pagar e Itens. As fórmulas são vivas: a Amanda simula prazo sem nós.
-- `AAMMDD-BASE-PLAN-FluxoDesembolso-Revisao-R00.html`, o relatório de revisão do Vitor, com
+- `AAMMDD-BASE-PLAN-FluxoDesembolsoRevisao-R00.html`, o relatório de revisão do Vitor, com
   as duas obras, o gráfico por unidade, a conferência e o que mudou. **Não vai para a Amanda.**
 - `trabalho\fluxo-desembolso\rodadas\AAMMDD-<obra>.json`, que a rodada seguinte usa para
   dizer o que mudou.
@@ -110,10 +110,10 @@ Unidade sem nada a contratar não gera pasta.
 
 O fluxo é documento recorrente, e o histórico entre as emissões é obrigatório. Depois de o
 Vitor conferir, rode `C:\claude\scripts\fluxo-desembolso\arquivar-sharepoint.ps1`. Para ver
-antes o que ele vai fazer, rode com `-Ensaio`. Ele segue o costume das pastas de planejamento:
-- A emissão em vigor fica na raiz de `10-Plan/Fin` da obra:
-  - Mirage: `Base Empreendimentos/11-Ob em Andam/Ob-MIR-BASE-Sorriso-MT/10-Plan/FIN`
-  - Urbanit: `Base Empreendimentos/11-Ob em Andam/Ob-UG-BASE-Sorriso-MT/10-Plan/Fin`
+antes o que ele vai fazer, rode com `-Ensaio`. Ele segue o POP-04.00 da Base, R09 (§4.3.2 e §6.8):
+- A emissão em vigor fica na raiz de `10-Plan/03-Fluxo Desembolso` da obra:
+  - Mirage: `Base Empreendimentos/11-Ob em Andam/Ob-MIR-BASE-Sorriso-MT/10-Plan/03-Fluxo Desembolso`
+  - Urbanit: `Base Empreendimentos/11-Ob em Andam/Ob-UG-BASE-Sorriso-MT/10-Plan/03-Fluxo Desembolso`
 - Toda emissão anterior da mesma unidade é **movida** para `_Obsoletos/`, nunca apagada. O
   item leva junto o histórico de versões do SharePoint.
 

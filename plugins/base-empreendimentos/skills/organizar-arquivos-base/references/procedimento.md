@@ -1,7 +1,7 @@
 # Referência operacional
 
 - Empresa: Base Empreendimentos
-- Documento vigente: `POP-04.00-Base-Organizacao-Arquivos-R06.docx`
+- Documento vigente: `POP-04.00-Base-Organizacao-Arquivos-R09.docx`
 - Origem: pasta mestra de POPs/ITs da empresa
 - Regra: ao existir nova revisão, reextrair e revalidar esta referência antes do uso.
 
@@ -9,7 +9,7 @@
 
 PROCEDIMENTO DE ORGANIZAÇÃO DE ARQUIVOS E PASTAS
 
-POP-04.00 — Organização de Arquivos — Rev. 04
+POP-04.00 — Organização de Arquivos — Rev. 09
 
 Setor de Planejamento e Engenharia
 
@@ -25,6 +25,9 @@ BASE Empreendimentos Imobiliários Ltda.
 | 04 | 19/07/2026 | Numeração obrigatória das subpastas de obra (00-Import a 12-Rh e Dp), fixando a ordem de exibição no SharePoint. Criada a §4.3.0 (00-Import — caixa de entrada da obra, com regras de depósito, triagem e vedações) e a §4.3.8 (05-Fin — financeiro da obra, obrigatória: 01-Ord Pag / 02-Boletos / 03-Comprovantes). Tabela de subpastas de obra e mapa visual (§7) atualizados. Alinhamento à numeração já adotada pela VZP. | Vitor Zanchet |
 | 05 | 19/07/2026 | Reordenacao da numeracao das subpastas de obra para ordem ALFABETICA (00-Import no topo): 00-Import, 01-Compras, 02-Contratos, 03-Doc, 04-Ehs, 05-Fin, 06-Fisc, 07-ITs, 08-Med Serv Prop, 09-Med Serv Terc, 10-Plan, 11-Proj, 12-Rh e Dp. Tabela de subpastas, mapa visual e referencias atualizados; aplicado nas pastas. | Vitor Zanchet |
 | 06 | 19/07/2026 | Atualizada a Estrutura Raiz (§3): as pastas de 1o nivel passam a ser numeradas com 00-Import no topo, refletindo a numeracao aplicada no repositorio. Inclui a 00-Import corporativa e a Correcao Manual de Arquivos. | Vitor Zanchet |
+| 07 | 27/08/2026 | Criada a área COMERCIAL: na obra, 02-Contratos passa a 02-Vendas com 00-Propostas e 01-Contratos; no corporativo, criada 15-Vendas (§5.10), que recebeu os contratos de Doc e Cad/Contratos e as propostas de Mark e Prop. Contrato social permanece em 04-Doc e Cad. | Vitor Zanchet |
+| 08 | 27/08/2026 | Contrato passa a existir nos DOIS lados da relação comercial: criada 01-Compras/05-Contratos para todo contrato de compra, e 02-Vendas/01-Contratos passa a conter somente contrato de VENDA. Instituído o princípio dos dois lados e a regra de que a pasta da obra pertence ao empreendimento (§4.3.4). Corrigida a legenda da sigla MP: Marketing e PROPAGANDA, não Propostas (§5.4). Aplicado em MIR e UG e na raiz em 27/08/2026. | Vitor Zanchet |
+| 09 | 01/10/2026 | Reorganizada a 10-Plan das obras em quatro subpastas numeradas: 01-Cronograma, 02-Orcamento, 03-Fluxo Desembolso e 04-RDO, cada uma com o próprio _Obsoletos/ (§4.3.2). A antiga FIN de Plan deixa de existir: orçamento e fluxo de desembolso ganham pasta própria. Substituída a §6.8: documento de planejamento passa a se chamar AAMMDD-[OBRA]-PLAN-[Descrição]-RXX, e documento recorrente guarda histórico subindo a revisão e movendo a anterior para _Obsoletos/. O que não é planejamento sai de 10-Plan (controle tecnológico para 06-Fisc, projeto para 11-Proj, documentação do empreendimento para 03-Doc). Aplicado em MIR e UG em 01/10/2026. | Vitor Zanchet |
 
 | ELABORADO POR | ANALISADO POR | APROVADO POR |
 | --- | --- | --- |
@@ -75,11 +78,12 @@ A raiz do repositório SharePoint é uma biblioteca de documentos denominada BAS
 | 06-Fin | FIN | Financeiro corporativo. |
 | 07-Fisc | FISC | Fiscal e tributário corporativo. |
 | 08-Inst Trab e Pop's | IT | Instruções técnicas e POPs corporativos. |
-| 09-Mark e Prop | MP | Marketing e propostas comerciais. |
+| 09-Mark e Prop | MP | Marketing e PROPAGANDA: campanhas, imagens, logo, placa de obra, book de vendas e material estratégico. "Prop" é PROPAGANDA, não proposta — a proposta comercial fica em 15-Vendas. |
 | 10-Ob Concluidas | — | Obras finalizadas (mesma estrutura interna das obras em andamento). |
 | 11-Ob em Andam | — | Obras em execução (uma subpasta por obra). |
 | 12-Rh e Dp | RH | Recursos Humanos e Departamento Pessoal corporativo. |
 | 13-Soft, Prog e Manuais | — | Softwares, programas e manuais. |
+| 15-Vendas | VEN | Comercial da empresa — lado da RECEITA: 00-Propostas e 01-Contratos. Contrato de COMPRA corporativo fica em 01-Compras/05-Contratos. Ver §5.10. |
 
 4.0 ESTRUTURA DE OBRAS
 
@@ -104,8 +108,8 @@ Numeração obrigatória. As subpastas de obra são prefixadas com número de 2 
 | SUBPASTA | SIGLA | CONTEÚDO |
 | --- | --- | --- |
 | 00-Import | IMP | CAIXA DE ENTRADA da obra — destino único de todo arquivo recebido que ainda não foi classificado. Triagem periódica pela BASE. Ver §4.3.0. |
-| 01-Compras | COMP | Processo completo de compras (5 subpastas sequenciais). |
-| 02-Contratos | CONT | Contratos com clientes, fornecedores e subempreiteiros. |
+| 01-Compras | COMP | Processo completo de compras (00-Mem Calc Quant a 05-Contratos). A subpasta 05-Contratos guarda TODOS os contratos de compra da obra: fornecedor, subempreiteiro, projetista, locação e gestão contratada. |
+| 02-Vendas | VEN | Lado da RECEITA na obra: 00-Propostas (proposta ao cliente) e 01-Contratos (contrato de venda — cliente, unidade do empreendimento, permuta). Contrato de compra NÃO fica aqui: vai para 01-Compras/05-Contratos. Ver §4.3.4. |
 | 03-Doc | DOC | Documentos gerais (atas, documentos do imóvel, registros). |
 | 04-Ehs | EHS | Segurança, meio ambiente e saúde no trabalho. |
 | 05-Fin | FIN | Financeiro da obra — OBRIGATÓRIA. Ordens de pagamento, boletos e comprovantes ficam SEMPRE aqui, nunca em 01-Compras. Ver §4.3.8. |
@@ -113,11 +117,11 @@ Numeração obrigatória. As subpastas de obra são prefixadas com número de 2 
 | 07-ITs | IT | Instruções técnicas de execução da obra. |
 | 08-Med Serv Prop | MSP | Medições dos serviços próprios da BASE. |
 | 09-Med Serv Terc | MST | Medições dos serviços terceirizados. |
-| 10-Plan | PLAN | Planejamento: RDO, RSO e cronograma financeiro. |
+| 10-Plan | PLAN | Planejamento: 01-Cronograma / 02-Orcamento / 03-Fluxo Desembolso / 04-RDO. Ver §4.3.2. |
 | 11-Proj | PROJ | Projetos técnicos por disciplina. |
 | 12-Rh e Dp | RH | Documentos dos trabalhadores da obra. |
 
-| NOTA Em cada pasta Proj/<disciplina>/ e, quando aplicável, dentro da raiz de Proj/, a subpasta _Obsoletos/ armazena versões superadas (revisões antigas, arquivos duplicados, materiais de descarte). O prefixo "_" garante ordenação alfabética no topo da listagem. Conteúdos jamais devem ser excluídos sem revisão do gestor — mantidos para auditoria conforme POP-01.00 §10. |
+| NOTA  Em cada pasta Proj/<disciplina>/ e, quando aplicável, dentro da raiz de Proj/, a subpasta _Obsoletos/ armazena versões superadas (revisões antigas, arquivos duplicados, materiais de descarte). O prefixo "_" garante ordenação alfabética no topo da listagem. Conteúdos jamais devem ser excluídos sem revisão do gestor — mantidos para auditoria conforme POP-01.00 §10. |
 | --- |
 
 4.3 Detalhamento das subpastas
@@ -152,15 +156,21 @@ Vedações. 00-Import não é área de armazenamento nem de trabalho. É vedado 
 | Canteiro | Layout e implantação do canteiro de obras. |
 | Luminotécnico | Projeto luminotécnico (iluminação técnica/decorativa, fotometria). |
 
-4.3.2 Plan — Planejamento
+4.3.2 10-Plan — Planejamento
 
-- RDO — Relatório Diário de Obra.
+- 01-Cronograma — cronograma físico, macrofluxos, linhas de base, exportações do Prevision (MSPDI, XML), vínculos orçamento × cronograma e relatórios de cronograma.
 
-- RSO — Relatório Semanal de Obra.
+- 02-Orcamento — planilha orçamentária, importações e conferências do Sienge, EAP, verbas, comparativos e estudos de custo, quantitativos que alimentam o orçamento.
 
-- FIN — Cronograma financeiro e fluxo de caixa da obra.
+- 03-Fluxo Desembolso — fluxo de desembolso de cada unidade construtiva, cronograma financeiro, matriz de condição de pagamento e simuladores de caixa.
 
-- Relatorios — planilhas orçamentárias, fluxos financeiros, pagamentos em aberto e demais relatórios financeiros gerados durante a obra (subpasta de FIN). Padrão de nomenclatura: ver §6.8.
+- 04-RDO — Relatório Diário de Obra e registro fotográfico. O RSO (Relatório Semanal de Obra) também fica aqui.
+
+Regra do vigente. Na raiz de cada subpasta fica somente a emissão em vigor de cada documento. Toda revisão superada vai para o _Obsoletos/ da mesma subpasta, movida e nunca apagada, para manter o histórico de versões do SharePoint.
+
+Documento recorrente (fluxo de desembolso, cronograma financeiro, relatório periódico) segue a mesma regra a cada emissão: a nova sobe a revisão (R00, R01, R02…) e a anterior desce para _Obsoletos/. Assim, a raiz mostra o que vale hoje e o _Obsoletos/ conta a história, em ordem de data.
+
+Não pertence a 10-Plan: controle tecnológico, mapas de concretagem, rompimento e as-built (06-Fisc); cópias e estudos de projeto e compatibilização (11-Proj); laudos, documentação da Caixa e cadastro do empreendimento (03-Doc); quadro de vendas (02-Vendas).
 
 4.3.3 Compras — Processo de Aquisição
 
@@ -171,14 +181,23 @@ Vedações. 00-Import não é área de armazenamento nem de trabalho. É vedado 
 | 02-Orcamentos | Orçamentos recebidos de fornecedores. |
 | 03-Mapa-de-Cotacoes | Planilhas de cotação e comparativo. |
 | 04-Ord Comp | Ordens de compra aprovadas. |
+| 05-Contratos | Contratos de COMPRA assinados e aditivos, em subpastas por tipo de serviço ou fornecedor contratado. |
 
 O prefixo numérico (00, 01…) garante ordenação cronológica no SharePoint. Ordens de pagamento, comprovantes e notas fiscais de entrada são geridos respectivamente em Fin/01-Ord-Pag, Fin/03-Comprovantes e Fisc/01-Nfe-Recebidas (corporativo) ou nas pastas homônimas dentro da obra.
 
-4.3.4 Contratos
+4.3.4 02-Vendas e 01-Compras/05-Contratos — os dois lados do contrato
 
-Subpastas por tipo de contrato (criar conforme a obra):
+Todo contrato amarra uma relação comercial, e relação comercial existe nas duas pontas. A pasta segue o LADO da relação, não o tipo de documento: se a BASE PAGA (fornecedor, subempreiteiro, projetista, locador, prestador), o contrato mora em 01-Compras/05-Contratos; se a BASE RECEBE (cliente, unidade do empreendimento, permuta), mora em 02-Vendas/01-Contratos.
 
-- Cliente — Proposta;
+A pasta 02-Vendas tem duas subpastas obrigatórias: 00-Propostas, com a proposta comercial apresentada ao cliente, o orçamento de venda e o QQP em negociação até o fechamento; e 01-Contratos, com o contrato de venda assinado e seus aditivos.
+
+REGRA DA PASTA DE OBRA: a pasta da obra pertence ao cliente / ao empreendimento e vai com ele no encerramento. Por isso, dentro da obra, todo contrato de execução — inclusive o de gestão de obras prestado pela própria empresa — figura do lado de 01-Compras/05-Contratos. O contrato de VENDA desse serviço vive na pasta mãe, em 15-Vendas/01-Contratos, e reaparece na obra pelo lado de compras. Não duplicar em Vendas dentro da obra.
+
+Fronteira: enquanto o documento serve para vender, fica em 00-Propostas; assinado o instrumento, ele e os aditivos passam a residir em Contratos, do lado que corresponder. Documento societário ou cadastral (contrato social, alteração contratual) NÃO é comercial — vai para 04-Doc e Cad.
+
+Subpastas por tipo de contrato dentro de 01-Compras/05-Contratos (criar conforme a obra):
+
+- Cliente;
 
 - Obras Civis;
 
@@ -246,7 +265,6 @@ Distinção prática: a Ordem de Compra (01-Compras/04-Ord Comp) formaliza O QUE
 | --- | --- |
 | ART's | Anotações de Responsabilidade Técnica emitidas. |
 | Certidões e Declarações | Certidões negativas, declarações diversas. |
-| Contratos | Contratos corporativos da empresa. |
 | DAS | Guias DAS — Simples Nacional. |
 | Laudos | Laudos técnicos emitidos pela BASE. |
 | Modelos | Templates e modelos de documentos. |
@@ -277,7 +295,9 @@ Nomenclatura dos arquivos em Fin/03-Comprovantes/: padrão corporativo BASE-FIN 
 
 - 03-Estudos-Trib — Estudos e pareceres tributários.
 
-5.4 Mark e Prop — Marketing e Propostas
+5.4 Mark e Prop — Marketing e Propaganda
+
+Correção de legenda: a sigla MP significa "Marketing e PROPAGANDA". As revisões anteriores registravam "Marketing e propostas comerciais", e foi essa leitura errada que criou a subpasta Propostas dentro do marketing. A pasta guarda somente propaganda, campanha, book de vendas e identidade visual; a proposta comercial fica em 15-Vendas/00-Propostas (§5.10).
 
 | SUBPASTA | CONTEÚDO |
 | --- | --- |
@@ -289,8 +309,13 @@ Nomenclatura dos arquivos em Fin/03-Comprovantes/: padrão corporativo BASE-FIN 
 | Placa de Obra | Artes e arquivos de placas de identificação de obra. |
 | Assinatura de Email | Modelos de assinatura de e-mail da BASE. |
 | Book de Vendas | Book comercial e portfólio de vendas. |
-| Propostas | Propostas comerciais e apresentações a clientes. |
 | Material Estrategico | Dossiês, estudos de posicionamento e documentos estratégicos. |
+
+5.10 Vendas — Comercial
+
+Área comercial da empresa no nível corporativo, com a mesma lógica de funil aplicada na obra (§4.3.4). Duas subpastas: 00-Propostas, com as propostas comerciais e apresentações a clientes e suas revisões, vindas da antiga Mark e Prop/Propostas; e 01-Contratos, com os contratos de VENDA assinados e aditivos, vindos da antiga Doc e Cad/Contratos.
+
+Não pertence a esta pasta: contrato de obra específica (fica em 01-Compras/05-Contratos da própria obra), contrato de COMPRA corporativo (01-Compras/05-Contratos no nível corporativo), contrato social e alterações contratuais (04-Doc e Cad) e book de vendas e material de propaganda (09-Mark e Prop).
 
 5.5 Curs e Trein — Cursos e Treinamentos
 
@@ -362,7 +387,7 @@ AAMMDD-EMP-FAS-DIS-Descrição-RXX.ext
 | RXX | R00 / R01 | Revisão (inicia em R00). |
 | .ext | .pdf / .dwg / .rvt | Extensão original. |
 
-| NOTA O formato acima é idêntico ao padrão do POP-01.00 §5. Aplica-se a todos os documentos de projeto: pranchas, memoriais, listas de materiais, laudos, modelos BIM e demais arquivos técnicos. As regras de pastas e de nomenclatura de comprovantes, notas fiscais e recibos permanecem regidas pelas demais seções deste POP-04. |
+| NOTA  O formato acima é idêntico ao padrão do POP-01.00 §5. Aplica-se a todos os documentos de projeto: pranchas, memoriais, listas de materiais, laudos, modelos BIM e demais arquivos técnicos. As regras de pastas e de nomenclatura de comprovantes, notas fiscais e recibos permanecem regidas pelas demais seções deste POP-04. |
 | --- |
 
 6.3 Exemplos de nomes de arquivo
@@ -437,22 +462,22 @@ AAMMDD-[OBRA]-[TP_OBRA]-COMP-ORC-[Fornecedor]-[NumOrcamento].(pdf|xlsx)
 | --- | --- | --- | --- |
 | 260512-UG-RE-COMP-ORC-Polizello-1329.pdf | 260512-UG-RE-COMP-ORC-Polizello-1329.pdf | Orçamento Polizello nº 1329 — Urbanit Garden — recebido em 12/05/2026. | Orçamento Polizello nº 1329 — Urbanit Garden — recebido em 12/05/2026. |
 | 260315-MIR-MX-COMP-ORC-Norcalc-Aproveitamento.xlsx | 260315-MIR-MX-COMP-ORC-Norcalc-Aproveitamento.xlsx | Planilha interna de aproveitamento Norcalc — Mirage — 15/03/2026. | Planilha interna de aproveitamento Norcalc — Mirage — 15/03/2026. |
-| NOTA Arquivos PDF puramente autogerados por sistemas de fornecedores podem ser mantidos com o nome original no momento da recepção, desde que sejam renomeados para o padrão acima até o fechamento do orçamento (passagem para 04-Ord Comp). Nomes contendo espaços, acentos ou caracteres especiais devem ser corrigidos em qualquer hipótese; o número do orçamento e o nome do fornecedor identificáveis no nome original devem ser preservados. | NOTA Arquivos PDF puramente autogerados por sistemas de fornecedores podem ser mantidos com o nome original no momento da recepção, desde que sejam renomeados para o padrão acima até o fechamento do orçamento (passagem para 04-Ord Comp). Nomes contendo espaços, acentos ou caracteres especiais devem ser corrigidos em qualquer hipótese; o número do orçamento e o nome do fornecedor identificáveis no nome original devem ser preservados. |  |  |
+| NOTA  Arquivos PDF puramente autogerados por sistemas de fornecedores podem ser mantidos com o nome original no momento da recepção, desde que sejam renomeados para o padrão acima até o fechamento do orçamento (passagem para 04-Ord Comp). Nomes contendo espaços, acentos ou caracteres especiais devem ser corrigidos em qualquer hipótese; o número do orçamento e o nome do fornecedor identificáveis no nome original devem ser preservados. | NOTA  Arquivos PDF puramente autogerados por sistemas de fornecedores podem ser mantidos com o nome original no momento da recepção, desde que sejam renomeados para o padrão acima até o fechamento do orçamento (passagem para 04-Ord Comp). Nomes contendo espaços, acentos ou caracteres especiais devem ser corrigidos em qualquer hipótese; o número do orçamento e o nome do fornecedor identificáveis no nome original devem ser preservados. |  |  |
 
-6.8 Nomenclatura de relatórios financeiros (Plan/FIN/Relatorios)
+6.8 Nomenclatura de documentos de planejamento (10-Plan)
 
-Arquivos armazenados em Plan/FIN/Relatorios/ — planilhas orçamentárias, fluxos financeiros, planilhas de pagamentos em aberto, simuladores de custo — devem seguir o padrão abaixo. Aplica-se tanto a relatórios gerados internamente pela BASE quanto a relatórios exportados de softwares de gestão financeira de obra (Sienge).
+Todo arquivo de 10-Plan — cronograma, orçamento, fluxo de desembolso, relatório e as exportações de sistema (Sienge, Prevision) depois de salvas — segue o padrão abaixo. Vale também para relatório gerado por ferramenta automática.
 
-AAMMDD-[Descritor].(pdf|xlsx)
+AAMMDD-[OBRA]-PLAN-[Descrição]-RXX.ext
 
 | EXEMPLO | SIGNIFICADO |
 | --- | --- |
-| 260118-PlanilhaOrcamentaria.pdf | Planilha orçamentária — 18/01/2026. |
-| 260123-FluxoFinanceiro.pdf | Fluxo financeiro — 23/01/2026. |
-| 260512-PagamentosEmAberto.pdf | Pagamentos em aberto — 12/05/2026. |
-| 2604-PagamentosEmAberto.pdf | Fechamento mensal de pagamentos em aberto — abril/2026. |
+| 260930-MIR-PLAN-FluxoDesembolsoObra-R00.xlsx | Fluxo de desembolso da unidade Obra — Mirage — emissão de 30/09/2026, Rev. 00. |
+| 260806-UG-PLAN-MacrofluxoFundacao-R01.html | Macrofluxo da fundação — Urbanit Garden — Rev. 01. |
+| 260824-UG-PLAN-ImportSiengeObraE01-R44.xls | Planilha de importação do orçamento da Obra E01 no Sienge — Rev. 44. |
+| 260903-BASE-PLAN-EapPadraoUnidadesConstrutivas-R04.xlsx | Padrão corporativo (vale para todas as obras): sigla BASE no lugar da obra. |
 
-Observação: o contexto da obra (sigla OBRA-TP_OBRA) é dado pela própria pasta (cada obra tem sua Plan/FIN/Relatorios/), portanto o prefixo OBRA-TP_OBRA não é repetido no nome do arquivo — princípio de não-redundância.
+Regras: (a) Descrição em PascalCase, numa palavra só — sem espaço, acento, hífen interno ou underscore — com a unidade construtiva no fim quando houver (FluxoDesembolsoObraE01); (b) RXX é obrigatório, inclusive em exportação de sistema (começa em R00); (c) a data é a da emissão e não muda quando o arquivo desce para _Obsoletos/; (d) a sigla da obra fica no nome mesmo estando na pasta da obra, porque o arquivo viaja por e-mail e anexo sem a pasta. Esta seção substitui o padrão anterior AAMMDD-[Descritor] de Plan/FIN/Relatorios.
 
 7.0 MAPA VISUAL DA ESTRUTURA DE PASTAS
 
@@ -460,13 +485,13 @@ Observação: o contexto da obra (sigla OBRA-TP_OBRA) é dado pela própria past
 
 | PASTA / SUBPASTA | OBSERVAÇÃO |
 | --- | --- |
-| BASE-Emp (raiz) | Pasta raiz do repositório SharePoint. |
+| BASE-Emp  (raiz) | Pasta raiz do repositório SharePoint. |
 | └─ Ob em Andam | Obras em execução. |
 | └─ Ob-UG-BASE-Sorriso-MT | Urbanit Garden. |
 | └─ Ob-MIR-BASE-Sorriso-MT | Mirage Sky Houses. |
 | └─ 00-Import | CAIXA DE ENTRADA — triagem periódica pela BASE (§4.3.0). |
-| └─ 01-Compras | 00-Mem Calc Quant → 04-Ord Comp. |
-| └─ 02-Contratos | Por tipo de serviço contratado. |
+| └─ 01-Compras | 00-Mem Calc Quant → 05-Contratos (05-Contratos = contratos de COMPRA). |
+| └─ 02-Vendas | 00-Propostas / 01-Contratos (contrato de VENDA — cliente, unidade). |
 | └─ 03-Doc | Atas / Imóvel / Proj / Repres. |
 | └─ 04-Ehs | APR e documentos de segurança. |
 | └─ 05-Fin | 01-Ord Pag / 02-Boletos / 03-Comprovantes (obrigatória, §4.3.8). |
@@ -474,19 +499,20 @@ Observação: o contexto da obra (sigla OBRA-TP_OBRA) é dado pela própria past
 | └─ 07-ITs | ITs específicas da obra. |
 | └─ 08-Med Serv Prop | Medições BASE. |
 | └─ 09-Med Serv Terc | Medições terceiros. |
-| └─ 10-Plan | RDO / RSO / FIN. |
+| └─ 10-Plan | 01-Cronograma / 02-Orcamento / 03-Fluxo Desembolso / 04-RDO, cada uma com _Obsoletos/. |
 | └─ 11-Proj | Arquitetura / Estrutura / ELE / HID / CLI / SPD / PCI / TEL / ELV / AMB / CAN / LUM. |
 | └─ 12-Rh e Dp | Doc de Ativos / Inativos. |
 | └─ Ob Concluidas | Obras finalizadas (mesma estrutura interna). |
 | └─ Proj | Projetos avulsos sem obra associada. |
 | └─ Compras | Compras corporativas (00-Mem-Calc-Quant ... 04-Ord-Comp). |
 | └─ Curs e Trein | Cursos e treinamentos. |
-| └─ Doc e Cad | ART'S / Certidões / Contratos / DAS / Laudos / Modelos / NR's / Prog. SST / Seguros / Visitas Técnicas. |
+| └─ Doc e Cad | ART'S / Certidões / DAS / Laudos / Modelos / NR's / Prog. SST / Seguros / Visitas Técnicas. |
 | └─ Est | Equipamentos e bens patrimoniais. |
 | └─ Fin | 01-Ord-Pag / 02-Boletos / 03-Comprovantes / 04-Horas-Tec / 05-Relatorios. |
 | └─ Fisc | 01-Nfe-Recebidas / 02-Nfe-Emitidas / 03-Estudos-Trib. |
 | └─ Inst Trab e Pop's | ITs e POPs corporativos. |
-| └─ Mark e Prop | Marketing e propostas comerciais. |
+| └─ Mark e Prop | Marketing e Propaganda (MP). |
+| └─ Vendas | 00-Propostas / 01-Contratos (comercial corporativo). |
 | └─ Rh e Dp | RH corporativo. |
 | └─ Soft, Prog e Manuais | Softwares e licenças. |
 
@@ -507,7 +533,7 @@ Observação: o contexto da obra (sigla OBRA-TP_OBRA) é dado pela própria past
 | NÍVEL DE ACESSO | PERFIL | PASTAS |
 | --- | --- | --- |
 | Acesso total | Diretoria (Pierre Rosset, João Paulo Cerutti) e Coordenação de Planejamento e Engenharia (Vitor Zanchet) | Todas. |
-| Acesso de edição | Engenheiros, arquitetos e equipe técnica | Obras em que atuam, Mark e Prop, Inst Trab e Pops. |
+| Acesso de edição | Engenheiros, arquitetos e equipe técnica | Obras em que atuam, Mark e Prop, Vendas, Inst Trab e Pops. |
 | Acesso de leitura | Estagiários, parceiros e terceiros | Pasta específica da obra ou escopo contratado. |
 | Acesso restrito | Apenas Diretoria | Doc e Cad, Fin, Fisc, Rh e Dp. |
 
@@ -531,6 +557,6 @@ Observação: o contexto da obra (sigla OBRA-TP_OBRA) é dado pela própria past
 | Documentos administrativos da obra | SharePoint BASE-Emp > Ob > Doc, Ehs, Fisc, Plan | Conforme §8.2 | Por nome do arquivo | Permanente | Não há |
 | Comprovantes financeiros corporativos | SharePoint BASE-Emp > Fin > 03-Comprovantes | Apenas Diretoria | Padrão §6.6 | 5 anos | Arquivamento histórico |
 | Comprovantes financeiros de obra | SharePoint BASE-Emp > Ob > Fin > 03-Comprovantes | Apenas Diretoria | Padrão §6.5 | 5 anos após conclusão | Arquivamento histórico |
-| Versões obsoletas | Subpasta _Obsoletos/ em cada pasta de projeto | Conforme §8.2 | Por código original | Permanente | Auditoria conforme POP-01.00 §10 |
+| Versões obsoletas | Subpasta _Obsoletos/ em cada pasta de projeto e em cada subpasta de 10-Plan | Conforme §8.2 | Por código original | Permanente | Auditoria conforme POP-01.00 §10 |
 
 — Fim do procedimento —
