@@ -94,7 +94,9 @@ O `--forcar` gera mesmo travado. Só com decisão do Vitor, e com o motivo escri
 ## O que sai
 
 Em `C:\claude\trabalho\fluxo-desembolso\saida\`:
-- `AAMMDD-<MIR|UG>-PLAN-FluxoDesembolso-<Unidade>-R00.xlsx`, uma por unidade. Abas Leia-me,
+- `AAMMDD-<MIR|UG>-PLAN-FluxoDesembolso-<Unidade>-RXX.xlsx`, uma por unidade. A revisão sobe
+  uma a cada dia de rodada (R00, R01...). Rodar de novo no mesmo dia mantém o número e
+  substitui a emissão do dia. Abas Leia-me,
   Fluxo mensal (com gráfico), Premissas (amarelo é editável: CUB futuro % a.a. e prazo por
   pacote), A incorrer, A pagar e Itens. As fórmulas são vivas: a Amanda simula prazo sem nós.
 - `AAMMDD-BASE-PLAN-FluxoDesembolso-Revisao-R00.html`, o relatório de revisão do Vitor, com
@@ -106,10 +108,18 @@ Unidade sem nada a contratar não gera pasta.
 
 ## Arquivar e entregar
 
-Depois de o Vitor conferir, as pastas vão para o SharePoint com
-`C:\claude\scripts\enviar-arquivo-sharepoint.ps1`:
-- Mirage: `Base Empreendimentos/11-Ob em Andam/Ob-MIR-BASE-Sorriso-MT/10-Plan/FIN`
-- Urbanit: `Base Empreendimentos/11-Ob em Andam/Ob-UG-BASE-Sorriso-MT/10-Plan/Fin`
+O fluxo é documento recorrente, e o histórico entre as emissões é obrigatório. Depois de o
+Vitor conferir, rode `C:\claude\scripts\fluxo-desembolso\arquivar-sharepoint.ps1`. Para ver
+antes o que ele vai fazer, rode com `-Ensaio`. Ele segue o costume das pastas de planejamento:
+- A emissão em vigor fica na raiz de `10-Plan/Fin` da obra:
+  - Mirage: `Base Empreendimentos/11-Ob em Andam/Ob-MIR-BASE-Sorriso-MT/10-Plan/FIN`
+  - Urbanit: `Base Empreendimentos/11-Ob em Andam/Ob-UG-BASE-Sorriso-MT/10-Plan/Fin`
+- Toda emissão anterior da mesma unidade é **movida** para `_Obsoletos/`, nunca apagada. O
+  item leva junto o histórico de versões do SharePoint.
+
+O script sobe a emissão nova antes de mover a antiga, então uma falha no meio não deixa a pasta
+sem a emissão em vigor. Se já existir em `_Obsoletos` um arquivo com o mesmo nome, ele para:
+não sobrescreve evidência.
 
 Ao mostrar ao Vitor, uma linha para cada: a contratar nominal e corrigido por unidade; o pico
 e o mês; o que a conferência acusou; o que mudou desde a última rodada; e que a curva do não
