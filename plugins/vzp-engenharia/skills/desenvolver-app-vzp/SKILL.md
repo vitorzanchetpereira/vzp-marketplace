@@ -164,6 +164,28 @@ Três armadilhas que já derrubaram app nosso em produção, cada uma calada:
 
 Detalhe em `references/dados.md` e `references/publicar.md`.
 
+## Como a mudança chega ao ar: Branch → Commit → PR → Merge → Deploy
+
+Vale para **toda** mudança, inclusive a correção de uma linha. Tamanho pequeno
+não é motivo para pular passo. E a conversa mostra **cada etapa**, não só o
+resultado: quem pediu tem de ver a PR, não receber "já está no ar".
+
+1. **Branch:** nunca commit direto na `main`. Antes de criar a branch, veja se a
+   `main` local está em dia (`git fetch` e `git log main..origin/main`). O nome
+   começa por `fix/`, `feat/`, `chore/` ou `docs/`.
+2. **Commit:** inclua os arquivos pelo caminho, nunca com `git commit -a`. A
+   mensagem diz o que muda para quem usa.
+3. **PR:** o texto conta o antes e o depois na tela. **O link da PR vai na
+   conversa.**
+4. **Merge:** depois que o Vitor aprovou a mudança, quem faz o merge é o Claude.
+   A PR é o registro do que entrou, não um portão.
+5. **Deploy:** o merge não é o deploy. Confirme que o build terminou e que a
+   revisão nova subiu, e confira que o arquivo servido em produção já tem a
+   mudança. Só então diga que está no ar, com o nome da revisão.
+
+Se a mudança nasceu de reclamação no botão de melhorias, o último passo é fechar
+o card (seção acima).
+
 ## Olhar a tela pronta, não só o código
 
 **Toda melhoria termina abrindo a tela no navegador e olhando** — de verdade,
@@ -203,3 +225,4 @@ ordem, na largura de celular, de tablet e de monitor:
 8. `grep` por `_blank` e `window.open` dá zero?
 9. Cada lista deixa criar, abrir e alterar, e excluir o registro sem passar pela IA?
 10. Tela com dois cartões ou mais deixa reordenar — arrastando e por ↑ ↓ — e a ordem volta igual no outro aparelho?
+11. Passou pelo caminho Branch → Commit → PR → Merge → Deploy, e o link da PR e a revisão no ar estão na conversa?
