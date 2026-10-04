@@ -37,6 +37,11 @@ oficial `POP-05.00-Vitor-Controle-Financeiro-R03.docx`, em
 5. **Validar**: bateu o saldo? previsto × realizado por categoria (categoria projetada não atingida + outra estourada = categorização errada).
 6. **Corrigir** a causa; resíduo pequeno fecha com lançamento "Ajuste — Diferença" na data.
 
+**Regras que já custaram caro:**
+- **Parcela de cartão fica sempre no dia 1º do mês** da fatura em que cai (futuras também). Não use a data do banco nem a da planilha.
+- **Despesa avulsa com data futura é erro**: procure a data real da compra.
+- **O ajuste de conciliação tem o tamanho do rendimento das caixinhas.** Se der maior, abra a diferença antes de lançar, porque está faltando lançamento.
+
 ## Registros
 
 Manter os extratos de origem (importação é refazível) e registrar as conciliações/ajustes no razão.

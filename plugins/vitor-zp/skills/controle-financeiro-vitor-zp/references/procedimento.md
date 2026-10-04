@@ -95,6 +95,21 @@ categorização e projeção antes que virem bola de neve.
    no mesmo mês existe (dois abastecimentos iguais, duas compras iguais) — a
    linha entra destacada na prévia e quem confirma decide. Repete a cada fatura
    nova até o motor de importação aprender a janela mensal.
+10. **Parcela de cartão fica SEMPRE no dia 1º do mês** (decisão do Vitor,
+   2026-10-04). Toda linha "Parcela N/M", inclusive as futuras, é gravada com o
+   dia 1º do mês da fatura em que ela cai, e não na data de abertura nem no
+   aniversário da compra. Motivo: o banco põe a parcela na fatura aberta logo
+   no início do ciclo (o Nubank em 02/10, o Mercado Pago em 30/09), enquanto a
+   planilha datava a mesma parcela pelo dia 20–30. A dívida já existia no banco
+   e não existia no app, e a conciliação errou por R$ 3.047,35 em 03/10. Com
+   todas as parcelas no dia 1º, quem olha o extrato do app vê o compromisso do
+   mês inteiro desde o primeiro dia, e a fatura aberta do app e a do banco andam
+   juntas. Parcela continua sendo **realizado**, nunca previsão.
+11. **Data futura em despesa avulsa é sinal de erro.** O arquivo da fatura
+   aberta pode trazer uma compra datada pela data de lançamento e não pela da
+   compra (ex.: aiqfome via NuPay saiu com 09/10, mas já estava no limite usado
+   em 02/10). Antes de gravar uma despesa que não é parcela com data posterior a
+   hoje, procure a data real da compra (a fatura fechada mostra o limite usado).
 
 ## 5. Categorização
 1. Aprende do **histórico** (estabelecimento → categoria) + **palavras-chave**.
@@ -122,6 +137,21 @@ categorização e projeção antes que virem bola de neve.
    das compras do cartão **desde o último fechamento até hoje** (não a conta
    inteira do cartão, que acumula todo o histórico).
 6. **Diferente? Investiga** (Seção 8) antes de forçar o número.
+
+**Lições de 03/10/2026 sobre o gabarito:**
+- A fatura aberta entra no gabarito **inteira**, com as parcelas que o banco já
+  lançou nela. Se o app datar essas parcelas mais tarde, o gabarito e o app se
+  descolam. É por isso que a parcela fica no dia 1º (item 4.10).
+- **O ajuste de conciliação não pode misturar sinais.** Antes de lançar o
+  ajuste, abra a diferença em partes. Em 03/10 um ajuste de +2.184,12 escondia
+  um presente de R$ 5.000 que não estava no app (só aparecia como sobra nas
+  caixinhas: saldo do print × saldo anterior + aplicações − resgates), menos
+  R$ 3.253,52 de parcelas e compra com data errada. Depois de abrir, o ajuste
+  ficou em 437,64, que é só rendimento das caixinhas. **O ajuste legítimo é o
+  rendimento das caixinhas**: se der muito acima disso, há lançamento faltando.
+- Movimento das caixinhas entre duas conciliações: saldo anterior + aplicações
+  − resgates = saldo de hoje − rendimento. Se não fechar, entrou ou saiu
+  dinheiro por fora do extrato.
 
 ## 7. Âncora da auditoria
 - A **última conciliação com lançamento** (valor ≠ 0) é o ponto **confiável**:
@@ -158,9 +188,13 @@ categorização e projeção antes que virem bola de neve.
    pendente de definição.
 
 ---
-*Versão 4 (R03) · 2026-08-26 · revisar quando a metodologia evoluir.*
+*Versão 5 (R04) · 2026-10-04 · revisar quando a metodologia evoluir.*
 
 ### Histórico de revisões
+- **R04 (2026-10-04):** parcela de cartão sempre no **dia 1º do mês** da fatura
+  (item 4.10); despesa avulsa com data futura é erro a investigar (item 4.11);
+  na conciliação, a fatura aberta entra inteira e o ajuste não pode misturar
+  sinais. Ele deve ficar do tamanho do rendimento das caixinhas (Seção 6).
 - **R03 (2026-08-26):** a conferência de duplicidade passa de **mesmo dia** para
   **mesmo mês** — mesmo remetente + mesmo valor (±R$ 0,05) dentro do mês pede
   atenção a duplicidade, para qualquer lançamento (não só "Parcela N/M").
