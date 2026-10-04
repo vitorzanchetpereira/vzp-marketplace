@@ -43,6 +43,23 @@ categorização e projeção antes que virem bola de neve.
   qualquer leitor de PDF (ex.: `pdfplumber`) e usar esses dois números como
   checksum daquela conta, no lugar do `_saldos.txt`.
 
+- **Extratos da Luciana: ela NÃO salva na consultoria** (regra do Vitor,
+  04/10/2026). Ela salva nas pastas `Fin` da VLA
+  (`VLA Engenharia e Arquitetura - Documentos`):
+  - principal: `VLA-Eng&Arq\06-Fin\Extratos Bancarios para Conciliacao\<titular - conta>\<ano>\`;
+  - cópias e extras: `06-Fin\Contr Financ Obras-Esp\<obra>\EXTRATO(S)`, `VLA-Imóbiliaria\08-Fin` e `VLA-Patrimónial\08-Fin`.
+
+  **Sempre procurar nelas também** e trazer os arquivos para
+  `Consultórias\Luciana Zanchet\07-Fin\04-Extratos\AA-MM\<conta> - <arquivo>`.
+  O script `trazer_extratos_luciana.py`, da rotina de sábado, faz isso: varre os
+  três `Fin`, descarta repetido pelo sha256 e não mexe na VLA. Cuidados:
+  - Todas as contas que estão lá são da **carteira da Luciana**, inclusive a
+    "Vitor Zanchet 70952-2", que está no nome dele por estratégia tributária.
+  - A mesma conta pode vir exportada duas vezes (pasta principal e pasta da
+    obra). Importe só **uma** por conta e mês.
+  - Arquivo de terceiro que estava na pasta da obra (Santander Amanda, Jardim
+    Paraíso) não se importa sem o Vitor dizer de quem é.
+
 ## 4. Importação / lançamento
 1. **Não duplicar, não perder:** dedup por **contagem** (multiset). Re-importar o
    mesmo arquivo não duplica; mas 2 compras iguais no mesmo dia (café, transporte)
