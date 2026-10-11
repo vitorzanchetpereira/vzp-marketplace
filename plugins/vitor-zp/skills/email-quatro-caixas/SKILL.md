@@ -88,6 +88,32 @@ C:\claude\scripts\aplicar-regras-email.ps1 -Aplicar
    resposta chega solta ao lado da conversa.
 5. **Ao conferir se um e-mail saiu certo, não confie no conector** (item acima).
 
+## "Organiza meus e-mails" — o que ele quer (11/10/2026)
+
+Nas palavras dele: *"só me alerta o que realmente for dar problema, o resto você
+arquiva o email e arquiva os anexos"*. O pedido já é a autorização para mover — não
+precisa mostrar antes, ao contrário do `-Aplicar` da regra 2.
+
+1. **Entrada zerada nas quatro caixas.** Tudo o que ele já leu vai para a pasta do
+   assunto (a árvore das caixas espelha a do SharePoint). Obra também sai: vai para
+   `12-Proj`, `01-Compras/02-Orçamentos` etc. Não lida fica — é a fila dele; diga
+   quantas sobraram. As travas de prazo da rotina automática (`triagem-email`,
+   `C:\claude\trabalho\triagem\arrumacao.md`) **não** valem para pedido ao vivo.
+2. **O anexo vai junto, para o SharePoint.** Pelo conector `correio`:
+   `listar_anexos` (o campo `anexos` da busca mente no Gmail) → `baixar_anexo` com
+   `destino="url"` → `C:\claude\scripts\enviar-arquivo-sharepoint.ps1 -Url <link>
+   -Destino <pasta> -Nome <nome>`. A pasta espelha a do e-mail: pessoal em
+   `Consultórias/Vitor Z.P/...` (**com acento**), VZP em `VZP-Eng/...`, obra da Base
+   em `Base Empreendimentos/11-Ob em Andam/Ob-UG-BASE-Sorriso-MT/...`. Subpasta do
+   mês como a que já existe ali (`26-10` em Fin e Orçamentos; `2610` nas NF-e
+   pessoais). Nome genérico (`comprovante.pdf`) se renomeia para algo achável.
+3. **Na resposta, só problema:** boleto vencido ou vencendo sem comprovante,
+   cobrança que vai cair (teste que vira assinatura), serviço que parou, cliente ou
+   fornecedor esperando resposta (confira os Enviados antes de afirmar). O resto
+   numa linha.
+4. Nunca apagar, nunca spam, e cada movimentação no `trabalho\triagem\log.md` com
+   origem → destino.
+
 ## Antes de dizer que algo falhou
 
 Confira a credencial do Graph:
