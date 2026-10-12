@@ -19,6 +19,10 @@
     "Payingless": {
       "type": "http",
       "url": "https://vzp-mcp-payingless-ra6s7yj5ca-uc.a.run.app/mcp"
+    },
+    "Casa": {
+      "type": "http",
+      "url": "https://vzp-mcp-casa-ra6s7yj5ca-uc.a.run.app/mcp"
     }
   }
 }
