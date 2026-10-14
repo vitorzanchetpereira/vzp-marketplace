@@ -103,6 +103,13 @@ Key professional contacts:
   - Schedules/summaries → single-page, print-ready PDF with VZP branding
 - Document naming convention: `AAMMDD-EMP-DOC-Descricao_RXX.ext`
 - Calendar: Timezone `America/Cuiaba` (UTC-4). Standard reminders: 1 day before (1440 min) + 30 minutes before, both popup.
+- **Date, time and weekday — never from memory (rule of 13/10/2026).** Sorriso/MT is `America/Cuiaba`, **UTC−4, no daylight saving — never UTC−3 (Brasília)**. Before writing any date, time or weekday (calendar event, Asana card or comment, e-mail, WhatsApp, log):
+  - With a shell: `TZ=America/Cuiaba date "+%d/%m/%Y %A %H:%M"`; for another day, `TZ=America/Cuiaba date -d 2026-10-14 "+%A"`.
+  - Without a shell (claude.ai, Projects): take the current UTC time and **subtract 4 hours**; never assume the server clock is local.
+  - Every calendar event is created with `timeZone: America/Cuiaba` explicitly. Never pass an offset of `-03:00`.
+  - Weekday comes from a computed calendar, never mental arithmetic. If it cannot be checked, write the date alone (`14/10`), without the weekday.
+  - When Vitor says "hoje"/"amanhã"/"terça", resolve it to an absolute date against the Cuiabá clock and repeat the date back before booking.
+  - Why: in Oct/2026 log entries were stamped in UTC ("09/10 18:21" was 14:21 local) and in Brasília time, a site visit was booked on 14/10 when it was 13/10, and 14/10 was called Tuesday (it is Wednesday).
 - SINAPI/CUB-MT as budget benchmarks. BDI per TCU Acórdão 2622/2013. ISS 2% (Sorriso, Simples Nacional).
 - Contact management (ongoing service): Vitor sends WhatsApp screenshot and/or business card/quote → Claude returns `.vcf` in VZP naming standard. vCard rule: full standardized name in BOTH `N` field (`N:;FULL NAME HERE;;;`) AND `FN` field — iPhone reads `N` for display. Single contact per person even when WhatsApp + business document arrive together. Naming pattern: `[TIPO] - [Solução] - [Função] - [Empresa] - [Pessoa]` (hyphen-separated, omit empty segments). Solution codes include SEG (security/CCTV/monitoring). Function codes: OP/COM/TEC/ARQ/ENG/ADM/FIN/JUR/DIR.
 - Contact migration status (July 2026): ~2,021 contacts cleaned, deduplicated, and standardized; Google Contacts as single master source; Outlook and iCloud Contacts disabled to prevent duplication.
