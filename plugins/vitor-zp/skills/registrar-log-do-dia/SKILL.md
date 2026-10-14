@@ -50,9 +50,15 @@ desktop, não aqui.
 Só declare o conector indisponível depois de tentar por palavra-chave.
 Workspace = `"Base"`.
 
-### 2. Descubra a data
+### 2. Descubra a data, a hora e o dia da semana — de um relógio, nunca de cabeça
 
-Bash: `TZ=America/Cuiaba date +"%d/%m/%Y"` e o dia da semana. Cuiabá é UTC−4.
+Sorriso é `America/Cuiaba`: **UTC−4, sem horário de verão. Nunca UTC−3 (Brasília).**
+
+- Com Bash: `TZ=America/Cuiaba date +"%d/%m/%Y %A %H:%M"` — dá data, dia da semana e hora de uma vez.
+- Sem Bash (claude.ai, Projeto): pegue a hora UTC atual e **subtraia 4**. O relógio do servidor é UTC, não é a hora do Vitor.
+- O dia da semana sai do comando ou de um calendário conferido. Se não der para conferir, escreva só a data.
+
+Erro que motivou esta regra (13/10/2026): o registro "09/10 18:21" foi gravado às 18:22 UTC — eram 14:21 em Sorriso —, e os de 13/10 "14:35" e "14:55" saíram em hora de Brasília. A rotina das 18h cruza o log com WhatsApp e e-mail pela hora; hora errada desalinha o dia inteiro.
 
 ### 3. Ache o cartão do dia
 
@@ -69,7 +75,7 @@ Se o cartão **já estiver concluído**, comente nele do mesmo jeito — não re
 `comentar_tarefa` no cartão, neste formato:
 
 ```
-🧾 Registro de sessão — [assunto] — DD/MM/AAAA HH:MM
+🧾 Registro de sessão — [assunto] — DD/MM/AAAA HH:MM (hora de Cuiabá, do passo 2)
 
 ✅ O QUE FOI FEITO
 • [entregas concretas, com nomes e números reais]
