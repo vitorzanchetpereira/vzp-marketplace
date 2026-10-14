@@ -23,10 +23,6 @@
     "Casa": {
       "type": "http",
       "url": "https://vzp-mcp-casa-ra6s7yj5ca-uc.a.run.app/mcp"
-    },
-    "M365": {
-      "type": "http",
-      "url": "https://vzp-mcp-m365-ra6s7yj5ca-uc.a.run.app/mcp"
     }
   }
 }
