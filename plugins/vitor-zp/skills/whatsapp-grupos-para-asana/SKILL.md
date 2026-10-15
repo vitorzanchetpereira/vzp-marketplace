@@ -1,24 +1,63 @@
 ---
 name: whatsapp-grupos-para-asana
 description: >-
-  Ler a conversa exportada de um grupo do WhatsApp ("Exportar conversa", .txt ou
-  .zip), tirar dela as definições — decisão tomada, prazo, responsável, valor,
-  especificação — e criar os cards no Asana depois de mostrar a prévia ao Vitor.
-  Use quando ele disser "lê o grupo", "passa o grupo pro Asana", "o que ficou
-  definido no grupo da obra", ou mandar um arquivo "Conversa do WhatsApp com…".
-  Só funciona no Claude Code do notebook dele (o leitor é script local).
+  Ler grupos do WhatsApp e levar as definições — decisão tomada, prazo,
+  responsável, valor, especificação — ao Asana. Duas entradas: a ROTINA das 18h,
+  que coleta pelo WhatsApp Web e cria os cards na seção "Entrada WhatsApp", e o
+  pedido avulso ("lê o grupo", "o que ficou definido no grupo da obra", ou um
+  arquivo "Conversa do WhatsApp com…"), que mostra a prévia antes de criar. Só
+  funciona no computador onde o leitor está instalado (scripts locais).
 ---
 
 # Grupo do WhatsApp → definições no Asana
 
-## Por que é por exportação
+## Por que não é pelo conector
 
 O conector do WhatsApp **não alcança grupo**: o número está em Coexistência, e a
-Meta bloqueia grupo nesse modo, sem exceção. Ferramenta não oficial que lê grupo
-(Baileys, Evolution, "WhatsApp Web automatizado") arrisca banir o número da VZP —
-não é caminho. Fica a exportação, que é do próprio WhatsApp e não arrisca nada.
+Meta bloqueia grupo nesse modo, sem exceção. Sobram dois caminhos, e os dois
+terminam no mesmo leitor (`C:\claude\scripts\whatsapp-grupo-ler.py`):
 
-## 1. O Vitor exporta
+| Entrada | Quem dispara | Prévia |
+| --- | --- | --- |
+| **Rotina**: `C:\claude\scripts\whatsapp-grupos\coletar.py` lê os grupos da config pelo WhatsApp Web | Agendador do Windows, 18h | **Não**: cria na seção "Entrada WhatsApp" e a equipe revisa lá (decisão do Vitor, 15/10/2026) |
+| **Avulso**: exportação da conversa, ou `coletar.py um "<grupo>"` | Alguém nesta conversa | **Sim**, sempre (passo 5) |
+
+O WhatsApp Web roda com o aparelho conectado em `C:\claude\config\whatsapp-web\<conta>`
+— hoje o número **11 94337-1041**, que está nos grupos da Base. Só lê: nada se
+envia pelo WhatsApp a partir daqui.
+
+## Modo rotina (18h, sem ninguém olhando)
+
+Quem chama é `C:\claude\scripts\whatsapp-grupos\rodar-diario.cmd`, depois de
+`coletar.py todos`. Grupos e destinos ficam em `C:\claude\config\whatsapp-grupos.json`.
+Para cada grupo da config:
+
+1. `python C:\claude\scripts\whatsapp-grupo-ler.py ler "<arquivo da coleta>"`.
+   `novas: 0` → pula.
+2. Separe os baldes como no passo 3 e procure duplicata como no passo 4.
+3. `criar_secao` "Entrada WhatsApp" no `projeto_id` do grupo (devolve a
+   existente se já houver), `criar_tarefa` com o `projeto_id`, e
+   `mover_para_secao` para ela. Notas como no passo 6, com a linha extra
+   **"Criado automaticamente pela rotina das 18h — revisar e mover para a coluna
+   certa, ou apagar."**
+4. Os *em aberto* do dia viram **um** card só por grupo, "Em aberto — <grupo> —
+   DD/MM", com a lista e os números das mensagens. Sem em aberto, sem card.
+5. Rode o `para_marcar`.
+
+Na rotina **não se pergunta nada**, porque não há ninguém para responder. Grupo
+fora da config não se lê; grupo sem `projeto_id` se pula e entra no resumo.
+Responsável só com e-mail certo. Termine com um resumo curto (grupos, cards,
+pulados, erros), que vai para `C:\claude\trabalho\whatsapp-grupos\rotina.log`.
+
+Se a coleta trouxer `historico_sincronizando: true` com `chegou_no_corte: false`,
+o aparelho ainda não puxou tudo do celular: crie o que veio, marque, e diga no
+resumo que pode faltar mensagem anterior.
+
+## 1. Avulso: exportar (ou coletar)
+
+Grupo que está na config nem precisa de exportação:
+`C:\claude\scripts\whatsapp-grupos\.venv\Scripts\python C:\claude\scripts\whatsapp-grupos\coletar.py um "<grupo>"`
+e siga do passo 2 com o `arquivo` que ele devolve. Fora disso:
 
 No celular: grupo → ⋮ (ou nome do grupo, no iPhone) → **Exportar conversa** →
 **Sem mídia** → mandar para si (e-mail ou OneDrive). Sem mídia porque o leitor
@@ -73,25 +112,21 @@ Regras de leitura:
 
 ## 4. Destino no Asana
 
-Pergunte **uma vez por grupo** o workspace (`VZP`, `VLA`, `Base`) e o projeto, e
-grave em `C:\claude\trabalho\whatsapp-grupos\destinos.json`:
-
-```json
-{ "obra-mirage": { "workspace": "Base", "projeto_id": "120…", "projeto": "Mirage — Obra" } }
-```
-
-A chave é o `chave` que o leitor devolve. Nas próximas vezes, leia daí e só
-confirme na prévia.
+O destino de cada grupo está em `C:\claude\config\whatsapp-grupos.json`
+(`workspace`, `projeto_id`, `projeto`). Grupo que ainda não está lá: pergunte
+**uma vez** o workspace (`VZP`, `VLA`, `Base`) e o projeto, e acrescente o grupo
+à config. Assim ele também entra na rotina das 18h.
 
 Antes de propor, **procure duplicata**: `buscar_tarefas` com 2–3 palavras do
 assunto no workspace. Achou card do mesmo assunto aberto → propor **comentário**
 nele em vez de card novo.
 
-## 5. Prévia — obrigatória
+## 5. Prévia — obrigatória no avulso
 
 `criar_tarefa` **não tem prévia própria**: grava na hora, e sai assinado pela
-conta do Vitor. Por isso a prévia é daqui, sempre, e nada é criado sem o "sim"
-dele **nesta conversa**.
+conta de quem conectou o Asana. Por isso, no avulso, a prévia é daqui, sempre,
+e nada é criado sem o "sim" **nesta conversa**. (A rotina é a única exceção, e
+só porque escreve numa seção de triagem.)
 
 Mostre uma tabela numerada:
 
@@ -145,6 +180,10 @@ python C:\claude\scripts\whatsapp-grupo-ler.py estado   # o que já foi lido, po
   leitura. Ler é ler.
 - **Não subir o export** para lugar nenhum além de `C:\claude\trabalho\whatsapp-grupos\`:
   são mensagens de terceiros.
-- Não criar card de *Em aberto* por conta própria.
-- Não confirmar nada dentro de rotina automática — esta skill é sempre com o
-  Vitor presente.
+- No avulso, não criar card de *Em aberto* por conta própria (na rotina, é o
+  card único do passo 4 do modo rotina).
+- A rotina só **cria** na seção "Entrada WhatsApp". Não mexe, não comenta, não
+  conclui nem apaga card existente: duplicata, na rotina, se pula e entra no
+  resumo.
+- Não abrir o WhatsApp Web **sem janela** (headless): em 15/10/2026 isso
+  desconectou o aparelho. O `coletar.py` já abre com janela fora da tela.
