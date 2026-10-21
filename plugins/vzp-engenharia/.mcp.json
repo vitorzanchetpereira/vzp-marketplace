@@ -35,6 +35,10 @@
     "Payingless": {
       "type": "http",
       "url": "https://vzp-mcp-payingless-ra6s7yj5ca-uc.a.run.app/mcp"
+    },
+    "Crea-MT": {
+      "type": "http",
+      "url": "https://vzp-mcp-crea-ra6s7yj5ca-uc.a.run.app/mcp"
     }
   }
 }
