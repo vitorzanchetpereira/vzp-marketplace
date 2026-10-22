@@ -1,7 +1,7 @@
 {
   "name": "vitor-zp",
-  "version": "0.12.0",
-  "description": "Skills pessoais de Vitor Zanchet Pereira: contexto pessoal e profissional, POP de Controle e Conciliacao Financeira, organizacao dos arquivos pessoais, verificacao antes de enviar, registro do log do dia as ferramentas locais de e-mail das quatro caixas e a leitura de grupo do WhatsApp para o Asana. Conectores da Saude Pessoal, do Meu Tempo, da operacao do produto Zara, do correio das quatro caixas, do PayingLess da Casa (Home Assistant, Izy Smart e Alexas) e das Fotos (busca pelo conteudo em OneDrive e iCloud, e gestao do OneDrive).",
+  "version": "0.13.0",
+  "description": "Skills pessoais de Vitor Zanchet Pereira: contexto pessoal e profissional, POP de Controle e Conciliacao Financeira, organizacao dos arquivos pessoais, verificacao antes de enviar, registro do log do dia as ferramentas locais de e-mail das quatro caixas e a leitura de grupo do WhatsApp para o Asana. Conectores da Saude Pessoal, do Meu Tempo, da operacao do produto Zara, do correio das quatro caixas, do PayingLess da Casa (Home Assistant, Izy Smart e Alexas) e das Fotos (busca pelo conteudo em OneDrive e iCloud, e gestao do OneDrive), da conta de agua (Aguas de Sorriso) e da conta de luz (Energisa, so no notebook do Vitor).",
   "author": {
     "name": "Grupo VZP"
   },

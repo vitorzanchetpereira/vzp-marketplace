@@ -27,6 +27,20 @@
     "Fotos": {
       "type": "http",
       "url": "https://vzp-mcp-fotos-ra6s7yj5ca-uc.a.run.app/mcp"
+    },
+    "Aguas-Sorriso": {
+      "type": "http",
+      "url": "https://vzp-mcp-aguas-sorriso-ra6s7yj5ca-uc.a.run.app/mcp"
+    },
+    "Energisa": {
+      "type": "stdio",
+      "command": "C:\\claude\\scripts\\energisa\\.venv\\Scripts\\python.exe",
+      "args": [
+        "C:\\claude\\scripts\\energisa\\servidor_mcp.py"
+      ],
+      "env": {
+        "PYTHONIOENCODING": "utf-8"
+      }
     }
   }
 }
