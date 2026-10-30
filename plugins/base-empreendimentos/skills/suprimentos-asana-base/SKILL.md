@@ -97,8 +97,14 @@ origem no Sienge.
    pendente: `autorizar_solicitacao` — e o sim tem de ser de **quem autoriza
    compras na obra**, dito na conversa. Nunca autorize por conta própria.
 2. **Fornecedores.** O código de credor de cada um sai de `buscar_credores`
-   (nome ou CNPJ). Fornecedor sem cadastro no Sienge é cadastro na tela — avise e
-   siga com os outros.
+   (nome ou CNPJ; procure **pelo CNPJ**, que nome muda). Fornecedor sem cadastro
+   (POP §5): `cadastrar_credor` com os dados do **cartão CNPJ** — razão social,
+   endereço, cidade e UF como estão lá (`consultar_cnpj` traz o cartão; não
+   complete de cabeça), telefone e e-mail do orçamento ou do contato, e o PIX só
+   se o fornecedor mandou e só no CNPJ dele. Prévia, sim, confirmo. Se a tool
+   disser que já existe, use o código que ela devolve (inativo se reativa na
+   tela). Cadastrar não qualifica: avise no card que a qualificação e os anexos
+   do credor (Credores > Complemento e Anexos) ficam com Suprimentos.
 3. **Criar a cotação**: `criar_cotacao(solicitacao_id, comprador, fornecedores)`.
    `comprador` é o código Sienge de quem compra, e tem de estar cadastrado como
    comprador no Sienge (`usuarios_do_sienge` mostra os códigos; a Suprimentos lança
