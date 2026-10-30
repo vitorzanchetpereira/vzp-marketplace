@@ -130,7 +130,7 @@ o pedido é gerado **na tela do Sienge**, a partir da cotação — diga isso ao
 fechar, para ninguém achar que o pedido já existe. Quando o pedido sair, o número
 dele vai ao card do mesmo jeito.
 
-## Pedido de compra: análise, autorização e avaliação
+## Pedido de compra: análise, autorização, NF e avaliação
 
 Criado o pedido na tela, o resto anda pelo conector.
 
@@ -146,7 +146,21 @@ Criado o pedido na tela, o resto anda pelo conector.
    própria. A tool relê o pedido: só diga "autorizado" com `conferido` verdadeiro.
    Registre no card, num comentário, o número do pedido e a decisão; o título
    ganha o número: `SC <nº> · COT <nº> · PC <nº> - <o que> - <Obra>`.
-3. **Avaliar a entrega** (POP §9.1), quando o material chega:
+3. **NF de compra do recebimento** (POP §9), com o documento fiscal em mãos:
+   `entregas_do_pedido(pedido_id)` mostra o que está em aberto →
+   `lancar_nf_de_compra(pedido_id, numero, serie, data_emissao, entregas,
+   valor_total_nf, observacao)`. Número, série e emissão saem **da NF**, como
+   impressos; ponha a chave de acesso na `observacao` (`Chave NFe: ...`).
+   `entregas` só quando a NF não atende o pedido inteiro: `{"1": 10}` ou
+   `{"2/1": 12}`; entrega parcial final, `manter_saldo=False`. Passe sempre
+   `valor_total_nf`: total que não bate com o pedido a tool recusa, e a
+   diferença se resolve com o fornecedor antes, não na nota. Prévia, sim,
+   `confirmo=True`. Se vier `parcial`, a NF ficou em inclusão sem itens — **não
+   chame de novo** (criaria outra com o mesmo número); termine ou exclua na tela.
+   Se vier `atencao` (NF não consistente), falta completar na tela antes de virar
+   título. Na Base, quem lança e completa NF de compra hoje é a Isadora e o
+   comprador (Willian): avise quem for. A NF vai anexada ao card (`anexar_arquivo`).
+4. **Avaliar a entrega** (POP §9.1), quando o material chega:
    `criterios_de_avaliacao(pedido_id)` lista os cinco critérios (Quantidade,
    Inspeção Técnica, Qualidade, Prazo de Entrega, Dados Fiscais) →
    `avaliar_fornecimento(pedido_id, notas, observacao)`. **Todos** os critérios
