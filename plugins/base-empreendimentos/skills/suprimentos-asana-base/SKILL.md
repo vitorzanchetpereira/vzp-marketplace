@@ -130,6 +130,33 @@ o pedido é gerado **na tela do Sienge**, a partir da cotação — diga isso ao
 fechar, para ninguém achar que o pedido já existe. Quando o pedido sair, o número
 dele vai ao card do mesmo jeito.
 
+## Pedido de compra: análise, autorização e avaliação
+
+Criado o pedido na tela, o resto anda pelo conector.
+
+1. **Análise no card.** `analise_do_pedido(pedido_id)` devolve um link do PDF
+   "Análise do Pedido de Compra" que vale **2 horas**. Anexe já ao card da SC com
+   `anexar_arquivo(url=<link>)` — depois de 2 h o link morre e é preciso pedir
+   outro. Esse PDF é **interno**: traz os outros pedidos e preços do mesmo
+   fornecedor. **Nunca vai ao fornecedor.**
+2. **Autorizar ou reprovar.** `autorizar_pedido(pedido_id, observacao)` ou
+   `reprovar_pedido(pedido_id, observacao)` — reprovar exige o motivo; a
+   observação tem até 300 caracteres. Prévia com os itens, **sim de quem
+   autoriza compras** dito na conversa, `confirmo=True`. Nunca autorize por conta
+   própria. A tool relê o pedido: só diga "autorizado" com `conferido` verdadeiro.
+   Registre no card, num comentário, o número do pedido e a decisão; o título
+   ganha o número: `SC <nº> · COT <nº> · PC <nº> - <o que> - <Obra>`.
+3. **Avaliar a entrega** (POP §9.1), quando o material chega:
+   `criterios_de_avaliacao(pedido_id)` lista os cinco critérios (Quantidade,
+   Inspeção Técnica, Qualidade, Prazo de Entrega, Dados Fiscais) →
+   `avaliar_fornecimento(pedido_id, notas, observacao)`. **Todos** os critérios
+   levam nota, e só **0, 5 ou 10**. Nota 0 ou 5 exige na `observacao` o motivo
+   **e** a tratativa com o fornecedor. As notas vêm de quem recebeu — não
+   preencha 10 por padrão; pergunte. Avaliação errada se corrige com
+   `corrigir_ultima=True`. O Sienge não deixa reler a avaliação pela API: a
+   resposta vem com `conferido` falso, e a conferência é na tela (Suprimentos >
+   Apoio > Relatórios > Fornecedores > Avaliação de Fornecedor).
+
 ## Responsável
 
 Toda tarefa de **contrato, NF, recibo, medição, lista de materiais ou solicitação de
