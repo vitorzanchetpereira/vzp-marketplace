@@ -4,8 +4,10 @@ description: >-
   Regras do projeto Asana de Suprimentos (Base Empreendimentos / URBANIT / MIRAGE)
   e da SOLICITAÇÃO DE COMPRA feita na conversa: toda SC nasce nos dois lados — card
   no projeto Suprimentos da obra certa no Asana E solicitação no Sienge na obra
-  certa, amarrados pelo número. Use ao pedir uma compra ("abre uma SC", "precisa
-  comprar", "solicita material"), e ao criar ou atualizar tarefas de contratos,
+  certa, amarrados pelo número — e da COTAÇÃO que vem depois (propostas e
+  vencedor no Sienge, mapa em PDF no card). Use ao pedir uma compra ("abre uma
+  SC", "precisa comprar", "solicita material"), ao cotar ("lança as propostas",
+  "faz a cotação", "quem ganhou"), e ao criar ou atualizar tarefas de contratos,
   notas fiscais, recibos, medições ou listas de materiais no Asana da Base.
 ---
 
@@ -80,6 +82,53 @@ Card no Asana sem SC no Sienge (aberto antes da regra, ou pela tela): mesma orde
 a partir do passo 4. SC no Sienge sem card: crie o card e grave o número nele.
 Para não duplicar, procure antes: `solicitacoes_de_compra(empreendimento_id=...)`
 e `buscar_tarefas` pelo assunto.
+
+## Cotação: no Sienge pelo conector, mapa em PDF no card
+
+Depois da SC, a cotação. Cada lado guarda uma coisa: **o Sienge guarda os
+números** (propostas, vencedor — é dali que sai o pedido), **o card guarda a
+decisão** (o mapa em PDF da Engenharia, que equaliza escopo e diz por que aquele
+fornecedor ganhou). Os dois, sempre — cotação só no PDF deixa o pedido sem
+origem no Sienge.
+
+### A ordem
+
+1. **Item autorizado.** Só item autorizado entra na cotação. Se a SC está
+   pendente: `autorizar_solicitacao` — e o sim tem de ser de **quem autoriza
+   compras na obra**, dito na conversa. Nunca autorize por conta própria.
+2. **Fornecedores.** O código de credor de cada um sai de `buscar_credores`
+   (nome ou CNPJ). Fornecedor sem cadastro no Sienge é cadastro na tela — avise e
+   siga com os outros.
+3. **Criar a cotação**: `criar_cotacao(solicitacao_id, comprador, fornecedores)`.
+   `comprador` é o código Sienge de quem compra, e tem de estar cadastrado como
+   comprador no Sienge (`usuarios_do_sienge` mostra os códigos; a Suprimentos lança
+   as SCs como `SUPRIMENTOS`, o Vitor como `VZP`). Na dúvida, pergunte. Prévia, sim, confirmo. Fornecedor que entrar depois:
+   `incluir_fornecedor_na_cotacao`.
+4. **Lançar cada proposta**: `cotacao(cotacao_id)` dá o número dos itens **da
+   cotação** (não são os da SC) → `lancar_negociacao` por fornecedor, com preço
+   unitário por item, frete (`frete_tipo`: nenhum, incluso ou a_pagar), desconto,
+   condição de pagamento ("28", "30/60/90") e validade. A proposta vem do PDF ou
+   do e-mail do fornecedor: leia os números de lá, **não arredonde nem
+   complete**; o que faltar, pergunte. A tool relê e compara o total — total que
+   não bate com a proposta é erro de lançamento, não diferença aceitável.
+   Renegociação: `nova_rodada=True`.
+5. **Mapa no card.** O mapa da Engenharia (PDF) vai anexado ao card da SC
+   (`anexar_arquivo`, a partir do SharePoint da obra). O `mapa_de_cotacao` do
+   Sienge devolve um **link que só abre com login no Sienge** — não dá para
+   anexar direto; ponha o link num comentário do card (`comentar_tarefa`) junto
+   com o número da cotação.
+6. **Vencedor**: `autorizar_negociacao(cotacao_id, fornecedor_id)` — de novo, só
+   com o sim de **quem autoriza compras**. Registre no card, num comentário:
+   cotação nº, vencedor, total e o motivo em uma linha (o mesmo do mapa).
+7. **Card na mão do próximo passo**: título passa a
+   `SC <nº> · COT <nº> - <o que> - <Obra>`.
+
+### Onde a cotação para
+
+A API do Sienge **não cria pedido de compra**. Depois de autorizar a negociação,
+o pedido é gerado **na tela do Sienge**, a partir da cotação — diga isso ao
+fechar, para ninguém achar que o pedido já existe. Quando o pedido sair, o número
+dele vai ao card do mesmo jeito.
 
 ## Responsável
 
