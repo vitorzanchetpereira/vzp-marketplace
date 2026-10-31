@@ -129,16 +129,23 @@ origem no Sienge.
 7. **Card na mão do próximo passo**: título passa a
    `SC <nº> · COT <nº> - <o que> - <Obra>`.
 
-### Onde a cotação para
+### Da cotação ao pedido
 
-A API do Sienge **não cria pedido de compra**. Depois de autorizar a negociação,
-o pedido é gerado **na tela do Sienge**, a partir da cotação — diga isso ao
-fechar, para ninguém achar que o pedido já existe. Quando o pedido sair, o número
-dele vai ao card do mesmo jeito.
+Com o vencedor autorizado, `gerar_pedido_de_compra(cotacao_id)` gera o pedido
+(a API pública não cria; o conector usa a tela nova do Sienge). A prévia mostra
+um pedido por fornecedor e obra, com itens, entregas, total e **condição de
+pagamento** — confira com o mapa e a proposta antes do sim. Fornecedor com mais
+de uma condição: pergunte qual e passe `condicoes`. Sem condição nenhuma: falta
+lançá-la na negociação. Se o Sienge recusar por **endereço da obra**,
+**apropriação** ou **centro de custo**, nenhum pedido foi criado: diga o que
+falta (endereço e apropriação se acertam na tela, por Suprimentos) e repita
+depois. O pedido nasce pendente de autorização; o número vai ao card e o título
+passa a `SC <nº> · COT <nº> · PC <nº> - <o que> - <Obra>`. O primeiro pedido
+gerado assim é teste: peça a Suprimentos para conferir na tela.
 
 ## Pedido de compra: análise, autorização, NF e avaliação
 
-Criado o pedido na tela, o resto anda pelo conector.
+Gerado o pedido, o resto anda pelo conector.
 
 1. **Análise no card.** `analise_do_pedido(pedido_id)` devolve um link do PDF
    "Análise do Pedido de Compra" que vale **2 horas**. Anexe já ao card da SC com
