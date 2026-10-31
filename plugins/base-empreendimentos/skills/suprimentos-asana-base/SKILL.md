@@ -245,6 +245,33 @@ Depois de criar:
 
 Prévia, sim, confirmo.
 
+## Avaliação do prestador de serviço (POP §12.6)
+
+Serviço se avalia **na medição**, não no pedido: `avaliar_medicao(contrato,
+medicao_numero, notas, observacao)`. Ela grava pela tela "Avaliação de
+Fornecedor" do tipo Medição de Contratos, uma avaliação por medição.
+
+Os seis critérios do POP, com nota **0, 5 ou 10** em todos:
+1. Qualidade técnica do serviço executado
+2. Atendimento ao escopo e às especificações
+3. Cumprimento de prazo
+4. Segurança do trabalho e atendimento à NR-18
+5. Regularidade fiscal e documental
+6. Postura, comunicação e relacionamento
+
+- As notas vêm de quem acompanhou o serviço (engenheiro ou mestre). Não preencha 10 por padrão; pergunte.
+- Nota 0 ou 5 exige na `observacao` o motivo **e** a tratativa com o prestador.
+- `notas` aceita o nome do critério ou o código.
+- Medição já avaliada é recusada. Para corrigir, é pela tela.
+
+A medição só abre com esses seis se o cadastro de critérios do Sienge os tiver
+como padrão de medição. Confira com `criterios_do_cadastro()`: se
+`medicao_segue_o_pop` for falso, `avaliar_medicao` recusa. O cadastro se
+arruma com `salvar_criterio_avaliacao`, e mexer nele muda as avaliações de
+todo mundo dali em diante, então só com o sim do Vitor.
+
+Prévia, sim, confirmo. A resposta traz `conferido` depois de reler a tela.
+
 ## Anexos
 
 O conector do Asana anexa: `anexar_arquivo` (um) e `anexar_varios`, com o arquivo
