@@ -222,6 +222,29 @@ template de compra.
 Para SC, a seção **Solicitações de Compras** é a certa — só a descrição precisa
 ser reenviada no passo 5, junto com o número da SC.
 
+## Contrato novo no Sienge (POP §12.4)
+
+Contratação fechada vira contrato com `criar_contrato`. Ele grava pela tela
+"Contrato Rápido" do Sienge, com cabeçalho e itens de uma vez.
+
+O que ele pede:
+- **Fornecedor:** o código do credor.
+- **Empresa:** o código que a tela mostra (4 = Mirage, 6 = Urbanit).
+- **Obra:** o empreendimento (181, 125).
+- **Tipo de contrato:** código ou nome, como "mão de obra".
+- **Objeto** e **data de término**.
+- **Itens.** Cada um leva insumo (precisa estar no orçamento da obra), quantidade, preço de mão de obra e/ou de material, unidade construtiva, item de orçamento de último nível e conta financeira.
+
+Sem número, vai o próximo que o Sienge sugere.
+
+A **apropriação e a conta de cada item são de quem pede**, como na SC. Ajude a achar com `itens_do_contrato` de um contrato parecido da mesma obra, mas não escolha. Cada item leva uma apropriação e uma conta, as duas 100%. Mais do que isso é pela tela.
+
+Depois de criar:
+- O contrato nasce **sem autorização**, que é sempre de uma pessoa, pela tela.
+- O assinado entra com `anexar_no_contrato`, como abaixo.
+
+Prévia, sim, confirmo.
+
 ## Anexos
 
 O conector do Asana anexa: `anexar_arquivo` (um) e `anexar_varios`, com o arquivo
