@@ -47,7 +47,12 @@ não chute o par.
 1. **Insumo existe na obra?** `insumos_da_obra(empreendimento_id, busca=...)`.
    Não está → `buscar_insumo_no_cadastro` (pode existir com outro nome) →
    `incluir_insumo_na_obra` (prévia, sim, confirmo). Insumo que não existe nem no
-   cadastro geral é cadastro na tela, por uma pessoa — avise e pare esse item.
+   cadastro geral (POP §4): `cadastrar_insumo` com descrição, unidade (o
+   símbolo do Sienge), grupo de último nível e conta financeira analítica. O
+   **grupo e a conta são de quem pede**: a prévia mostra os insumos parecidos
+   e o grupo e a conta que eles usam. Use isso para perguntar, não para
+   escolher. Prévia, sim, confirmo. O código que voltar vai para
+   `incluir_insumo_na_obra`.
 2. **Mostre UMA prévia com os dois lados juntos**: o card (projeto, título,
    responsável, descrição) e a SC (`criar_solicitacao_de_compra` sem `confirmo`,
    que confere item por item contra o orçamento). Um "sim" só vale para os dois.
