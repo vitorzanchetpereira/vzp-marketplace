@@ -49,7 +49,7 @@
       "name": "vitor-zp",
       "description": "Skills pessoais de Vitor Zanchet Pereira — contexto pessoal e profissional, POP de Controle e Conciliação Financeira, organização dos arquivos pessoais, verificação antes de enviar, registro do log do dia as ferramentas locais de e-mail das quatro caixas e a leitura de grupo do WhatsApp para o Asana — e os conectores da Saúde Pessoal, do Meu Tempo, da operação do produto Zara, do correio das quatro caixas, do PayingLess da Casa (Home Assistant, Izy Smart e Alexas) e das Fotos (busca pelo conteúdo em OneDrive e iCloud, e gestão do OneDrive), da conta de água (Águas de Sorriso) e da conta de luz (Energisa, só no notebook do Vitor).",
       "source": "./plugins/vitor-zp",
-      "version": "0.13.0",
+      "version": "0.13.1",
       "category": "financas"
     },
     {
