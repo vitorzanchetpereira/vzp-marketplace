@@ -1,6 +1,6 @@
 {
   "name": "vzp-engenharia-marketplace",
-  "version": "1.16.4",
+  "version": "1.17.0",
   "description": "Skills internas separadas por empresa do Grupo VZP.",
   "owner": {
     "name": "VZP Engenharia",
@@ -12,16 +12,16 @@
   "plugins": [
     {
       "name": "vzp-engenharia",
-      "description": "Skills dos 4 POPs e 30 ITs técnicas exclusivas da VZP Engenharia, o padrão de desenvolvimento de app da casa, a interface que se explica e a gestão de contatos, e os conectores de Vobi, Asana, Google Contatos, Construir & Reformar, WhatsApp, VZP Planejamento, Google Maps, VERO e PayingLess.",
+      "description": "Skills dos 4 POPs e 30 ITs técnicas exclusivas da VZP Engenharia, o padrão de desenvolvimento de app da casa, a interface que se explica e a gestão de contatos, e os conectores de Vobi, Asana, Google Contatos, Construir & Reformar, WhatsApp, VZP Planejamento, Google Maps, VERO, PayingLess, CREA-MT (ARTs no eCREA) e Fiscal (NFS-e Nacional da VZP).",
       "source": "./plugins/vzp-engenharia",
-      "version": "0.5.4",
+      "version": "0.5.7",
       "category": "engenharia"
     },
     {
       "name": "base-empreendimentos",
       "description": "Skills dos 5 POPs, 29 ITs, contratos, fluxos operacionais, o fechamento trimestral e o fluxo de desembolso exclusivos da Base Empreendimentos, e os conectores de Sienge, Prevision, Asana, Google Contatos, ConstruBASE, Google Maps e PayingLess.",
       "source": "./plugins/base-empreendimentos",
-      "version": "0.8.3",
+      "version": "0.9.3",
       "category": "engenharia"
     },
     {
@@ -47,9 +47,9 @@
     },
     {
       "name": "vitor-zp",
-      "description": "Skills pessoais de Vitor Zanchet Pereira — contexto pessoal e profissional, POP de Controle e Conciliação Financeira, organização dos arquivos pessoais, verificação antes de enviar, registro do log do dia e as ferramentas locais de e-mail das quatro caixas — e os conectores da Saúde Pessoal, do Meu Tempo, da operação do produto Zara, do correio das quatro caixas e do PayingLess.",
+      "description": "Skills pessoais de Vitor Zanchet Pereira — contexto pessoal e profissional, POP de Controle e Conciliação Financeira, organização dos arquivos pessoais, verificação antes de enviar, registro do log do dia as ferramentas locais de e-mail das quatro caixas e a leitura de grupo do WhatsApp para o Asana — e os conectores da Saúde Pessoal, do Meu Tempo, da operação do produto Zara, do correio das quatro caixas, do PayingLess da Casa (Home Assistant, Izy Smart e Alexas) e das Fotos (busca pelo conteúdo em OneDrive e iCloud, e gestão do OneDrive), da conta de água (Águas de Sorriso) e da conta de luz (Energisa, só no notebook do Vitor).",
       "source": "./plugins/vitor-zp",
-      "version": "0.7.3",
+      "version": "0.13.1",
       "category": "financas"
     },
     {

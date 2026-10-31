@@ -1,7 +1,7 @@
 # Referência operacional
 
 - Empresa: VZP Engenharia
-- Documento vigente: `POP-04.00-VZP-Organizacao-Arquivos-R01.docx` — **Versão 2.1 | 27/08/2026**
+- Documento vigente: `POP-04.00-VZP-Organizacao-Arquivos-R02.docx` — **Versão 2.2 | 15/10/2026**
 - Origem: `Documentos Compartilhados/VZP-Eng/08-Inst Trab e Pop's/` (SharePoint)
 - Reextraída em 05/09/2026. A revisão anterior desta referência vinha do **R00 (Versão 1.0, Maio/2026)**, treze revisões atrás, e por isso descrevia uma estrutura que não existe mais.
 - Regra: ao existir nova revisão, reextrair e revalidar esta referência antes do uso. **Não confie na linha "Documento vigente" sem conferir a revisão no SharePoint** — ela registra o que era verdade na extração, não hoje.
@@ -16,7 +16,7 @@ Procedimento Operacional Padrão de Organização de Arquivos e Pastas
 
 Estrutura de Pastas, Subpastas e Nomenclatura de Arquivos para SharePoint
 
-Versão 2.1  |  Agosto de 2026  |  Vitor Zanchet – Eng. Civil
+Versão 2.2  |  Outubro de 2026  |  Vitor Zanchet – Eng. Civil
 
 ## 1. Objetivo
 
@@ -331,8 +331,25 @@ VZP-Eng (raiz)
 
 - Site de Equipe: VZP Engenharia. Biblioteca principal: `VZP-Eng`. Replicar toda a árvore dentro dela.
 - Obras em andamento e concluídas em subpastas separadas.
-- **Permissões:** acesso total ao gestor e colaboradores diretos; acesso restrito por pasta de obra a parceiros e terceiros; `04-Doc e Cad`, `06-Fin` e `07-Fisc` restritas ao gestor.
 - **Sincronização:** biblioteca completa no computador do gestor; demais colaboradores sincronizam somente as obras em que atuam.
+
+### 8.2 Permissões por Grupo
+
+O acesso ao SharePoint da VZP é dado por **grupo, nunca por pessoa**. Cada grupo é uma função; a pessoa herda o que o grupo abre. Em vigor desde 14/10/2026.
+
+| Grupo (Entra ID) | Quem está | O que abre |
+| --- | --- | --- |
+| VZP-Equipe | Vitor, João Wesley (Suprimentos), Duana (Administrativo/Financeiro) | Edição em todo o site (único integrante do grupo Membros), menos as pastas restritas |
+| VZP-Financeiro | Vitor, Duana | `06-Fin`, `07-Fisc` e `13-Rh e Dp` |
+| VZP-Direcao | Vitor | Tudo, inclusive `04-Doc e Cad` e `Consultórias` |
+| Proprietários do site | Administradores do M365 | Controle total em todas as pastas |
+
+- **Pessoa nova:** entra no grupo da função, no Entra ID. É vedado dar acesso direto a pasta ou arquivo. Saiu ou afastou-se: sai do grupo, ou fica nele com a licença liberada, conforme decisão do gestor.
+- **Pastas restritas** não herdam a permissão do site: `04-Doc e Cad` e `Consultórias`, só Direção; `06-Fin`, `07-Fisc` e `13-Rh e Dp`, Direção e Financeiro. Pasta nova com sigilo segue o mesmo modelo: interromper a herança e conceder a um grupo.
+- **Convidado externo** (projetista, parceiro, cliente): só na pasta da obra em que atua, compartilhada com a pessoa pelo e-mail. Nunca no site inteiro, nunca no grupo Visitantes.
+- **Link anônimo** ("Qualquer pessoa com o link") é vedado. Exceção só registrada pelo gestor, com motivo (hoje: a pasta da garantia do notebook, enviada à Acer).
+- **Outra empresa do grupo** (VLA) trabalha no site dela e não entra no site da VZP. A pasta Base Empreendimentos fica neste site por ora, com os convidados da Base só na pasta da obra.
+- **Nota técnica:** grupo do Entra só entra em grupo do SharePoint depois do `ensureuser` no site; pela tela basta digitar o nome do grupo, por script sem esse passo a inclusão falha com "o usuário não existe".
 
 Dúvidas sobre nomenclatura ou criação de novas pastas: consultar o gestor antes de criar qualquer item fora do padrão.
 
@@ -352,6 +369,7 @@ Dúvidas sobre nomenclatura ou criação de novas pastas: consultar o gestor ant
 | 1.9 | 19/07/2026 | Estrutura raiz (§3) numerada, com 00-Import no topo |
 | 2.0 | 27/08/2026 | **Área comercial.** Na obra, `02-Contratos` passa a `02-Vendas` (00-Propostas / 01-Contratos). No corporativo, criada `15-Vendas` (§5.10) |
 | 2.1 | 27/08/2026 | **Contrato existe nos DOIS lados.** Criada `01-Compras/05-Contratos` (obra e corporativo) para todo contrato de compra; `02-Vendas/01-Contratos` passa a conter só contrato de VENDA. Corrigida a legenda MP: Marketing e PROPAGANDA (§5.4) — causa raiz do arquivamento errado de propostas. Migradas 69 pastas de contrato nas 12 obras |
+| 2.2 | 15/10/2026 | **Permissões por grupo (§8.2).** Sai "Permissões Sugeridas", entram as em vigor: grupos VZP-Equipe, VZP-Financeiro e VZP-Direcao, pastas restritas, convidado só na pasta da obra, link anônimo vedado, pessoa nova entra por grupo |
 
 ## ADENDO 01 — Novos Prefixos (25/05/2026)
 
