@@ -103,8 +103,13 @@ origem no Sienge.
    complete de cabeça), telefone e e-mail do orçamento ou do contato, e o PIX só
    se o fornecedor mandou e só no CNPJ dele. Prévia, sim, confirmo. Se a tool
    disser que já existe, use o código que ela devolve (inativo se reativa na
-   tela). Cadastrar não qualifica: avise no card que a qualificação e os anexos
-   do credor (Credores > Complemento e Anexos) ficam com Suprimentos.
+   tela). **Cadastrar não qualifica.** Na sequência, `qualificar_fornecedor`
+   com o critério do POP §5.1 que de fato vale para ele (visita técnica,
+   atendimentos anteriores, PSQ, licença ambiental…). No Sienge da Base, cada
+   critério é uma classe do credor. Indicação exige `indicado_por` e
+   `justificativa`. Não escolha o critério por ele: se o card ou a conversa não
+   dizem, pergunte. A evidência (licença, certidão, foto da visita) vai com
+   `anexar_no_credor`. Prévia, sim, confirmo, nas duas.
 3. **Criar a cotação**: `criar_cotacao(solicitacao_id, comprador, fornecedores)`.
    `comprador` é o código Sienge de quem compra, e tem de estar cadastrado como
    comprador no Sienge (`usuarios_do_sienge` mostra os códigos; a Suprimentos lança
@@ -224,4 +229,7 @@ arquivo no card, `link_para_baixar` do Asana dá o link e `anexar_no_contrato`
 "Proposta Chacon rev. 2") sobe ao contrato. Um arquivo por chamada; prévia,
 sim, confirmo. `anexos_do_contrato` mostra o que já está lá. NF e boletim de
 medição são `anexar_na_medicao`, não aqui. Documentos e evidências do **credor**
-(qualificação) não têm rota na API: ficam com Suprimentos, na tela.
+(qualificação §5, documentos do prestador §12.4, laudos e licenças §13) vão
+para o cadastro dele com `anexar_no_credor` (credor pelo código ou CNPJ,
+link do `link_para_baixar`, descrição do que é). `anexos_do_credor` lista o
+que já está lá.
