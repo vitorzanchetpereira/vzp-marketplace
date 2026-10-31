@@ -210,3 +210,11 @@ ser reenviada no passo 5, junto com o número da SC.
 O conector do Asana anexa: `anexar_arquivo` (um) e `anexar_varios`, com o arquivo
 no SharePoint (`sharepoint_item_id`). Arquivo só no disco → suba antes ao
 SharePoint da obra. Confira com `listar_anexos`.
+
+**Contrato assinado e propostas também vão ao Sienge** (POP §12.4): com o
+arquivo no card, `link_para_baixar` do Asana dá o link e `anexar_no_contrato`
+(contrato como `CTS/550`, descrição dizendo o que é: "Contrato assinado",
+"Proposta Chacon rev. 2") sobe ao contrato. Um arquivo por chamada; prévia,
+sim, confirmo. `anexos_do_contrato` mostra o que já está lá. NF e boletim de
+medição são `anexar_na_medicao`, não aqui. Documentos e evidências do **credor**
+(qualificação) não têm rota na API: ficam com Suprimentos, na tela.
